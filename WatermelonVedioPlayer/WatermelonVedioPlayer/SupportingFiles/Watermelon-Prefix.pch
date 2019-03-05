@@ -1,0 +1,19 @@
+//
+//  Watermelon-Prefix.pch
+//  WatermelonVedioPlayer
+//
+//  Created by shichuang on 2019/1/9.
+//  Copyright © 2019 VedioPlayer. All rights reserved.
+//
+
+#ifndef Watermelon_Prefix_pch
+#define Watermelon_Prefix_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "PublicMacro.h"
+#import "PublicConfig.h"
+#import "StyleSyntaxSugar.h"
+#import "UserConfig.h"
+
+#endif /* Watermelon_Prefix_pch */
