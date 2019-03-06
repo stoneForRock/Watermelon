@@ -14,12 +14,13 @@
 #import "ChannelVC.h"
 #import "FinderVC.h"
 #import "MineVC.h"
+#import "LoginVC.h"
 
 #import "BaseRequest.h"
 #import "ReachabilityManager.h"
 
 #import "LaunchManager.h"
-
+#import "AppStyle.h"
 
 @interface AppDelegate ()
 
@@ -27,12 +28,45 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)getAppDelegate {
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self initAppConfigure:launchOptions];
+    
+    [self setupAppUI:launchOptions];
+    
+    [self setupAppConfigure:launchOptions];
+    
     return YES;
 }
 
+//初始化应用配置
+- (void)initAppConfigure:(NSDictionary *)launchOptions {
+    //注册推送
+    
+    //首次进入添加网络状态监听
+    [[ReachabilityManager sharedManager] startMonitoring];
+}
+
+//初始化界面视图
+- (void)setupAppUI:(NSDictionary *)launchOptions {
+    [AppStyle setupStyple];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.tintColor = ThemeTextColor;
+    [self.window makeKeyAndVisible];
+    
+    [LOGIN_MANAGER enterLoginWithGuideVC:!USER_Config.user];
+}
+
+//配置app
+- (void)setupAppConfigure:(NSDictionary *)launchOptions {
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

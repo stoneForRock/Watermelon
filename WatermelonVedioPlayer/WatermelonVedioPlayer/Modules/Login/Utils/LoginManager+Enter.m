@@ -17,7 +17,7 @@
 }
 
 - (void)enterLoginWithGuideVC:(BOOL)showGuideVC {
-    //如果已经登陆过，就直接进入主页
+    //如果已经有token，就直接进入主页
     if (USER_Config.user.token.length > 0) {
         [self directEnterAPP];
         return;
@@ -27,6 +27,10 @@
         //跳转到引导页面
         
     } else {
+        
+        //没有token 请求获取token
+        //获取token后 再开始倒计时 倒计时完成后 进入主页
+        
         //未登陆过，跳转到登陆页面
         LoginVC *loginVC = [LoginVC instanceFromXib];
         UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginVC];

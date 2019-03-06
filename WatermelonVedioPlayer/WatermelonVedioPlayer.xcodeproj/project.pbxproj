@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2EE9B7F0A5DB0395B0BFC376 /* libPods-WatermelonVedioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD732287E55022B83E2E3B /* libPods-WatermelonVedioPlayer.a */; };
 		3DBFCD2152011D2879E28B4C /* libPods-WatermelonVedioPlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFB3A77A34150B607236DFF /* libPods-WatermelonVedioPlayerUITests.a */; };
+		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
+		D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2798130222F6C6F0036D408 /* ForgetPswVC.m */; };
+		D2798133222F6CA50036D408 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2798132222F6CA50036D408 /* Login.storyboard */; };
 		D7F4BEB8BB94363495C2612F /* libPods-WatermelonVedioPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D90BB39DABAD190FF7E792 /* libPods-WatermelonVedioPlayerTests.a */; };
 		E5512D7321F0662300DD8859 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7221F0662300DD8859 /* MineVC.m */; };
 		E5512D7621F0671400DD8859 /* ChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7521F0671400DD8859 /* ChannelVC.m */; };
@@ -440,6 +443,11 @@
 		7C86A34D0E59AC61E7669CEE /* Pods-WatermelonVedioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayer/Pods-WatermelonVedioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		85E57562F7E066C4B204858B /* Pods-WatermelonVedioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerUITests/Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0801926F123F5A02F8C3B4 /* Pods-WatermelonVedioPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerTests/Pods-WatermelonVedioPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D279812C222F6C590036D408 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		D279812D222F6C590036D408 /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		D279812F222F6C6F0036D408 /* ForgetPswVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPswVC.h; sourceTree = "<group>"; };
+		D2798130222F6C6F0036D408 /* ForgetPswVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPswVC.m; sourceTree = "<group>"; };
+		D2798132222F6CA50036D408 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E5512D7121F0662300DD8859 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E5512D7221F0662300DD8859 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E5512D7421F0671400DD8859 /* ChannelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelVC.h; sourceTree = "<group>"; };
@@ -2301,8 +2309,13 @@
 				E55134C621F1DEFD00DD8859 /* Network */,
 				E55134C521F1DEF600DD8859 /* Utils */,
 				E55134B221F085C200DD8859 /* Model */,
+				D2798132222F6CA50036D408 /* Login.storyboard */,
 				E55134D321F1E03000DD8859 /* LoginVC.h */,
 				E55134D421F1E03000DD8859 /* LoginVC.m */,
+				D279812C222F6C590036D408 /* RegisterVC.h */,
+				D279812D222F6C590036D408 /* RegisterVC.m */,
+				D279812F222F6C6F0036D408 /* ForgetPswVC.h */,
+				D2798130222F6C6F0036D408 /* ForgetPswVC.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2720,6 +2733,7 @@
 				E551304F21F0688400DD8859 /* MJPhotoBrowser.bundle in Resources */,
 				E551318221F0688500DD8859 /* ImageSelectedSmallOff@2x.png in Resources */,
 				E551318621F0688500DD8859 /* PlayButtonOverlayLargeTap@3x.png in Resources */,
+				D2798133222F6CA50036D408 /* Login.storyboard in Resources */,
 				E551319821F0688500DD8859 /* ImageSelectedOn@2x.png in Resources */,
 				E551319021F0688500DD8859 /* ImageSelectedSmallOff.png in Resources */,
 				E551319521F0688500DD8859 /* ImageSelectedSmallOn@3x.png in Resources */,
@@ -2854,6 +2868,7 @@
 			files = (
 				E551337A21F06AAF00DD8859 /* ZXDataMatrixX12Encoder.m in Sources */,
 				E55133BF21F06AAF00DD8859 /* ZXRSSExpandedFieldParser.m in Sources */,
+				D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */,
 				E55133E121F06AB000DD8859 /* ZXURIParsedResult.m in Sources */,
 				E55133BD21F06AAF00DD8859 /* ZXAztecBinaryShiftToken.m in Sources */,
 				E551340F21F06AB000DD8859 /* ZXMaxiCodeReader.m in Sources */,
@@ -2975,6 +2990,7 @@
 				E551339921F06AAF00DD8859 /* ZXPDF417BarcodeMatrix.m in Sources */,
 				E551316C21F0688500DD8859 /* QNDnspodEnterprise.m in Sources */,
 				E55133B521F06AAF00DD8859 /* ZXWifiResultParser.m in Sources */,
+				D279812E222F6C590036D408 /* RegisterVC.m in Sources */,
 				E551341F21F06AB000DD8859 /* ZXUPCEANExtension2Support.m in Sources */,
 				E551341B21F06AB000DD8859 /* ZXDataMatrixDetector.m in Sources */,
 				E551340C21F06AB000DD8859 /* ZXEAN8Writer.m in Sources */,
@@ -3363,6 +3379,7 @@
 			baseConfigurationReference = 7C86A34D0E59AC61E7669CEE /* Pods-WatermelonVedioPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3380,7 +3397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VedioPlayer.WatermelonVedioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -3389,6 +3406,7 @@
 			baseConfigurationReference = FB223E3BC7EC3699964F3CA4 /* Pods-WatermelonVedioPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3406,7 +3424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VedioPlayer.WatermelonVedioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

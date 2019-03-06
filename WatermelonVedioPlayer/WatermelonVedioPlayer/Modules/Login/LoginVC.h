@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginManager+Enter.h"
 
 @interface LoginVC : UIViewController
 INSTANCE_XIB_H
