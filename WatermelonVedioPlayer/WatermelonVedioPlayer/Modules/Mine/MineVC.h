@@ -10,4 +10,6 @@
 
 @interface MineVC : UIViewController
 
+INSTANCE_XIB_H
+
 @end

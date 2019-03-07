@@ -9,6 +9,9 @@
 #import "LoginManager+Enter.h"
 #import "LoginVC.h"
 #import "AppDelegate.h"
+#import "LoginRequest.h"
+#import "UniqueIdentificationTool.h"
+#import "LaunchManager.h"
 
 @implementation LoginManager (Enter)
 
@@ -28,22 +31,32 @@
         
     } else {
         
-        //没有token 请求获取token
-        //获取token后 再开始倒计时 倒计时完成后 进入主页
-        
-        //未登陆过，跳转到登陆页面
-        LoginVC *loginVC = [LoginVC instanceFromXib];
-        UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginVC];
-        [AppDelegate getAppDelegate].window.rootViewController = loginNav;
+        //没有visitorToken 请求获取visitorToken
+        if (USER_Config.user.visitorToken.length > 0) {
+            //进入主页
+            [self directEnterAPP];
+        } else {
+            [self directEnterAPP];
+            [APPDelegate.window showHUDLoadingText:@"选择加速通道..."];
+            [LoginRequest getVisitorTokenWithDeviceUIID:[UniqueIdentificationTool readUIID] finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+                [APPDelegate.window hideHUDView];
+                if (success) {
+                    //获取到游客token
+                    NSString *visitorToken = responseObject[@"data"];
+                    USER_Config.user.visitorToken = visitorToken;
+                    [USER_Config saveConfig];
+                    [LaunchManager showTimeOutCount];
+                } else {
+                    [APPDelegate.window showHUDWithErrorText:error.domain];
+                }
+            }];
+        }
     }
 }
 
 - (void)directEnterAPP {
     //执行进入应用主页面之前的逻辑，比如数据库的初始化
     
-    //自动登录接口
-    [self autoLoginCompleted:^(BOOL success, NSUInteger errorCode, NSString *error, id userInfo) {
-    }];
     [self enterMainViewController];
 }
 

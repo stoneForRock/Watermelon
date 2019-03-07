@@ -18,7 +18,7 @@
 
 #import "BaseRequest.h"
 #import "ReachabilityManager.h"
-
+#import "UniqueIdentificationTool.h"
 #import "LaunchManager.h"
 #import "AppStyle.h"
 
@@ -48,6 +48,11 @@
 - (void)initAppConfigure:(NSDictionary *)launchOptions {
     //注册推送
     
+    //保存设备唯一标识符
+    if (![UniqueIdentificationTool readUIID]) {
+        [UniqueIdentificationTool saveUIID];
+    }
+    
     //首次进入添加网络状态监听
     [[ReachabilityManager sharedManager] startMonitoring];
 }
@@ -59,13 +64,63 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.tintColor = ThemeTextColor;
     [self.window makeKeyAndVisible];
-    
+    [LaunchManager didFinishLaunching];
     [LOGIN_MANAGER enterLoginWithGuideVC:!USER_Config.user];
 }
 
 //配置app
 - (void)setupAppConfigure:(NSDictionary *)launchOptions {
     
+}
+
+- (void)setupMainViewControllers {
+    NSArray *tabbarItemInfos = @[
+                                 @{@"title":@"首页",@"selectedImage":@"main_bar_mainpage_press",@"image":@"main_bar_mainpage_unpress"},
+                                 @{@"title":@"频道",@"selectedImage":@"main_bar_channel_press",@"image":@"main_bar_channel_unpress"},
+                                 @{@"title":@"发现",@"selectedImage":@"main_bar_discover_press",@"image":@"main_bar_discover_unpress"},
+                                 @{@"title":@"我的",@"selectedImage":@"main_bar_center_press",@"image":@"main_bar_center_unpress"}
+                                 ];
+    NSMutableArray *tabbarNavs = [NSMutableArray arrayWithCapacity:0];
+    
+    MainPageVC *mainVC = [MainPageVC instanceFromXib];
+    mainVC.title = @"首页";
+    
+    ChannelVC *channelVC = [ChannelVC instanceFromXib];
+    channelVC.title = @"频道";
+    
+    FinderVC *finderVC = [FinderVC instanceFromXib];
+    finderVC.title = @"发现";
+    
+    MineVC *mineVC = [MineVC instanceFromXib];
+    mineVC.title = @"我的";
+    
+    NSArray *tabbarVCs = @[mainVC,channelVC,finderVC,mineVC];
+    
+    for (int i = 0; i < tabbarVCs.count; i ++) {
+        if (i > tabbarItemInfos.count - 1) {
+            break;
+        }
+        
+        NSDictionary *tabbarItemInfoDic = tabbarItemInfos[i];
+        UIViewController *tabbarVC = tabbarVCs[i];
+        tabbarVC.tabBarItem = [[UITabBarItem alloc] init];
+        tabbarVC.tabBarItem.title = tabbarItemInfoDic[@"title"];
+        [tabbarVC.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -5)];
+        tabbarVC.tabBarItem.selectedImage = [[UIImage imageNamed:tabbarItemInfoDic[@"selectedImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        tabbarVC.tabBarItem.image = [[UIImage imageNamed:tabbarItemInfoDic[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UINavigationController *tabbarRootNav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
+        [tabbarNavs addObject:tabbarRootNav];
+    }
+    self.tabBarController = [[APPTabbarContorller alloc] init];
+    self.tabBarController.viewControllers = tabbarNavs;
+    self.window.rootViewController = self.tabBarController;
+}
+
+- (void)showLoginViewControllers {
+    //未登陆过，跳转到登陆页面
+    LoginVC *loginVC = [LoginVC instanceFromXib];
+    UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    [[AppDelegate getAppDelegate].window.rootViewController presentViewController:loginNav animated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

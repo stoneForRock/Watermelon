@@ -10,4 +10,6 @@
 
 @interface MainPageVC : UIViewController
 
+INSTANCE_XIB_H
+
 @end

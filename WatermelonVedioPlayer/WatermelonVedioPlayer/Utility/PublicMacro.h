@@ -58,10 +58,16 @@ return [[UIStoryboard storyboardWithName:s bundle:nil] instantiateViewController
 #endif
 
 //尺寸
+#define IphoneXScreen ((ScreenFullWidth == 375.f && ScreenFullHeight == 812.f ? YES : NO) || (ScreenFullWidth == 414.f && ScreenFullHeight == 896.f ? YES : NO))
+
+// iPhoneX 适配
+#define SafeTopHeight    (NaviBarHeight + StatusBarHeight)
+#define SafeBottomHeight (IphoneXScreen?34:0)
+
 #define ScreenBounds [[UIScreen mainScreen] bounds]     //屏幕
 #define ScreenFullHeight [[UIScreen mainScreen] bounds].size.height //屏幕高度
 #define ScreenFullWidth [[UIScreen mainScreen] bounds].size.width   //屏幕宽度
-#define StatusBarHeight 20.0        //状态栏高度
+#define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height        //状态栏高度
 #define NavigationBarHeight 44.0    //导航栏高度
 #define TabBarHeight 49.0           //标签栏高度
 #define ToolBarHeight 44.0          //工具栏高度

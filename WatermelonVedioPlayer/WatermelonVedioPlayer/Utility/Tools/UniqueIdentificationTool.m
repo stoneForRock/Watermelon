@@ -14,21 +14,18 @@ static NSString * const KEY_UIID = @"com.VedioPlayer.WatermelonVedioPlayer.UIID"
 
 @implementation UniqueIdentificationTool
 
-+ (void)saveUIID
-{
++ (void)saveUIID {
     NSMutableDictionary *uiidKVPairs = [NSMutableDictionary dictionary];
     [uiidKVPairs setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:KEY_UIID];
     [DGBKeyChain save:KEY_IN_KEYCHAIN data:uiidKVPairs];
 }
 
-+ (id)readUIID
-{
++ (id)readUIID {
     NSMutableDictionary *uiidKVPairs = (NSMutableDictionary *)[DGBKeyChain load:KEY_IN_KEYCHAIN];
-    return [uiidKVPairs objectForKey:KEY_UIID]?[uiidKVPairs objectForKey:KEY_UIID]:[[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    return [uiidKVPairs objectForKey:KEY_UIID]?[uiidKVPairs objectForKey:KEY_UIID]:nil;
 }
 
-+ (void)deleteUIID
-{
++ (void)deleteUIID {
     [DGBKeyChain delete:KEY_IN_KEYCHAIN];
 }
 

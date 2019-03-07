@@ -14,6 +14,8 @@
 
 @implementation MainPageVC
 
+INSTANCE_XIB_M(@"MainPage", MainPageVC)
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

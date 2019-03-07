@@ -10,4 +10,6 @@
 
 @interface FinderVC : UIViewController
 
+INSTANCE_XIB_H
+
 @end

@@ -10,4 +10,12 @@
 
 @interface LoginRequest : BaseRequest
 
+/**
+ 获取游客token
+
+ @param uiid uiid
+ @param finishBlock finishBlock
+ */
++ (void)getVisitorTokenWithDeviceUIID:(NSString *)uiid finishBlock:(RequestFinishBlock)finishBlock;
+
 @end

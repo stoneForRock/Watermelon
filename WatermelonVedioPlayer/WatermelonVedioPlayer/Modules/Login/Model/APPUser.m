@@ -32,6 +32,7 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.userId forKey:@"userId"];
+    [aCoder encodeObject:self.visitorToken forKey:@"visitorToken"];
     [aCoder encodeObject:self.token forKey:@"token"];
     [aCoder encodeObject:self.phone forKey:@"phone"];
     [aCoder encodeObject:self.password forKey:@"password"];
@@ -51,6 +52,7 @@
     if (self)
     {
         self.userId = [aDecoder decodeObjectForKey:@"userId"];
+        self.visitorToken = [aDecoder decodeObjectForKey:@"visitorToken"];
         self.token = [aDecoder decodeObjectForKey:@"token"];
         self.phone = [aDecoder decodeObjectForKey:@"phone"];
         self.password = [aDecoder decodeObjectForKey:@"password"];

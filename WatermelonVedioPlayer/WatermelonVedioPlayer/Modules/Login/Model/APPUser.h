@@ -11,9 +11,10 @@
 @interface APPUser : JSONModel<NSCoding>
 
 @property (nonatomic, copy) NSString *deviceUID;//设备唯一识别号
+@property (nonatomic, copy) NSString *visitorToken;//未登录 是游客token
 
 @property (nonatomic, copy) NSString<Optional> *userId;
-@property (nonatomic, copy) NSString<Optional> *token;//未登录 是游客token 登录后就是正式token
+@property (nonatomic, copy) NSString<Optional> *token;//正式token
 @property (nonatomic, copy) NSString<Optional> *phone;
 @property (nonatomic, copy) NSString<Optional> *password;
 @property (nonatomic, copy) NSString<Optional> *name;

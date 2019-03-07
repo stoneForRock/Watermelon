@@ -22,6 +22,7 @@
 // 进入新版指引页
 - (void)showGuideVC;
 - (void)setupMainViewControllers;
+- (void)showLoginViewControllers;
 
 
 @end

@@ -18,13 +18,11 @@
 
 @implementation LaunchManager
 
-+ (void)didFinishLaunching
-{
++ (void)didFinishLaunching {
     [self showHubLaunchImage];
 }
 
-+ (void)showHubLaunchImage
-{
++ (void)showHubLaunchImage {
     NSString *launchImageName = @"LaunchImage";
     __block UIImageView *launchImageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     launchImageView.userInteractionEnabled = YES;
@@ -34,7 +32,10 @@
     
     UITapGestureRecognizer *tapLaunchRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapLaunchAction)];
     [launchImageView addGestureRecognizer:tapLaunchRecognizer];
-    
+}
+
++ (void)showTimeOutCount {
+    UIImageView *launchImageView = [[AppDelegate getAppDelegate].window viewWithTag:19839];
     __block atomic_int timeOutCount = 5;//5秒倒计时
     __block UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeBtn setTitle:[NSString stringWithFormat:@"%d",timeOutCount] forState:UIControlStateNormal];
@@ -67,8 +68,6 @@
     
     dispatch_resume(timer);
 }
-
-
 
 - (void)closeAction {
     UIImageView *launchImageView = [[AppDelegate getAppDelegate].window viewWithTag:19839];

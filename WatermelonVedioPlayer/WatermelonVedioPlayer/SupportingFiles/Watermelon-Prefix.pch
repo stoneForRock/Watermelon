@@ -15,5 +15,7 @@
 #import "PublicConfig.h"
 #import "StyleSyntaxSugar.h"
 #import "UserConfig.h"
+#import "UIView+HUD.h"
+#import "UIViewController+HUD.h"
 
 #endif /* Watermelon_Prefix_pch */

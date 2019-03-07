@@ -8,13 +8,13 @@
 
 #import "URLPathManager.h"
 //正式环境
-static NSString *const URL = @"http://www.yizhimin.com";
+static NSString *const URL = @"http://120.79.57.229:8071";
 
 //Test
-static NSString *const URL_TEST = @"http://www.yizhimin.com";
+static NSString *const URL_TEST = @"http://120.79.57.229:8071";
 
 //Dev
-static NSString *const URL_Dev = @"http://www.yizhimin.com";
+static NSString *const URL_Dev = @"http://120.79.57.229:8071";
 
 NSString *const URLChangeNotification = @"URLChangeNotification";
 

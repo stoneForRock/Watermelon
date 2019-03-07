@@ -10,4 +10,7 @@
 
 @interface LaunchManager : NSObject
 
++ (void)didFinishLaunching;
++ (void)showTimeOutCount;
+
 @end

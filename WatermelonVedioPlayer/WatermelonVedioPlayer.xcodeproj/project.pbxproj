@@ -12,6 +12,13 @@
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
 		D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2798130222F6C6F0036D408 /* ForgetPswVC.m */; };
 		D2798133222F6CA50036D408 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2798132222F6CA50036D408 /* Login.storyboard */; };
+		D2ACDC922231199D00E3DF62 /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ACDC912231199D00E3DF62 /* HUDHelper.m */; };
+		D2ACDC95223119B600E3DF62 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ACDC94223119B600E3DF62 /* UIView+HUD.m */; };
+		D2ACDC98223119CE00E3DF62 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ACDC97223119CE00E3DF62 /* UIViewController+HUD.m */; };
+		D2ACDCA222312A0F00E3DF62 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA122312A0F00E3DF62 /* MainPage.storyboard */; };
+		D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA322312A4200E3DF62 /* Channel.storyboard */; };
+		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
+		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
 		D7F4BEB8BB94363495C2612F /* libPods-WatermelonVedioPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D90BB39DABAD190FF7E792 /* libPods-WatermelonVedioPlayerTests.a */; };
 		E5512D7321F0662300DD8859 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7221F0662300DD8859 /* MineVC.m */; };
 		E5512D7621F0671400DD8859 /* ChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7521F0671400DD8859 /* ChannelVC.m */; };
@@ -448,6 +455,17 @@
 		D279812F222F6C6F0036D408 /* ForgetPswVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPswVC.h; sourceTree = "<group>"; };
 		D2798130222F6C6F0036D408 /* ForgetPswVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPswVC.m; sourceTree = "<group>"; };
 		D2798132222F6CA50036D408 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D2ACDC8E2230F33000E3DF62 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
+		D2ACDC902231199D00E3DF62 /* HUDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
+		D2ACDC912231199D00E3DF62 /* HUDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
+		D2ACDC93223119B600E3DF62 /* UIView+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		D2ACDC94223119B600E3DF62 /* UIView+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		D2ACDC96223119CE00E3DF62 /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		D2ACDC97223119CE00E3DF62 /* UIViewController+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		D2ACDCA122312A0F00E3DF62 /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
+		D2ACDCA322312A4200E3DF62 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
+		D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finder.storyboard; sourceTree = "<group>"; };
+		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		E5512D7121F0662300DD8859 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E5512D7221F0662300DD8859 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E5512D7421F0671400DD8859 /* ChannelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelVC.h; sourceTree = "<group>"; };
@@ -1300,6 +1318,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D2ACDC8F2231198400E3DF62 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				D2ACDC902231199D00E3DF62 /* HUDHelper.h */,
+				D2ACDC912231199D00E3DF62 /* HUDHelper.m */,
+				D2ACDC93223119B600E3DF62 /* UIView+HUD.h */,
+				D2ACDC94223119B600E3DF62 /* UIView+HUD.m */,
+				D2ACDC96223119CE00E3DF62 /* UIViewController+HUD.h */,
+				D2ACDC97223119CE00E3DF62 /* UIViewController+HUD.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		E5512D7A21F0688200DD8859 /* TZImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1325,21 +1356,6 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
-		E5512D8D21F0688200DD8859 /* UMengSDK */ = {
-			isa = PBXGroup;
-			children = (
-				E5512D8E21F0688200DD8859 /* UMAnalytics_Sdk_3.5.8 */,
-			);
-			path = UMengSDK;
-			sourceTree = "<group>";
-		};
-		E5512D8E21F0688200DD8859 /* UMAnalytics_Sdk_3.5.8 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UMAnalytics_Sdk_3.5.8;
-			sourceTree = "<group>";
-		};
 		E5512D8F21F0688200DD8859 /* MJPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -1360,13 +1376,6 @@
 				E5512D9E21F0688200DD8859 /* MJPhotoBrowser.m */,
 			);
 			path = MJPhotoBrowser;
-			sourceTree = "<group>";
-		};
-		E5512D9F21F0688200DD8859 /* UploadImgProgress */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UploadImgProgress;
 			sourceTree = "<group>";
 		};
 		E5512F6A21F0688300DD8859 /* AMapSDK */ = {
@@ -2383,6 +2392,7 @@
 			children = (
 				E589702F21F065F5008924E4 /* MainPageVC.h */,
 				E589703021F065F5008924E4 /* MainPageVC.m */,
+				D2ACDCA122312A0F00E3DF62 /* MainPage.storyboard */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -2392,6 +2402,7 @@
 			children = (
 				E5512D7421F0671400DD8859 /* ChannelVC.h */,
 				E5512D7521F0671400DD8859 /* ChannelVC.m */,
+				D2ACDCA322312A4200E3DF62 /* Channel.storyboard */,
 			);
 			path = Channel;
 			sourceTree = "<group>";
@@ -2401,6 +2412,7 @@
 			children = (
 				E5512D7721F0672300DD8859 /* FinderVC.h */,
 				E5512D7821F0672300DD8859 /* FinderVC.m */,
+				D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */,
 			);
 			path = Finder;
 			sourceTree = "<group>";
@@ -2410,6 +2422,7 @@
 			children = (
 				E5512D7121F0662300DD8859 /* MineVC.h */,
 				E5512D7221F0662300DD8859 /* MineVC.m */,
+				D2ACDCA722312A7300E3DF62 /* Mine.storyboard */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2488,6 +2501,7 @@
 				E551345621F06E3300DD8859 /* Tools */,
 				E551345521F06E2600DD8859 /* Category */,
 				E551345421F06E1900DD8859 /* MD5 */,
+				D2ACDC8F2231198400E3DF62 /* HUD */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -2504,9 +2518,7 @@
 				E551300221F0688400DD8859 /* MWPhotoBrowser */,
 				E5512F9C21F0688400DD8859 /* QiniuSDK */,
 				E5512D7A21F0688200DD8859 /* TZImagePickerController */,
-				E5512D8D21F0688200DD8859 /* UMengSDK */,
 				E5512FFD21F0688400DD8859 /* UnlimitedScrollView */,
-				E5512D9F21F0688200DD8859 /* UploadImgProgress */,
 				E551303B21F0688400DD8859 /* XMNetworking */,
 				E5512F9921F0688300DD8859 /* XTSafeCollection */,
 			);
@@ -2573,6 +2585,7 @@
 		E5DC59FA21E4D1900018F12A /* WatermelonVedioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				D2ACDC8E2230F33000E3DF62 /* WatermelonVedioPlayer.entitlements */,
 				E5D5E37421E621AB00399261 /* AppDelegate */,
 				E5D5E37521E621B400399261 /* Foundation */,
 				E5D5E37621E621BB00399261 /* Modules */,
@@ -2689,6 +2702,11 @@
 				TargetAttributes = {
 					E5DC59F721E4D1900018F12A = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					E5DC5A0F21E4D1920018F12A = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -2737,6 +2755,8 @@
 				E551319821F0688500DD8859 /* ImageSelectedOn@2x.png in Resources */,
 				E551319021F0688500DD8859 /* ImageSelectedSmallOff.png in Resources */,
 				E551319521F0688500DD8859 /* ImageSelectedSmallOn@3x.png in Resources */,
+				D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */,
+				D2ACDCA222312A0F00E3DF62 /* MainPage.storyboard in Resources */,
 				E551318C21F0688500DD8859 /* PlayButtonOverlayLarge@2x.png in Resources */,
 				E5DC5A0821E4D1920018F12A /* LaunchScreen.storyboard in Resources */,
 				E551319621F0688500DD8859 /* PlayButtonOverlayLarge.png in Resources */,
@@ -2754,7 +2774,9 @@
 				E551319421F0688500DD8859 /* UIBarButtonItemArrowRight@2x.png in Resources */,
 				E551318421F0688500DD8859 /* PlayButtonOverlayLargeTap.png in Resources */,
 				E551317C21F0688500DD8859 /* UIBarButtonItemGrid.png in Resources */,
+				D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */,
 				E551318921F0688500DD8859 /* ImageError.png in Resources */,
+				D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */,
 				E551318E21F0688500DD8859 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
 				E551317E21F0688500DD8859 /* VideoOverlay@2x.png in Resources */,
 				E551313221F0688500DD8859 /* AMap.bundle in Resources */,
@@ -2991,6 +3013,7 @@
 				E551316C21F0688500DD8859 /* QNDnspodEnterprise.m in Sources */,
 				E55133B521F06AAF00DD8859 /* ZXWifiResultParser.m in Sources */,
 				D279812E222F6C590036D408 /* RegisterVC.m in Sources */,
+				D2ACDC98223119CE00E3DF62 /* UIViewController+HUD.m in Sources */,
 				E551341F21F06AB000DD8859 /* ZXUPCEANExtension2Support.m in Sources */,
 				E551341B21F06AB000DD8859 /* ZXDataMatrixDetector.m in Sources */,
 				E551340C21F06AB000DD8859 /* ZXEAN8Writer.m in Sources */,
@@ -3046,6 +3069,7 @@
 				E55133C121F06AAF00DD8859 /* ZXPDF417BarcodeRow.m in Sources */,
 				E55133AA21F06AAF00DD8859 /* ZXImage.m in Sources */,
 				E55133A921F06AAF00DD8859 /* ZXRSSExpandedDecodedChar.m in Sources */,
+				D2ACDC95223119B600E3DF62 /* UIView+HUD.m in Sources */,
 				E551344721F06AB000DD8859 /* ZXQRCodeBlockPair.m in Sources */,
 				E55133D821F06AB000DD8859 /* ZXAztecReader.m in Sources */,
 				E551315121F0688500DD8859 /* QNEtag.m in Sources */,
@@ -3124,6 +3148,7 @@
 				E551316721F0688500DD8859 /* QNLruCache.m in Sources */,
 				E551338D21F06AAF00DD8859 /* ZXVCardResultParser.m in Sources */,
 				E551314E21F0688500DD8859 /* QNCrc32.m in Sources */,
+				D2ACDC922231199D00E3DF62 /* HUDHelper.m in Sources */,
 				E551316B21F0688500DD8859 /* QNDnspodFree.m in Sources */,
 				E551315021F0688500DD8859 /* QNFile.m in Sources */,
 				E551314221F0688500DD8859 /* IQUIViewController+Additions.m in Sources */,
@@ -3380,7 +3405,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 659VY6XY77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WatermelonVedioPlayer/ThirdParts/AMapSDK",
@@ -3407,7 +3434,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 659VY6XY77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WatermelonVedioPlayer/ThirdParts/AMapSDK",
