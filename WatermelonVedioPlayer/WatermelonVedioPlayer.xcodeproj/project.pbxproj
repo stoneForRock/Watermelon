@@ -19,6 +19,10 @@
 		D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA322312A4200E3DF62 /* Channel.storyboard */; };
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
+		D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913A223259D300A021E4 /* MainSearchVC.m */; };
+		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
+		D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914422325BE600A021E4 /* MainPageRequest.m */; };
+		D2ED914822325C7300A021E4 /* RollingCircleScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914722325C7300A021E4 /* RollingCircleScroll.m */; };
 		D7F4BEB8BB94363495C2612F /* libPods-WatermelonVedioPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D90BB39DABAD190FF7E792 /* libPods-WatermelonVedioPlayerTests.a */; };
 		E5512D7321F0662300DD8859 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7221F0662300DD8859 /* MineVC.m */; };
 		E5512D7621F0671400DD8859 /* ChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7521F0671400DD8859 /* ChannelVC.m */; };
@@ -466,6 +470,14 @@
 		D2ACDCA322312A4200E3DF62 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finder.storyboard; sourceTree = "<group>"; };
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		D2ED9139223259D300A021E4 /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
+		D2ED913A223259D300A021E4 /* MainSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchVC.m; sourceTree = "<group>"; };
+		D2ED913D22325B6E00A021E4 /* PlayHistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayHistoryVC.h; sourceTree = "<group>"; };
+		D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayHistoryVC.m; sourceTree = "<group>"; };
+		D2ED914322325BE600A021E4 /* MainPageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPageRequest.h; sourceTree = "<group>"; };
+		D2ED914422325BE600A021E4 /* MainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPageRequest.m; sourceTree = "<group>"; };
+		D2ED914622325C7300A021E4 /* RollingCircleScroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RollingCircleScroll.h; sourceTree = "<group>"; };
+		D2ED914722325C7300A021E4 /* RollingCircleScroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollingCircleScroll.m; sourceTree = "<group>"; };
 		E5512D7121F0662300DD8859 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E5512D7221F0662300DD8859 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E5512D7421F0671400DD8859 /* ChannelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelVC.h; sourceTree = "<group>"; };
@@ -1329,6 +1341,49 @@
 				D2ACDC97223119CE00E3DF62 /* UIViewController+HUD.m */,
 			);
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		D2ED91352232590600A021E4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D2ED9139223259D300A021E4 /* MainSearchVC.h */,
+				D2ED913A223259D300A021E4 /* MainSearchVC.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D2ED913C22325B5000A021E4 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D2ED913D22325B6E00A021E4 /* PlayHistoryVC.h */,
+				D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		D2ED914022325BBC00A021E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2ED914622325C7300A021E4 /* RollingCircleScroll.h */,
+				D2ED914722325C7300A021E4 /* RollingCircleScroll.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2ED914122325BC100A021E4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2ED914322325BE600A021E4 /* MainPageRequest.h */,
+				D2ED914422325BE600A021E4 /* MainPageRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D2ED914222325BCE00A021E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E5512D7A21F0688200DD8859 /* TZImagePickerController */ = {
@@ -2390,6 +2445,11 @@
 		E589702221F0623F008924E4 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				D2ED914222325BCE00A021E4 /* Model */,
+				D2ED914122325BC100A021E4 /* Network */,
+				D2ED914022325BBC00A021E4 /* Views */,
+				D2ED913C22325B5000A021E4 /* History */,
+				D2ED91352232590600A021E4 /* Search */,
 				E589702F21F065F5008924E4 /* MainPageVC.h */,
 				E589703021F065F5008924E4 /* MainPageVC.m */,
 				D2ACDCA122312A0F00E3DF62 /* MainPage.storyboard */,
@@ -2998,6 +3058,8 @@
 				E55133A121F06AAF00DD8859 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
 				E551339421F06AAF00DD8859 /* ZXVEventResultParser.m in Sources */,
 				E55133A521F06AAF00DD8859 /* ZXAI013x0x1xDecoder.m in Sources */,
+				D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */,
+				D2ED914822325C7300A021E4 /* RollingCircleScroll.m in Sources */,
 				E551340921F06AB000DD8859 /* ZXCodaBarWriter.m in Sources */,
 				E551304721F0688400DD8859 /* UIView+Layout.m in Sources */,
 				E551304C21F0688400DD8859 /* TZImagePickerController.m in Sources */,
@@ -3076,6 +3138,7 @@
 				E551344821F06AB000DD8859 /* ZXPDF417DetectionResult.m in Sources */,
 				E55133AB21F06AAF00DD8859 /* ZXCode39Reader.m in Sources */,
 				E589702821F06360008924E4 /* URLPathManager.m in Sources */,
+				D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */,
 				E551338B21F06AAF00DD8859 /* ZXAnyAIDecoder.m in Sources */,
 				E551319A21F0688500DD8859 /* XMEngine.m in Sources */,
 				E55133BE21F06AAF00DD8859 /* ZXEAN13Reader.m in Sources */,
@@ -3137,6 +3200,7 @@
 				E55133EF21F06AB000DD8859 /* ZXMultiFormatReader.m in Sources */,
 				E551317721F0688500DD8859 /* MWGridViewController.m in Sources */,
 				E55133BC21F06AAF00DD8859 /* ZXAztecState.m in Sources */,
+				D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */,
 				E551344E21F06AB000DD8859 /* ZXAI013x0xDecoder.m in Sources */,
 				E551347B21F0745600DD8859 /* UIDevice+Tool.m in Sources */,
 				E551342921F06AB000DD8859 /* ZXRSSExpandedDecodedNumeric.m in Sources */,

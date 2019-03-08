@@ -14,6 +14,8 @@
 
 @implementation ChannelVC
 
+INSTANCE_XIB_M(@"Channel", ChannelVC)
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

@@ -38,13 +38,13 @@
 
 + (NSString *)sendRequest:(RequestConfigBlock)configBlock onSuccess:(nullable SuccessBlock)successBlock onFailure:(nullable FailureBlock)failureBlock {
     NSString *requestId = [XMCenter sendRequest:configBlock onSuccess:^(id  _Nullable responseObject) {
-        if ([responseObject[@"resultCode"] boolValue]) {
+        if ([responseObject[@"success"] boolValue]) {
             successBlock(responseObject[@"data"]);
         } else {
-            NSNumber *errorCode = responseObject[@"resultCode"];
-            NSString *errorMsg = responseObject[@"resultMsg"];
+            NSNumber *errorCode = responseObject[@"code"];
+            NSString *errorMsg = responseObject[@"msg"];
             if (errorCode && errorMsg) {
-                NSError *error = [NSError errorWithDomain:responseObject[@"resultMsg"]?:NetFailureErrorMsg code:[errorCode integerValue] userInfo:nil];
+                NSError *error = [NSError errorWithDomain:responseObject[@"msg"]?:NetFailureErrorMsg code:[errorCode integerValue] userInfo:nil];
                 failureBlock(error);
             } else {
                 failureBlock([self networkError]);
@@ -64,11 +64,11 @@
         configBlock(request);
         request.requestSerializerType = kXMRequestSerializerJSON;
     } onSuccess:^(id  _Nullable responseObject) {
-        if ([responseObject[@"resultCode"] boolValue]) {
+        if ([responseObject[@"success"] boolValue]) {
             successBlock(responseObject[@"data"]);
         } else {
-            NSNumber *errorCode = responseObject[@"resultCode"];
-            NSString *errorMsg = responseObject[@"resultMsg"];
+            NSNumber *errorCode = responseObject[@"code"];
+            NSString *errorMsg = responseObject[@"msg"];
             if (errorCode && errorMsg) {
                 NSError *error = [NSError errorWithDomain:responseObject[@"resultMsg"]?:NetFailureErrorMsg code:[errorCode integerValue] userInfo:nil];
                 failureBlock(error);

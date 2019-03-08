@@ -22,6 +22,7 @@
     
     //setup nav
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UINavigationBar appearance] setBackgroundColor:COLORWITHRGBADIVIDE255(49, 49, 49, 1)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : [UIFont systemFontOfSize:14]} forState:UIControlStateNormal];
@@ -32,8 +33,13 @@
     [[UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil] setBackButtonBackgroundImage:[[UIImage imageNamed:@"nav_btn_back_light_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height/2, image.size.width-1, image.size.height/2-1, image.size.width)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [[UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil] setBackButtonBackgroundImage:[[UIImage imageNamed:@"nav_btn_back_light_press"] resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height/2, image.size.width-1, image.size.height/2-1, image.size.width)] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [ThemeTextColor colorWithAlphaComponent:0.5], NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
+    
+    [[UITabBar appearance] setBarTintColor:COLORWITHRGBADIVIDE255(49, 49, 49, 1)];
+    [UITabBar appearance].translucent = NO;
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(194, 154, 104, 1), NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(139, 54, 55, 1), NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
+    
+    
     //setup searchbar
     [[UISearchBar appearance] setBarTintColor:[UIColor themeBackgroundColor]];
     [[UISearchBar appearance] setBarStyle:UIBarStyleBlack];

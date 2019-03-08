@@ -35,16 +35,18 @@
 }
 
 + (void)showTimeOutCount {
+    
     UIImageView *launchImageView = [[AppDelegate getAppDelegate].window viewWithTag:19839];
-    __block atomic_int timeOutCount = 5;//5秒倒计时
+    __block atomic_int timeOutCount = 6;//5秒倒计时
     __block UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeBtn setTitle:[NSString stringWithFormat:@"%d",timeOutCount] forState:UIControlStateNormal];
+    closeBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [closeBtn setBackgroundColor:COLORWITHRGBADIVIDE255(244, 244, 244, 1)];
     [closeBtn setTitleColor:COLORWITHRGBADIVIDE255(68, 68, 68, 1) forState:UIControlStateNormal];
-    closeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 80, 80, 60, 60);
+    closeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 34, StatusBarHeight + 10, 24, 24);
     [closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
     closeBtn.enabled = NO;
-    closeBtn.layer.cornerRadius = 30.0;
+    closeBtn.layer.cornerRadius = 12.0;
     closeBtn.layer.masksToBounds = YES;
     [launchImageView addSubview:closeBtn];
     
@@ -69,14 +71,14 @@
     dispatch_resume(timer);
 }
 
-- (void)closeAction {
++ (void)closeAction {
     UIImageView *launchImageView = [[AppDelegate getAppDelegate].window viewWithTag:19839];
     [launchImageView removeFromSuperview];
     launchImageView = nil;
 }
 
 //点击启动图
-- (void)tapLaunchAction {
++ (void)tapLaunchAction {
     
 }
 

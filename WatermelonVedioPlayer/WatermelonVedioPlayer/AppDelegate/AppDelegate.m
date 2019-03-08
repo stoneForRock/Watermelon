@@ -53,6 +53,9 @@
         [UniqueIdentificationTool saveUIID];
     }
     
+    //配置网络请求信息
+    [BaseRequest setupConfig];
+    
     //首次进入添加网络状态监听
     [[ReachabilityManager sharedManager] startMonitoring];
 }
@@ -64,8 +67,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.tintColor = ThemeTextColor;
     [self.window makeKeyAndVisible];
+    
+    [LOGIN_MANAGER enterLoginWithGuideVC:NO];
     [LaunchManager didFinishLaunching];
-    [LOGIN_MANAGER enterLoginWithGuideVC:!USER_Config.user];
 }
 
 //配置app
@@ -75,10 +79,10 @@
 
 - (void)setupMainViewControllers {
     NSArray *tabbarItemInfos = @[
-                                 @{@"title":@"首页",@"selectedImage":@"main_bar_mainpage_press",@"image":@"main_bar_mainpage_unpress"},
-                                 @{@"title":@"频道",@"selectedImage":@"main_bar_channel_press",@"image":@"main_bar_channel_unpress"},
-                                 @{@"title":@"发现",@"selectedImage":@"main_bar_discover_press",@"image":@"main_bar_discover_unpress"},
-                                 @{@"title":@"我的",@"selectedImage":@"main_bar_center_press",@"image":@"main_bar_center_unpress"}
+                                 @{@"title":@"首页",@"selectedImage":@"main_bar_mainpage_press",@"image":@"main_bar_mainpage_nopress"},
+                                 @{@"title":@"频道",@"selectedImage":@"main_bar_channel_press",@"image":@"main_bar_channel_nopress"},
+                                 @{@"title":@"发现",@"selectedImage":@"main_bar_discover_press",@"image":@"main_bar_discover_nopress"},
+                                 @{@"title":@"我的",@"selectedImage":@"main_bar_center_press",@"image":@"main_bar_center_nopress"}
                                  ];
     NSMutableArray *tabbarNavs = [NSMutableArray arrayWithCapacity:0];
     
@@ -105,9 +109,12 @@
         UIViewController *tabbarVC = tabbarVCs[i];
         tabbarVC.tabBarItem = [[UITabBarItem alloc] init];
         tabbarVC.tabBarItem.title = tabbarItemInfoDic[@"title"];
-        [tabbarVC.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -5)];
-        tabbarVC.tabBarItem.selectedImage = [[UIImage imageNamed:tabbarItemInfoDic[@"selectedImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        tabbarVC.tabBarItem.image = [[UIImage imageNamed:tabbarItemInfoDic[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        UIImage *selectedImage = [UIImage imageNamed:tabbarItemInfoDic[@"selectedImage"]];
+        UIImage *image = [UIImage imageNamed:tabbarItemInfoDic[@"image"]];
+        
+        tabbarVC.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        tabbarVC.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UINavigationController *tabbarRootNav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
         [tabbarNavs addObject:tabbarRootNav];
     }

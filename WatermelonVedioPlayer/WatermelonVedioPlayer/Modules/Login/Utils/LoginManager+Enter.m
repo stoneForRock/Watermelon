@@ -42,7 +42,7 @@
                 [APPDelegate.window hideHUDView];
                 if (success) {
                     //获取到游客token
-                    NSString *visitorToken = responseObject[@"data"];
+                    NSString *visitorToken = responseObject;
                     USER_Config.user.visitorToken = visitorToken;
                     [USER_Config saveConfig];
                     [LaunchManager showTimeOutCount];

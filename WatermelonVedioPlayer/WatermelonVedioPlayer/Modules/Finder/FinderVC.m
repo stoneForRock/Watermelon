@@ -14,6 +14,8 @@
 
 @implementation FinderVC
 
+INSTANCE_XIB_M(@"Finder", FinderVC)
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

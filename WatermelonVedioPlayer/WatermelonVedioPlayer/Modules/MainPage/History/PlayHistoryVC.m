@@ -1,29 +1,24 @@
 //
-//  MineVC.m
+//  PlayHistoryVC.m
 //  WatermelonVedioPlayer
 //
-//  Created by shichuang on 2019/1/17.
-//  Copyright © 2019 VedioPlayer. All rights reserved.
+//  Created by dachen on 2019/3/8.
+//  Copyright © 2019年 VedioPlayer. All rights reserved.
 //
 
-#import "MineVC.h"
+#import "PlayHistoryVC.h"
 
-@interface MineVC ()
+@interface PlayHistoryVC ()
 
 @end
 
-@implementation MineVC
+@implementation PlayHistoryVC
 
-INSTANCE_XIB_M(@"Mine", MineVC)
+INSTANCE_XIB_M(@"MainPage", PlayHistoryVC)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
