@@ -9,8 +9,9 @@
 #import "MainPageVC.h"
 #import "MainSearchVC.h"
 #import "PlayHistoryVC.h"
+#import "RollingCircleScroll.h"
 
-@interface MainPageVC ()
+@interface MainPageVC ()<RollingCircleScrollDelegate>
 
 @property (nonatomic, strong) UIView *navBarView;
 
@@ -22,8 +23,28 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initDataInfo];
+    [self initUI];
+    [self request];
+}
+
+- (void)initUI {
     [self initNavBarView];
+    [self initTopScroll];
+}
+
+- (void)initDataInfo {
+    
+}
+
+- (void)request {
+    
+}
+
+- (void)initTopScroll {
+    RollingCircleScroll *circleScroll = [[RollingCircleScroll alloc] initWithFrame:CGRectMake(0, StatusBarHeight + NavigationBarHeight, self.view.frame.size.width, 150) withDataSources:@[@"",@"",@"",@""]];
+    circleScroll.delegate = self;
+    [self.view addSubview:circleScroll];
 }
 
 - (void)initNavBarView {

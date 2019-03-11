@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface RollingCircleScroll : UIView
 
+@property (nonatomic, assign) NSInteger scrollInterval;
+@property (nonatomic, assign) id<RollingCircleScrollDelegate> delegate;
+
+- (instancetype)initWithFrame:(CGRect)frame withDataSources:(NSArray *)dataSources;
+
 @end
 
 NS_ASSUME_NONNULL_END
