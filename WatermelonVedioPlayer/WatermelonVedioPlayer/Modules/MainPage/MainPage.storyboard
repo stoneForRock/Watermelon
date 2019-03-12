@@ -17,13 +17,33 @@
                     <view key="view" contentMode="scaleToFill" id="Gdd-o1-cBe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sZr-1t-hcq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ji2-pr-HQX" id="aaP-kH-wdB"/>
+                                    <outlet property="delegate" destination="ji2-pr-HQX" id="acR-BI-R0y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sZr-1t-hcq" firstAttribute="top" secondItem="Gdd-o1-cBe" secondAttribute="topMargin" constant="-20" id="6F5-di-d5f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sZr-1t-hcq" secondAttribute="trailing" constant="-16" id="Hi6-Lp-Giw"/>
+                            <constraint firstItem="sZr-1t-hcq" firstAttribute="leading" secondItem="Q4Z-ok-dhX" secondAttribute="leading" id="o4x-K0-LjI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sZr-1t-hcq" secondAttribute="bottom" id="t45-Ie-3fo"/>
+                            <constraint firstItem="sZr-1t-hcq" firstAttribute="trailing" secondItem="Q4Z-ok-dhX" secondAttribute="trailing" id="zlm-t8-vCi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q4Z-ok-dhX"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sZr-1t-hcq" id="aE1-dO-6Ke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YM7-pe-n6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="-40"/>
+            <point key="canvasLocation" x="-476" y="-40.029985007496258"/>
         </scene>
         <!--Main SearchVC-->
         <scene sceneID="NX2-wI-8Ty">

@@ -7,7 +7,8 @@
 //
 
 #import "RollingCircleScroll.h"
-//https://www.jianshu.com/p/cc2eb8e058e5
+#import <SDWebImage/UIImageView+WebCache.h>
+
 @interface RollingCircleScroll () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -15,7 +16,7 @@
 
 @property (nonatomic, strong) NSMutableArray *scrollList;//数据源
 @property (nonatomic, assign) NSInteger currentPage;//当前页
-
+ 
 @property (nonatomic, strong) NSTimer *scrollTimer;
 
 @end
@@ -26,11 +27,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        CGFloat width = frame.size.width - 60;
+        
         [self addSubview:self.scrollView];
-        self.scrollView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height - 20);
+        self.scrollView.frame = CGRectMake(30, 0, width + 10, frame.size.height - 20);
         
         [self addSubview:self.pageControl];
-        self.pageControl.frame = CGRectMake(0, CGRectGetMaxY(self.scrollView.frame), frame.size.width, 20);
+        self.pageControl.frame = CGRectMake(0, CGRectGetMaxY(self.scrollView.frame) , frame.size.width, 20);
+        self.pageControl.numberOfPages = dataSources.count;
         
         if (dataSources.count > 0) {
             self.scrollList = [NSMutableArray arrayWithArray:dataSources];
@@ -40,22 +44,24 @@
             }
         }
         
-        CGFloat width = frame.size.width - 60;
         for (int i = 0; i < self.scrollList.count; i ++) {
+            NSDictionary *adInfo = self.scrollList[i];
             UIImageView *imageView = [[UIImageView alloc] init];
-            imageView.frame = CGRectMake(width * i - width - 20, 10, width, frame.size.height - 40);
-            imageView.image = [UIImage imageNamed:@"LaunchImage"];
+            imageView.frame = CGRectMake((width + 10) * i, 10, width, frame.size.height - 40);
+            [imageView sd_setImageWithURL:[NSURL URLWithString:adInfo[@"thumbnail"]] placeholderImage:[UIImage imageNamed:@"LaunchImage"]];
             imageView.contentMode = UIViewContentModeScaleAspectFill;
             imageView.layer.masksToBounds = YES;
+            imageView.layer.cornerRadius = 6.0;
             imageView.userInteractionEnabled = YES;
+            imageView.tag = 188 + i;
             [self.scrollView addSubview:imageView];
             
-            imageView.layer.borderColor = [UIColor redColor].CGColor;
-            imageView.layer.borderWidth = 1.0;
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAd:)];
+            [imageView addGestureRecognizer:tapGesture];
         }
         
         self.scrollView.contentSize = CGSizeMake(self.scrollList.count * frame.size.width, frame.size.height - 20);
-        self.scrollView.contentOffset = CGPointMake(frame.size.width, 0);
+        self.scrollView.contentOffset = CGPointMake(width + 10, 0);
         
         [self startAutoScroll];
     }
@@ -65,13 +71,13 @@
 - (void)makeFinishScrolling {
     CGFloat width = self.scrollView.frame.size.width;
     NSInteger currentPage = (self.scrollView.contentOffset.x + width/2.0)/width;
-    
+
     if (currentPage == self.scrollList.count-1) {
         [self.scrollView setContentOffset:CGPointMake(width, 0) animated:NO];
         self.pageControl.currentPage = 0;
     } else if (currentPage == 0) {
         self.pageControl.currentPage = self.scrollList.count - 2;
-        
+
         [self.scrollView setContentOffset:CGPointMake(width * (self.scrollList.count-2), 0) animated:NO];
     } else {
         self.pageControl.currentPage = currentPage-1 ;
@@ -94,6 +100,14 @@
 - (void)stopAutoScroll {
     [self.scrollTimer invalidate];
     self.scrollTimer = nil;
+}
+
+- (void)tapAd:(UIGestureRecognizer *)recognizer {
+    UIView *tapView = recognizer.view;
+    NSDictionary *tapAdInfo = self.scrollList[tapView.tag - 188];
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(rollingCircleScrollClickPage:)]) {
+        [self.delegate rollingCircleScrollClickPage:tapAdInfo];
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -121,6 +135,9 @@
         _scrollView = [[UIScrollView alloc] init];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
+        _scrollView.clipsToBounds = NO;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
     }
     return _scrollView;
 }

@@ -10,9 +10,19 @@
 #import "MainSearchVC.h"
 #import "PlayHistoryVC.h"
 #import "RollingCircleScroll.h"
+#import "MainPageVC+Request.h"
+#import "MainPageVC+Push.h"
 
-@interface MainPageVC ()<RollingCircleScrollDelegate>
+#import "MainNewestMovieCell.h"
+#import "MoiveClassCell.h"
 
+#define MoiveClassCellIdentifier  @"MoiveClassCell"
+#define MainNewestMovieCellIdentifier  @"MainNewestMovieCell"
+
+@interface MainPageVC ()<RollingCircleScrollDelegate, UITableViewDelegate, UITableViewDataSource, MoiveClassCellDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) RollingCircleScroll *circleScroll;
 @property (nonatomic, strong) UIView *navBarView;
 
 @end
@@ -29,22 +39,51 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)initUI {
+    self.view.backgroundColor = COLORWITHRGBADIVIDE255(29, 29, 29, 1);
     [self initNavBarView];
-    [self initTopScroll];
+    [self createTableHeaderView];
+    [self regiserTableCell];
 }
 
 - (void)initDataInfo {
-    
+    self.tableDataSource = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                            @"",@"moiveClass",
+                            @"",@"newestMoive",
+                            @"",@"重磅热播-2-换一批",
+                            @"",@"猜你喜欢-1-no",
+                            @"",@"广告1",
+                            nil];
 }
 
 - (void)request {
-    
+    [self lunchRequest];
 }
 
-- (void)initTopScroll {
-    RollingCircleScroll *circleScroll = [[RollingCircleScroll alloc] initWithFrame:CGRectMake(0, StatusBarHeight + NavigationBarHeight, self.view.frame.size.width, 150) withDataSources:@[@"",@"",@"",@""]];
-    circleScroll.delegate = self;
-    [self.view addSubview:circleScroll];
+- (void)createTableHeaderView {
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
+    self.tableView.tableHeaderView = tableHeaderView;
+    
+    self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
+- (void)initTopScrollWithData:(NSArray *)ads {
+    if (self.circleScroll) {
+        [self.circleScroll removeFromSuperview];
+        self.circleScroll = nil;
+    }
+    self.circleScroll = [[RollingCircleScroll alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250) withDataSources:ads];
+    self.circleScroll.delegate = self;
+    [self.tableView.tableHeaderView addSubview:self.circleScroll];
+}
+
+- (void)refreshMoiveClassWithClass:(NSArray *)moiveClass {
+    [self.tableDataSource setObject:moiveClass forKey:@"moiveClass"];
+    [self.tableView reloadData];
+}
+
+- (void)refreshNewestMoiveWithList:(NSArray *)newestList {
+    [self.tableDataSource setObject:newestList forKey:@"newestMoive"];
+    [self.tableView reloadData];
 }
 
 - (void)initNavBarView {
@@ -90,6 +129,11 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [self.navBarView addSubview:scanBtn];
 }
 
+- (void)regiserTableCell {
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MoiveClassCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MoiveClassCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainNewestMovieCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MainNewestMovieCellIdentifier];
+}
+
 #pragma mark - btnAction
 
 //搜索
@@ -115,6 +159,66 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     historyVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:historyVC animated:YES];
 }
+
+//点击滚动广告
+- (void)rollingCircleScrollClickPage:(id)pageInfo {
+    NSString *linkAddr = pageInfo[@"linkAddr"]?:@"";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkAddr] options:@{} completionHandler:nil];
+}
+
+#pragma mark - cellDelegate
+- (void)clickMoiveClass:(NSDictionary *)classInfo {
+    [self pushToMoiveClassListVCWithClassList:self.tableDataSource[@"moiveClass"] currentClassInfo:classInfo];
+}
+
+#pragma mark - tableViewDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        //分类
+        MoiveClassCell *classCell = [tableView dequeueReusableCellWithIdentifier:MoiveClassCellIdentifier];
+        id cellData = self.tableDataSource[@"moiveClass"];
+        if (cellData && [cellData isKindOfClass:[NSArray class]]) {
+            classCell.cellDatas = cellData;
+        }
+        
+        return classCell;
+    } else if (indexPath.row == 1) {
+        MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
+        id cellData = self.tableDataSource[@"newestMoive"];
+        if (cellData && [cellData isKindOfClass:[NSArray class]]) {
+            newestCell.cellDataList = cellData;
+        }
+        return newestCell;
+    } else if (indexPath.row == 2) {
+        
+    } else if (indexPath.row == 3) {
+        
+    } else if (indexPath.row == 4) {
+        
+    } else if (indexPath.row == 5) {
+        
+    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

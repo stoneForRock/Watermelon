@@ -25,4 +25,6 @@
 @property (nonatomic, copy) NSString<Optional> *serial;
 @property (nonatomic, copy) NSString<Optional> *status;
 
+- (NSString *)getRequestToken;
+
 @end

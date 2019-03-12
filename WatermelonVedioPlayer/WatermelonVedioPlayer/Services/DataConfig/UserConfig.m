@@ -7,6 +7,7 @@
 //
 
 #import "UserConfig.h"
+#import "BaseRequest.h"
 
 #define kConfigUser @"config_user"
 
@@ -35,6 +36,8 @@
     if (user) {
         self.user = [NSKeyedUnarchiver unarchiveObjectWithData:user];
         self.firstProtectedDataAvailable = YES;
+    } else {
+        self.user = [[APPUser alloc] init];
     }
 }
 
@@ -48,8 +51,7 @@
     if (self.user != nil) {
         NSData *user = [NSKeyedArchiver archivedDataWithRootObject:self.user];
         [[NSUserDefaults standardUserDefaults] setObject:user forKey:kConfigUser];
-    }
-    else {
+    } else {
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:kConfigUser];
     }
     BOOL result = [[NSUserDefaults standardUserDefaults] synchronize];

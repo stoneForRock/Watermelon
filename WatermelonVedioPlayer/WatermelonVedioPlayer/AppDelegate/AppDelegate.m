@@ -69,7 +69,7 @@
     [self.window makeKeyAndVisible];
     
     [LOGIN_MANAGER enterLoginWithGuideVC:NO];
-    [LaunchManager didFinishLaunching];
+    [[LaunchManager sharedLaunchManager] didFinishLaunching];
 }
 
 //配置app

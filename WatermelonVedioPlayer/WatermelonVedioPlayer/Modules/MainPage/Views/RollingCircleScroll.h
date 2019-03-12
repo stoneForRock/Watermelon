@@ -11,7 +11,7 @@
 @protocol RollingCircleScrollDelegate <NSObject>
 @optional
 
-- (void)rollingCircleScrollClickPageModel:(id)pageModel;
+- (void)rollingCircleScrollClickPage:(id)pageInfo;
 
 @end
 

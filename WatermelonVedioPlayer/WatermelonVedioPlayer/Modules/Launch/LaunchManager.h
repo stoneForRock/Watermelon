@@ -10,7 +10,8 @@
 
 @interface LaunchManager : NSObject
 
-+ (void)didFinishLaunching;
-+ (void)showTimeOutCount;
++ (instancetype)sharedLaunchManager;
+- (void)didFinishLaunching;
+- (void)showTimeOutCountWithAds:(NSArray *)ads;
 
 @end

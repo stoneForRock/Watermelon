@@ -12,6 +12,17 @@
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
 		D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2798130222F6C6F0036D408 /* ForgetPswVC.m */; };
 		D2798133222F6CA50036D408 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2798132222F6CA50036D408 /* Login.storyboard */; };
+		D2A3AA232237AC8D00B6B7A3 /* MainPageVC+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */; };
+		D2A3AA292237AF8B00B6B7A3 /* MoiveClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */; };
+		D2A3AA2C2237B6E100B6B7A3 /* MoiveClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA2B2237B6E100B6B7A3 /* MoiveClassCell.m */; };
+		D2A3AA302237D76F00B6B7A3 /* MoivesDetialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA2F2237D76F00B6B7A3 /* MoivesDetialVC.m */; };
+		D2A3AA332237D78700B6B7A3 /* MoivesClassListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA322237D78700B6B7A3 /* MoivesClassListVC.m */; };
+		D2A3AA352237D79400B6B7A3 /* Moives.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A3AA342237D79400B6B7A3 /* Moives.storyboard */; };
+		D2A3AA3C2237D81500B6B7A3 /* MoivesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA3B2237D81500B6B7A3 /* MoivesModel.m */; };
+		D2A3AA3F2237D82500B6B7A3 /* MoivesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA3E2237D82500B6B7A3 /* MoivesRequest.m */; };
+		D2A3AA422237DF6500B6B7A3 /* MainPageVC+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA412237DF6500B6B7A3 /* MainPageVC+Push.m */; };
+		D2A3AA462237E33600B6B7A3 /* MainNewestMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA442237E33600B6B7A3 /* MainNewestMovieCell.m */; };
+		D2A3AA472237E33600B6B7A3 /* MainNewestMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A3AA452237E33600B6B7A3 /* MainNewestMovieCell.xib */; };
 		D2ACDC922231199D00E3DF62 /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ACDC912231199D00E3DF62 /* HUDHelper.m */; };
 		D2ACDC95223119B600E3DF62 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ACDC94223119B600E3DF62 /* UIView+HUD.m */; };
 		D2ACDC98223119CE00E3DF62 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ACDC97223119CE00E3DF62 /* UIViewController+HUD.m */; };
@@ -459,6 +470,25 @@
 		D279812F222F6C6F0036D408 /* ForgetPswVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPswVC.h; sourceTree = "<group>"; };
 		D2798130222F6C6F0036D408 /* ForgetPswVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPswVC.m; sourceTree = "<group>"; };
 		D2798132222F6CA50036D408 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D2A3AA212237AC8D00B6B7A3 /* MainPageVC+Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainPageVC+Request.h"; sourceTree = "<group>"; };
+		D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainPageVC+Request.m"; sourceTree = "<group>"; };
+		D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoiveClassCell.xib; sourceTree = "<group>"; };
+		D2A3AA2A2237B6E000B6B7A3 /* MoiveClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoiveClassCell.h; sourceTree = "<group>"; };
+		D2A3AA2B2237B6E100B6B7A3 /* MoiveClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoiveClassCell.m; sourceTree = "<group>"; };
+		D2A3AA2E2237D76F00B6B7A3 /* MoivesDetialVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoivesDetialVC.h; sourceTree = "<group>"; };
+		D2A3AA2F2237D76F00B6B7A3 /* MoivesDetialVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoivesDetialVC.m; sourceTree = "<group>"; };
+		D2A3AA312237D78700B6B7A3 /* MoivesClassListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoivesClassListVC.h; sourceTree = "<group>"; };
+		D2A3AA322237D78700B6B7A3 /* MoivesClassListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoivesClassListVC.m; sourceTree = "<group>"; };
+		D2A3AA342237D79400B6B7A3 /* Moives.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Moives.storyboard; sourceTree = "<group>"; };
+		D2A3AA3A2237D81500B6B7A3 /* MoivesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoivesModel.h; sourceTree = "<group>"; };
+		D2A3AA3B2237D81500B6B7A3 /* MoivesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoivesModel.m; sourceTree = "<group>"; };
+		D2A3AA3D2237D82500B6B7A3 /* MoivesRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoivesRequest.h; sourceTree = "<group>"; };
+		D2A3AA3E2237D82500B6B7A3 /* MoivesRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoivesRequest.m; sourceTree = "<group>"; };
+		D2A3AA402237DF6500B6B7A3 /* MainPageVC+Push.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainPageVC+Push.h"; sourceTree = "<group>"; };
+		D2A3AA412237DF6500B6B7A3 /* MainPageVC+Push.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainPageVC+Push.m"; sourceTree = "<group>"; };
+		D2A3AA432237E33600B6B7A3 /* MainNewestMovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNewestMovieCell.h; sourceTree = "<group>"; };
+		D2A3AA442237E33600B6B7A3 /* MainNewestMovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNewestMovieCell.m; sourceTree = "<group>"; };
+		D2A3AA452237E33600B6B7A3 /* MainNewestMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNewestMovieCell.xib; sourceTree = "<group>"; };
 		D2ACDC8E2230F33000E3DF62 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
 		D2ACDC902231199D00E3DF62 /* HUDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		D2ACDC912231199D00E3DF62 /* HUDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
@@ -1328,6 +1358,67 @@
 				6CFB3A77A34150B607236DFF /* libPods-WatermelonVedioPlayerUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2A3AA242237AF6600B6B7A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2A3AA2A2237B6E000B6B7A3 /* MoiveClassCell.h */,
+				D2A3AA2B2237B6E100B6B7A3 /* MoiveClassCell.m */,
+				D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */,
+				D2A3AA432237E33600B6B7A3 /* MainNewestMovieCell.h */,
+				D2A3AA442237E33600B6B7A3 /* MainNewestMovieCell.m */,
+				D2A3AA452237E33600B6B7A3 /* MainNewestMovieCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2A3AA2D2237D75000B6B7A3 /* Moives */ = {
+			isa = PBXGroup;
+			children = (
+				D2A3AA392237D7B000B6B7A3 /* Cell */,
+				D2A3AA382237D7A700B6B7A3 /* Network */,
+				D2A3AA372237D7A100B6B7A3 /* Views */,
+				D2A3AA362237D79800B6B7A3 /* Model */,
+				D2A3AA2E2237D76F00B6B7A3 /* MoivesDetialVC.h */,
+				D2A3AA2F2237D76F00B6B7A3 /* MoivesDetialVC.m */,
+				D2A3AA312237D78700B6B7A3 /* MoivesClassListVC.h */,
+				D2A3AA322237D78700B6B7A3 /* MoivesClassListVC.m */,
+				D2A3AA342237D79400B6B7A3 /* Moives.storyboard */,
+			);
+			path = Moives;
+			sourceTree = "<group>";
+		};
+		D2A3AA362237D79800B6B7A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2A3AA3A2237D81500B6B7A3 /* MoivesModel.h */,
+				D2A3AA3B2237D81500B6B7A3 /* MoivesModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2A3AA372237D7A100B6B7A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2A3AA382237D7A700B6B7A3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2A3AA3D2237D82500B6B7A3 /* MoivesRequest.h */,
+				D2A3AA3E2237D82500B6B7A3 /* MoivesRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D2A3AA392237D7B000B6B7A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D2ACDC8F2231198400E3DF62 /* HUD */ = {
@@ -2445,6 +2536,7 @@
 		E589702221F0623F008924E4 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				D2A3AA242237AF6600B6B7A3 /* Cell */,
 				D2ED914222325BCE00A021E4 /* Model */,
 				D2ED914122325BC100A021E4 /* Network */,
 				D2ED914022325BBC00A021E4 /* Views */,
@@ -2452,6 +2544,10 @@
 				D2ED91352232590600A021E4 /* Search */,
 				E589702F21F065F5008924E4 /* MainPageVC.h */,
 				E589703021F065F5008924E4 /* MainPageVC.m */,
+				D2A3AA402237DF6500B6B7A3 /* MainPageVC+Push.h */,
+				D2A3AA412237DF6500B6B7A3 /* MainPageVC+Push.m */,
+				D2A3AA212237AC8D00B6B7A3 /* MainPageVC+Request.h */,
+				D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */,
 				D2ACDCA122312A0F00E3DF62 /* MainPage.storyboard */,
 			);
 			path = MainPage;
@@ -2508,6 +2604,7 @@
 		E5D5E37621E621BB00399261 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D2A3AA2D2237D75000B6B7A3 /* Moives */,
 				E55134BE21F1DC6100DD8859 /* Guide */,
 				E55134BD21F1DC5800DD8859 /* Launch */,
 				E55134B121F085BC00DD8859 /* Login */,
@@ -2816,11 +2913,13 @@
 				E551319021F0688500DD8859 /* ImageSelectedSmallOff.png in Resources */,
 				E551319521F0688500DD8859 /* ImageSelectedSmallOn@3x.png in Resources */,
 				D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */,
+				D2A3AA292237AF8B00B6B7A3 /* MoiveClassCell.xib in Resources */,
 				D2ACDCA222312A0F00E3DF62 /* MainPage.storyboard in Resources */,
 				E551318C21F0688500DD8859 /* PlayButtonOverlayLarge@2x.png in Resources */,
 				E5DC5A0821E4D1920018F12A /* LaunchScreen.storyboard in Resources */,
 				E551319621F0688500DD8859 /* PlayButtonOverlayLarge.png in Resources */,
 				E551318A21F0688500DD8859 /* UIBarButtonItemArrowRight@3x.png in Resources */,
+				D2A3AA352237D79400B6B7A3 /* Moives.storyboard in Resources */,
 				E551318521F0688500DD8859 /* ImageError@3x.png in Resources */,
 				E551318821F0688500DD8859 /* VideoOverlay@3x.png in Resources */,
 				E551319921F0688500DD8859 /* ImageSelectedSmallOn@2x.png in Resources */,
@@ -2836,6 +2935,7 @@
 				E551317C21F0688500DD8859 /* UIBarButtonItemGrid.png in Resources */,
 				D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */,
 				E551318921F0688500DD8859 /* ImageError.png in Resources */,
+				D2A3AA472237E33600B6B7A3 /* MainNewestMovieCell.xib in Resources */,
 				D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */,
 				E551318E21F0688500DD8859 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
 				E551317E21F0688500DD8859 /* VideoOverlay@2x.png in Resources */,
@@ -2987,6 +3087,7 @@
 				E551314121F0688500DD8859 /* IQUIView+Hierarchy.m in Sources */,
 				E551340521F06AB000DD8859 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				E551343321F06AB000DD8859 /* ZXByQuadrantReader.m in Sources */,
+				D2A3AA462237E33600B6B7A3 /* MainNewestMovieCell.m in Sources */,
 				E551337F21F06AAF00DD8859 /* ZXCode93Reader.m in Sources */,
 				E551342621F06AB000DD8859 /* ZXWifiParsedResult.m in Sources */,
 				E551341821F06AB000DD8859 /* ZXPDF417Reader.m in Sources */,
@@ -3004,6 +3105,7 @@
 				E551342F21F06AB000DD8859 /* ZXDecoderResult.m in Sources */,
 				E551340B21F06AB000DD8859 /* ZXDataMatrixWriter.m in Sources */,
 				E551313C21F0688500DD8859 /* IQKeyboardManager.m in Sources */,
+				D2A3AA332237D78700B6B7A3 /* MoivesClassListVC.m in Sources */,
 				E551340721F06AB000DD8859 /* ZXMultiFormatOneDReader.m in Sources */,
 				E551305121F0688400DD8859 /* MJPhotoToolbar.m in Sources */,
 				E551313E21F0688500DD8859 /* IQUIWindow+Hierarchy.m in Sources */,
@@ -3167,7 +3269,9 @@
 				E551315F21F0688500DD8859 /* QNAssessment.m in Sources */,
 				E551304421F0688400DD8859 /* TZAssetCell.m in Sources */,
 				E551337C21F06AAF00DD8859 /* ZXDataMatrixEdifactEncoder.m in Sources */,
+				D2A3AA3C2237D81500B6B7A3 /* MoivesModel.m in Sources */,
 				E551344D21F06AB000DD8859 /* ZXISBNParsedResult.m in Sources */,
+				D2A3AA422237DF6500B6B7A3 /* MainPageVC+Push.m in Sources */,
 				E55133FB21F06AB000DD8859 /* ZXDataMatrixBase256Encoder.m in Sources */,
 				E551344321F06AB000DD8859 /* ZXEAN13Writer.m in Sources */,
 				E551337E21F06AAF00DD8859 /* ZXDataMatrixErrorCorrection.m in Sources */,
@@ -3214,9 +3318,11 @@
 				E551314E21F0688500DD8859 /* QNCrc32.m in Sources */,
 				D2ACDC922231199D00E3DF62 /* HUDHelper.m in Sources */,
 				E551316B21F0688500DD8859 /* QNDnspodFree.m in Sources */,
+				D2A3AA2C2237B6E100B6B7A3 /* MoiveClassCell.m in Sources */,
 				E551315021F0688500DD8859 /* QNFile.m in Sources */,
 				E551314221F0688500DD8859 /* IQUIViewController+Additions.m in Sources */,
 				E551343E21F06AB000DD8859 /* ZXDataMatrixHighLevelEncoder.m in Sources */,
+				D2A3AA302237D76F00B6B7A3 /* MoivesDetialVC.m in Sources */,
 				E55134BC21F1DC3F00DD8859 /* APPTabbarContorller.m in Sources */,
 				E551315B21F0688500DD8859 /* QNDes.m in Sources */,
 				E551341E21F06AB000DD8859 /* ZXQRCodeFinderPattern.m in Sources */,
@@ -3253,11 +3359,13 @@
 				E55133E221F06AB000DD8859 /* ZXBizcardResultParser.m in Sources */,
 				E551339F21F06AAF00DD8859 /* ZXByteMatrix.m in Sources */,
 				E55134B921F1CC4000DD8859 /* UploadImageManager.m in Sources */,
+				D2A3AA3F2237D82500B6B7A3 /* MoivesRequest.m in Sources */,
 				E551316F21F0688500DD8859 /* RMPageControl.m in Sources */,
 				E551344021F06AB000DD8859 /* ZXPDF417Codeword.m in Sources */,
 				E551304921F0688400DD8859 /* TZImageManager.m in Sources */,
 				E551316521F0688500DD8859 /* QNHosts.m in Sources */,
 				E551304A21F0688400DD8859 /* TZPhotoPickerController.m in Sources */,
+				D2A3AA232237AC8D00B6B7A3 /* MainPageVC+Request.m in Sources */,
 				E551341521F06AB000DD8859 /* ZXQRCodeMultiReader.m in Sources */,
 				E551315D21F0688500DD8859 /* QNGetAddrInfo.m in Sources */,
 				E551338021F06AAF00DD8859 /* ZXEANManufacturerOrgSupport.m in Sources */,
@@ -3472,6 +3580,7 @@
 				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 659VY6XY77;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WatermelonVedioPlayer/ThirdParts/AMapSDK",
@@ -3501,6 +3610,7 @@
 				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 659VY6XY77;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WatermelonVedioPlayer/ThirdParts/AMapSDK",

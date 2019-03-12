@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "URLPathManager.h"
 #import "XMNetworking.h"
+#import "UserConfig.h"
 
 #define NetFailureErrorMsg @"网络异常，请稍后再试！"
 
@@ -24,6 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setupConfig;
 + (void)setServerUrl:(NSString *)serverUrl;
 + (void)setOpenToken:(NSString *)token;
+
++ (NSString *)sendGETRequest:(NSString *)url
+                  parameters:(NSDictionary *)parameters
+                    callBack:(RequestFinishBlock)callBack;
+
++ (NSString *)sendPOSTRequest:(NSString *)url
+                   parameters:(NSDictionary *)parameters
+                     callBack:(RequestFinishBlock)callBack;
 
 + (NSString *)sendRequest:(RequestConfigBlock)configBlock
                 onSuccess:(nullable SuccessBlock)successBlock

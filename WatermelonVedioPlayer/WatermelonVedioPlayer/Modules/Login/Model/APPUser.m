@@ -68,5 +68,15 @@
     return self;
 }
 
+- (NSString *)getRequestToken {
+    if (self.token && self.token.length > 0) {
+        return self.token;
+    } else if (self.visitorToken && self.visitorToken.length > 0) {
+        return self.visitorToken;
+    } else {
+        return @"";
+    }
+}
+
 
 @end

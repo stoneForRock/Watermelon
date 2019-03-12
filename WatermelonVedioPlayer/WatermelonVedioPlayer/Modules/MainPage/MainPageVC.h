@@ -10,6 +10,12 @@
 
 @interface MainPageVC : UIViewController
 
+@property (nonatomic, strong) NSMutableDictionary *tableDataSource;
+
 INSTANCE_XIB_H
+
+- (void)initTopScrollWithData:(NSArray *)ads;
+- (void)refreshMoiveClassWithClass:(NSArray *)moiveClass;
+- (void)refreshNewestMoiveWithList:(NSArray *)newestList;
 
 @end
