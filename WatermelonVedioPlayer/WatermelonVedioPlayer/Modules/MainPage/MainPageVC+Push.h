@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)pushToMoiveClassListVCWithClassList:(NSArray *)classList currentClassInfo:(NSDictionary *)currentClassInfo;
 
+- (void)pushToMoiveDetialVCWithMovieInfo:(NSDictionary *)movieInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

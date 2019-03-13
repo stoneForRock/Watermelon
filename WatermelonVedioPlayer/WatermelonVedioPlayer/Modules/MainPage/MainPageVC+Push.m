@@ -8,6 +8,7 @@
 
 #import "MainPageVC+Push.h"
 #import "MoivesClassListVC.h"
+#import "MoivesDetialVC.h"
 
 @implementation MainPageVC (Push)
 
@@ -15,6 +16,14 @@
     MoivesClassListVC *classListVC = [MoivesClassListVC instanceFromXib];
     classListVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:classListVC animated:YES];
+}
+
+- (void)pushToMoiveDetialVCWithMovieInfo:(NSDictionary *)movieInfo {
+    MoivesModel *movieModel = [[MoivesModel alloc] initWithDictionary:movieInfo error:nil];
+    MoivesDetialVC *moivesDetialVC = [MoivesDetialVC instanceFromXib];
+    moivesDetialVC.movieModel = movieModel;
+    moivesDetialVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:moivesDetialVC animated:YES];
 }
 
 @end

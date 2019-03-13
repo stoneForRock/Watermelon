@@ -17,5 +17,8 @@ INSTANCE_XIB_H
 - (void)initTopScrollWithData:(NSArray *)ads;
 - (void)refreshMoiveClassWithClass:(NSArray *)moiveClass;
 - (void)refreshNewestMoiveWithList:(NSArray *)newestList;
+- (void)refreshHotPlayMoiveWithList:(NSArray *)hotPlayList;
+- (void)refreshGussLikeMoiveWithList:(NSArray *)gussLikeList;
+- (void)refreshMovieListADWithADList:(NSArray *)adList;
 
 @end

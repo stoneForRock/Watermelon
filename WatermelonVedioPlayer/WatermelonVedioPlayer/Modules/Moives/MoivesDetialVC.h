@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoivesModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MoivesDetialVC : UIViewController
+
+@property (nonatomic, strong) MoivesModel *movieModel;
 
 INSTANCE_XIB_H
 

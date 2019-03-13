@@ -28,6 +28,8 @@
             [self requestMainPageTopAds];
             [self requestMainMoiveClass];
             [self requestNewestMoive];
+            [self requestHotPlayMovie];
+            [self requestMovieListAd];
         } else {
             [APPDelegate.window showHUDWithErrorText:error.domain];
             [self lunchRequest];
@@ -68,6 +70,28 @@
         if (success) {
             [self refreshNewestMoiveWithList:responseObject];
         }
+    }];
+}
+
+- (void)requestHotPlayMovie {
+    [MainPageRequest getHotMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (success) {
+            [self refreshHotPlayMoiveWithList:responseObject];
+        }
+    }];
+}
+
+- (void)requestGuessLikeMovie {
+    [MainPageRequest getGuessLikeMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (success) {
+            [self refreshHotPlayMoiveWithList:responseObject];
+        }
+    }];
+}
+
+- (void)requestMovieListAd {
+    [MainPageRequest getADListWithType:ADListOtherType finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        
     }];
 }
 

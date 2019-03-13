@@ -10,4 +10,23 @@
 
 @implementation MoivesModel
 
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"cover": @"cover",
+                                                       @"createTime": @"createTime",
+                                                       @"dislikeCnt": @"dislikeCnt",
+                                                       @"file": @"file",
+                                                       @"moiveId": @"id",
+                                                       @"loveCnt": @"loveCnt",
+                                                       @"movCls": @"movCls",
+                                                       @"movDesc": @"movDesc",
+                                                       @"movName": @"movName",
+                                                       @"movScore": @"movScore",
+                                                       @"playCount": @"playCount",
+                                                       @"status": @"status",
+                                                       @"updateTime": @"updateTime",
+                                                       }];
+}
+
 @end

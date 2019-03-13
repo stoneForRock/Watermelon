@@ -12,6 +12,10 @@
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
 		D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2798130222F6C6F0036D408 /* ForgetPswVC.m */; };
 		D2798133222F6CA50036D408 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2798132222F6CA50036D408 /* Login.storyboard */; };
+		D28EF67E22389E000054CA8A /* HotPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28EF67C22389E000054CA8A /* HotPlayCell.m */; };
+		D28EF67F22389E000054CA8A /* HotPlayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28EF67D22389E000054CA8A /* HotPlayCell.xib */; };
+		D28EF6832238D71A0054CA8A /* GussLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28EF6812238D71A0054CA8A /* GussLikeCell.m */; };
+		D28EF6842238D71A0054CA8A /* GussLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28EF6822238D71A0054CA8A /* GussLikeCell.xib */; };
 		D2A3AA232237AC8D00B6B7A3 /* MainPageVC+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */; };
 		D2A3AA292237AF8B00B6B7A3 /* MoiveClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */; };
 		D2A3AA2C2237B6E100B6B7A3 /* MoiveClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA2B2237B6E100B6B7A3 /* MoiveClassCell.m */; };
@@ -470,6 +474,12 @@
 		D279812F222F6C6F0036D408 /* ForgetPswVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPswVC.h; sourceTree = "<group>"; };
 		D2798130222F6C6F0036D408 /* ForgetPswVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPswVC.m; sourceTree = "<group>"; };
 		D2798132222F6CA50036D408 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D28EF67B22389E000054CA8A /* HotPlayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotPlayCell.h; sourceTree = "<group>"; };
+		D28EF67C22389E000054CA8A /* HotPlayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotPlayCell.m; sourceTree = "<group>"; };
+		D28EF67D22389E000054CA8A /* HotPlayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotPlayCell.xib; sourceTree = "<group>"; };
+		D28EF6802238D71A0054CA8A /* GussLikeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GussLikeCell.h; sourceTree = "<group>"; };
+		D28EF6812238D71A0054CA8A /* GussLikeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GussLikeCell.m; sourceTree = "<group>"; };
+		D28EF6822238D71A0054CA8A /* GussLikeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GussLikeCell.xib; sourceTree = "<group>"; };
 		D2A3AA212237AC8D00B6B7A3 /* MainPageVC+Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainPageVC+Request.h"; sourceTree = "<group>"; };
 		D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainPageVC+Request.m"; sourceTree = "<group>"; };
 		D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoiveClassCell.xib; sourceTree = "<group>"; };
@@ -1369,6 +1379,12 @@
 				D2A3AA432237E33600B6B7A3 /* MainNewestMovieCell.h */,
 				D2A3AA442237E33600B6B7A3 /* MainNewestMovieCell.m */,
 				D2A3AA452237E33600B6B7A3 /* MainNewestMovieCell.xib */,
+				D28EF67B22389E000054CA8A /* HotPlayCell.h */,
+				D28EF67C22389E000054CA8A /* HotPlayCell.m */,
+				D28EF67D22389E000054CA8A /* HotPlayCell.xib */,
+				D28EF6802238D71A0054CA8A /* GussLikeCell.h */,
+				D28EF6812238D71A0054CA8A /* GussLikeCell.m */,
+				D28EF6822238D71A0054CA8A /* GussLikeCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2901,8 +2917,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E551313B21F0688500DD8859 /* IQKeyboardManager.bundle in Resources */,
+				D28EF67F22389E000054CA8A /* HotPlayCell.xib in Resources */,
 				E551319721F0688500DD8859 /* ImageSelectedOn@3x.png in Resources */,
 				E551318121F0688500DD8859 /* ImageError@2x.png in Resources */,
+				D28EF6842238D71A0054CA8A /* GussLikeCell.xib in Resources */,
 				E551349521F079AB00DD8859 /* NoDataView.xib in Resources */,
 				E551318021F0688500DD8859 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
 				E551304F21F0688400DD8859 /* MJPhotoBrowser.bundle in Resources */,
@@ -3169,6 +3187,7 @@
 				E551341D21F06AB000DD8859 /* ZXUPCEANWriter.m in Sources */,
 				E551339821F06AAF00DD8859 /* ZXProductResultParser.m in Sources */,
 				E551340E21F06AB000DD8859 /* ZXRSSExpandedPair.m in Sources */,
+				D28EF67E22389E000054CA8A /* HotPlayCell.m in Sources */,
 				E551314621F0688500DD8859 /* XTSafeCollection.m in Sources */,
 				E551337D21F06AAF00DD8859 /* ZXParsedResult.m in Sources */,
 				E589702E21F0644C008924E4 /* QiniuOperator.m in Sources */,
@@ -3234,6 +3253,7 @@
 				E55133AA21F06AAF00DD8859 /* ZXImage.m in Sources */,
 				E55133A921F06AAF00DD8859 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				D2ACDC95223119B600E3DF62 /* UIView+HUD.m in Sources */,
+				D28EF6832238D71A0054CA8A /* GussLikeCell.m in Sources */,
 				E551344721F06AB000DD8859 /* ZXQRCodeBlockPair.m in Sources */,
 				E55133D821F06AB000DD8859 /* ZXAztecReader.m in Sources */,
 				E551315121F0688500DD8859 /* QNEtag.m in Sources */,
@@ -3597,6 +3617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VedioPlayer.WatermelonVedioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3627,6 +3648,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VedioPlayer.WatermelonVedioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
