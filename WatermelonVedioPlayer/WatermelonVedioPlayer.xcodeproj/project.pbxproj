@@ -469,6 +469,7 @@
 		7C86A34D0E59AC61E7669CEE /* Pods-WatermelonVedioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayer/Pods-WatermelonVedioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		85E57562F7E066C4B204858B /* Pods-WatermelonVedioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerUITests/Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0801926F123F5A02F8C3B4 /* Pods-WatermelonVedioPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerTests/Pods-WatermelonVedioPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D21EE3A9223931130018971B /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
 		D279812C222F6C590036D408 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		D279812D222F6C590036D408 /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		D279812F222F6C6F0036D408 /* ForgetPswVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPswVC.h; sourceTree = "<group>"; };
@@ -499,7 +500,6 @@
 		D2A3AA432237E33600B6B7A3 /* MainNewestMovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNewestMovieCell.h; sourceTree = "<group>"; };
 		D2A3AA442237E33600B6B7A3 /* MainNewestMovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNewestMovieCell.m; sourceTree = "<group>"; };
 		D2A3AA452237E33600B6B7A3 /* MainNewestMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNewestMovieCell.xib; sourceTree = "<group>"; };
-		D2ACDC8E2230F33000E3DF62 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
 		D2ACDC902231199D00E3DF62 /* HUDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		D2ACDC912231199D00E3DF62 /* HUDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
 		D2ACDC93223119B600E3DF62 /* UIView+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -2758,7 +2758,7 @@
 		E5DC59FA21E4D1900018F12A /* WatermelonVedioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				D2ACDC8E2230F33000E3DF62 /* WatermelonVedioPlayer.entitlements */,
+				D21EE3A9223931130018971B /* WatermelonVedioPlayer.entitlements */,
 				E5D5E37421E621AB00399261 /* AppDelegate */,
 				E5D5E37521E621B400399261 /* Foundation */,
 				E5D5E37621E621BB00399261 /* Modules */,
@@ -3598,6 +3598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 659VY6XY77;
 				ENABLE_BITCODE = NO;
@@ -3629,6 +3630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 659VY6XY77;
 				ENABLE_BITCODE = NO;

@@ -84,7 +84,7 @@
 - (void)requestGuessLikeMovie {
     [MainPageRequest getGuessLikeMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         if (success) {
-            [self refreshHotPlayMoiveWithList:responseObject];
+            
         }
     }];
 }
