@@ -12,6 +12,7 @@
 #import "UniqueIdentificationTool.h"
 #import "LaunchManager.h"
 #import "AppDelegate.h"
+#import "MoivesModel.h"
 
 @implementation MainPageVC (Request)
 
@@ -29,7 +30,9 @@
             [self requestMainMoiveClass];
             [self requestNewestMoive];
             [self requestHotPlayMovie];
+            [self requestGuessLikeMovie];
             [self requestMovieListAd];
+            [self requestColumnsMovieList];
         } else {
             [APPDelegate.window showHUDWithErrorText:error.domain];
             [self lunchRequest];
@@ -68,7 +71,12 @@
 - (void)requestNewestMoive {
     [MainPageRequest getNewMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         if (success) {
-            [self refreshNewestMoiveWithList:responseObject];
+            NSMutableArray *movies = [NSMutableArray arrayWithCapacity:0];
+            for (NSDictionary *movieDic in responseObject) {
+                MoivesModel *model = [[MoivesModel alloc] initWithDictionary:movieDic error:nil];
+                [movies addObject:model];
+            }
+            [self refreshNewestMoiveWithList:movies.copy];
         }
     }];
 }
@@ -76,7 +84,12 @@
 - (void)requestHotPlayMovie {
     [MainPageRequest getHotMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         if (success) {
-            [self refreshHotPlayMoiveWithList:responseObject];
+            NSMutableArray *movies = [NSMutableArray arrayWithCapacity:0];
+            for (NSDictionary *movieDic in responseObject) {
+                MoivesModel *model = [[MoivesModel alloc] initWithDictionary:movieDic error:nil];
+                [movies addObject:model];
+            }
+            [self refreshHotPlayMoiveWithList:movies.copy];
         }
     }];
 }
@@ -84,14 +97,32 @@
 - (void)requestGuessLikeMovie {
     [MainPageRequest getGuessLikeMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         if (success) {
-            
+            NSMutableArray *movies = [NSMutableArray arrayWithCapacity:0];
+            for (NSDictionary *movieDic in responseObject) {
+                MoivesModel *model = [[MoivesModel alloc] initWithDictionary:movieDic error:nil];
+                [movies addObject:model];
+            }
+            [self refreshGussLikeMoiveWithList:movies.copy];
         }
     }];
 }
 
 - (void)requestMovieListAd {
     [MainPageRequest getADListWithType:ADListOtherType finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        [self refreshMovieListADWithADList:responseObject];
+    }];
+}
+
+- (void)requestColumnsMovieList {
+    [MainPageRequest getColumnsMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (success) {
+            NSMutableArray *movieColumns = [NSMutableArray arrayWithCapacity:0];
+            for (NSDictionary *movieColumnDic in responseObject) {
+                MovieColumnModel *movieColumnModel = [[MovieColumnModel alloc] initWithDictionary:movieColumnDic error:nil];
+                [movieColumns addObject:movieColumnModel];
+            }
+            [self refreshColumnList:movieColumns.copy];
+        }
     }];
 }
 

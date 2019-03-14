@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieCoverView.h"
+
+@protocol GussLikeCellDelegate <NSObject>
+@optional
+- (void)gussLikeCellClickMovie:(MoivesModel *)moive;
+@end
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GussLikeCell : UITableViewCell
+
+@property (nonatomic, strong) NSArray *cellDataList;
+@property (nonatomic, assign) id<GussLikeCellDelegate> gussLikeCellDelegate;
 
 @end
 

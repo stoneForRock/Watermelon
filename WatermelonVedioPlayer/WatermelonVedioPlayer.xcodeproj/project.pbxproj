@@ -34,6 +34,11 @@
 		D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA322312A4200E3DF62 /* Channel.storyboard */; };
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
+		D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C4092239EBE20052CE44 /* MovieCoverView.m */; };
+		D2C3C40C2239EBF00052CE44 /* MovieCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */; };
+		D2C3C415223A32480052CE44 /* MainListADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C413223A32480052CE44 /* MainListADCell.m */; };
+		D2C3C416223A32480052CE44 /* MainListADCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C414223A32480052CE44 /* MainListADCell.xib */; };
+		D2C3C419223A46950052CE44 /* MovieColumnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C418223A46950052CE44 /* MovieColumnModel.m */; };
 		D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913A223259D300A021E4 /* MainSearchVC.m */; };
 		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
 		D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914422325BE600A021E4 /* MainPageRequest.m */; };
@@ -469,7 +474,6 @@
 		7C86A34D0E59AC61E7669CEE /* Pods-WatermelonVedioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayer/Pods-WatermelonVedioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		85E57562F7E066C4B204858B /* Pods-WatermelonVedioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerUITests/Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0801926F123F5A02F8C3B4 /* Pods-WatermelonVedioPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerTests/Pods-WatermelonVedioPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D21EE3A9223931130018971B /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
 		D279812C222F6C590036D408 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		D279812D222F6C590036D408 /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		D279812F222F6C6F0036D408 /* ForgetPswVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPswVC.h; sourceTree = "<group>"; };
@@ -510,6 +514,15 @@
 		D2ACDCA322312A4200E3DF62 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finder.storyboard; sourceTree = "<group>"; };
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		D2C3C4062239E4F90052CE44 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
+		D2C3C4082239EBE20052CE44 /* MovieCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCoverView.h; sourceTree = "<group>"; };
+		D2C3C4092239EBE20052CE44 /* MovieCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCoverView.m; sourceTree = "<group>"; };
+		D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCoverView.xib; sourceTree = "<group>"; };
+		D2C3C412223A32480052CE44 /* MainListADCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainListADCell.h; sourceTree = "<group>"; };
+		D2C3C413223A32480052CE44 /* MainListADCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainListADCell.m; sourceTree = "<group>"; };
+		D2C3C414223A32480052CE44 /* MainListADCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainListADCell.xib; sourceTree = "<group>"; };
+		D2C3C417223A46950052CE44 /* MovieColumnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieColumnModel.h; sourceTree = "<group>"; };
+		D2C3C418223A46950052CE44 /* MovieColumnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieColumnModel.m; sourceTree = "<group>"; };
 		D2ED9139223259D300A021E4 /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
 		D2ED913A223259D300A021E4 /* MainSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchVC.m; sourceTree = "<group>"; };
 		D2ED913D22325B6E00A021E4 /* PlayHistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayHistoryVC.h; sourceTree = "<group>"; };
@@ -1373,6 +1386,7 @@
 		D2A3AA242237AF6600B6B7A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D2C3C4072239EB6F0052CE44 /* CellView */,
 				D2A3AA2A2237B6E000B6B7A3 /* MoiveClassCell.h */,
 				D2A3AA2B2237B6E100B6B7A3 /* MoiveClassCell.m */,
 				D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */,
@@ -1385,6 +1399,9 @@
 				D28EF6802238D71A0054CA8A /* GussLikeCell.h */,
 				D28EF6812238D71A0054CA8A /* GussLikeCell.m */,
 				D28EF6822238D71A0054CA8A /* GussLikeCell.xib */,
+				D2C3C412223A32480052CE44 /* MainListADCell.h */,
+				D2C3C413223A32480052CE44 /* MainListADCell.m */,
+				D2C3C414223A32480052CE44 /* MainListADCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1450,6 +1467,16 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
+		D2C3C4072239EB6F0052CE44 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				D2C3C4082239EBE20052CE44 /* MovieCoverView.h */,
+				D2C3C4092239EBE20052CE44 /* MovieCoverView.m */,
+				D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
 		D2ED91352232590600A021E4 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -1489,6 +1516,8 @@
 		D2ED914222325BCE00A021E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D2C3C417223A46950052CE44 /* MovieColumnModel.h */,
+				D2C3C418223A46950052CE44 /* MovieColumnModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2758,7 +2787,7 @@
 		E5DC59FA21E4D1900018F12A /* WatermelonVedioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				D21EE3A9223931130018971B /* WatermelonVedioPlayer.entitlements */,
+				D2C3C4062239E4F90052CE44 /* WatermelonVedioPlayer.entitlements */,
 				E5D5E37421E621AB00399261 /* AppDelegate */,
 				E5D5E37521E621B400399261 /* Foundation */,
 				E5D5E37621E621BB00399261 /* Modules */,
@@ -2925,6 +2954,7 @@
 				E551318021F0688500DD8859 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
 				E551304F21F0688400DD8859 /* MJPhotoBrowser.bundle in Resources */,
 				E551318221F0688500DD8859 /* ImageSelectedSmallOff@2x.png in Resources */,
+				D2C3C40C2239EBF00052CE44 /* MovieCoverView.xib in Resources */,
 				E551318621F0688500DD8859 /* PlayButtonOverlayLargeTap@3x.png in Resources */,
 				D2798133222F6CA50036D408 /* Login.storyboard in Resources */,
 				E551319821F0688500DD8859 /* ImageSelectedOn@2x.png in Resources */,
@@ -2962,6 +2992,7 @@
 				E551319321F0688500DD8859 /* PlayButtonOverlayLarge@3x.png in Resources */,
 				E551317F21F0688500DD8859 /* ImageSelectedOff.png in Resources */,
 				E5DC5A0521E4D1920018F12A /* Assets.xcassets in Resources */,
+				D2C3C416223A32480052CE44 /* MainListADCell.xib in Resources */,
 				E551318721F0688500DD8859 /* UIBarButtonItemArrowRight.png in Resources */,
 				E551318B21F0688500DD8859 /* ImageSelectedOn.png in Resources */,
 				E551319121F0688500DD8859 /* UIBarButtonItemArrowLeft@3x.png in Resources */,
@@ -3123,6 +3154,7 @@
 				E551342F21F06AB000DD8859 /* ZXDecoderResult.m in Sources */,
 				E551340B21F06AB000DD8859 /* ZXDataMatrixWriter.m in Sources */,
 				E551313C21F0688500DD8859 /* IQKeyboardManager.m in Sources */,
+				D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */,
 				D2A3AA332237D78700B6B7A3 /* MoivesClassListVC.m in Sources */,
 				E551340721F06AB000DD8859 /* ZXMultiFormatOneDReader.m in Sources */,
 				E551305121F0688400DD8859 /* MJPhotoToolbar.m in Sources */,
@@ -3207,6 +3239,7 @@
 				E551343B21F06AB000DD8859 /* ZXExpandedProductParsedResult.m in Sources */,
 				E551313521F0688500DD8859 /* IQTextView.m in Sources */,
 				E551316321F0688500DD8859 /* QNResolver.m in Sources */,
+				D2C3C415223A32480052CE44 /* MainListADCell.m in Sources */,
 				E551337721F06AAF00DD8859 /* ZXAI01weightDecoder.m in Sources */,
 				E551342421F06AB000DD8859 /* ZXAztecWriter.m in Sources */,
 				E551314F21F0688500DD8859 /* QNUrlSafeBase64.m in Sources */,
@@ -3276,6 +3309,7 @@
 				E55133A821F06AAF00DD8859 /* ZXPDF417Common.m in Sources */,
 				E551341721F06AB000DD8859 /* ZXAztecSimpleToken.m in Sources */,
 				E55134C921F1DF1300DD8859 /* LoginRequest.m in Sources */,
+				D2C3C419223A46950052CE44 /* MovieColumnModel.m in Sources */,
 				E551338521F06AAF00DD8859 /* ZXCodaBarReader.m in Sources */,
 				E551316821F0688500DD8859 /* QNNetworkInfo.m in Sources */,
 				E551314B21F0688500DD8859 /* QNFormUpload.m in Sources */,
@@ -3599,8 +3633,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 659VY6XY77;
+				DEVELOPMENT_TEAM = RA3S34K4EA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3616,7 +3651,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WatermelonVedioPlayer/ThirdParts/GtSdkLib-noidfa",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.VedioPlayer.WatermelonVedioPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dachen.medicalcircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3631,8 +3666,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WatermelonVedioPlayer/WatermelonVedioPlayer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 659VY6XY77;
+				DEVELOPMENT_TEAM = RA3S34K4EA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3648,7 +3684,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WatermelonVedioPlayer/ThirdParts/GtSdkLib-noidfa",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.VedioPlayer.WatermelonVedioPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dachen.medicalcircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

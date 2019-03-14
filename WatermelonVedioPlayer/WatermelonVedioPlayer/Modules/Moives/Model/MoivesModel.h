@@ -12,19 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MoivesModel : JSONModel
 
-@property (nonatomic, copy) NSString *cover;
-@property (nonatomic, copy) NSString *createTime;
-@property (nonatomic, copy) NSString *dislikeCnt;
-@property (nonatomic, copy) NSString *file;
-@property (nonatomic, copy) NSString *moiveId;
-@property (nonatomic, copy) NSString *loveCnt;
-@property (nonatomic, copy) NSString *movCls;
-@property (nonatomic, copy) NSString *movDesc;
-@property (nonatomic, copy) NSString *movName;
-@property (nonatomic, copy) NSString *movScore;
-@property (nonatomic, copy) NSString *playCount;
-@property (nonatomic, copy) NSString *status;
-@property (nonatomic, copy) NSString *updateTime;
+@property (nonatomic, copy) NSString<Optional> *cover;
+@property (nonatomic, copy) NSString<Optional> *createTime;
+@property (nonatomic, copy) NSString<Optional> *dislikeCnt;
+@property (nonatomic, copy) NSString<Optional> *file;
+@property (nonatomic, copy) NSString<Optional> *moiveId;
+@property (nonatomic, copy) NSString<Optional> *loveCnt;
+@property (nonatomic, copy) NSString<Optional> *movCls;
+@property (nonatomic, copy) NSString<Optional> *movDesc;
+@property (nonatomic, copy) NSString<Optional> *movName;
+@property (nonatomic, copy) NSString<Optional> *movScore;
+@property (nonatomic, copy) NSString<Optional> *playCount;
+@property (nonatomic, copy) NSString<Optional> *status;
+@property (nonatomic, copy) NSString<Optional> *updateTime;
 
 
 @end

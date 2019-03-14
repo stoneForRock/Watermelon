@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoivesModel.h"
+#import "MovieColumnModel.h"
 
 @interface MainPageVC : UIViewController
 
@@ -19,6 +21,8 @@ INSTANCE_XIB_H
 - (void)refreshNewestMoiveWithList:(NSArray *)newestList;
 - (void)refreshHotPlayMoiveWithList:(NSArray *)hotPlayList;
 - (void)refreshGussLikeMoiveWithList:(NSArray *)gussLikeList;
+
 - (void)refreshMovieListADWithADList:(NSArray *)adList;
+- (void)refreshColumnList:(NSArray *)columnList;
 
 @end

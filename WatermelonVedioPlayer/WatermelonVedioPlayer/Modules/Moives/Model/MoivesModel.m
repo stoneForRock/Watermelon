@@ -17,7 +17,7 @@
                                                        @"createTime": @"createTime",
                                                        @"dislikeCnt": @"dislikeCnt",
                                                        @"file": @"file",
-                                                       @"moiveId": @"id",
+                                                       @"id": @"moiveId",
                                                        @"loveCnt": @"loveCnt",
                                                        @"movCls": @"movCls",
                                                        @"movDesc": @"movDesc",

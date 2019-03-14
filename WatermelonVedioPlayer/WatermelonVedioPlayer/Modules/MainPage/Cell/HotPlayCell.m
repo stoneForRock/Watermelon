@@ -13,18 +13,12 @@
 
 @property (weak, nonatomic) IBOutlet UIView *exchangeView;
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgview1;
-@property (weak, nonatomic) IBOutlet UIImageView *imgview2;
-@property (weak, nonatomic) IBOutlet UIImageView *imgview3;
-@property (weak, nonatomic) IBOutlet UIImageView *imgview4;
+@property (weak, nonatomic) IBOutlet MovieCoverView *coverView1;
+@property (weak, nonatomic) IBOutlet MovieCoverView *coverView2;
+@property (weak, nonatomic) IBOutlet MovieCoverView *coverView3;
+@property (weak, nonatomic) IBOutlet MovieCoverView *coverView4;
 
-@property (weak, nonatomic) IBOutlet UILabel *label1;
-@property (weak, nonatomic) IBOutlet UILabel *label2;
-@property (weak, nonatomic) IBOutlet UILabel *label3;
-@property (weak, nonatomic) IBOutlet UILabel *label4;
-
-@property (nonatomic, strong) NSMutableArray *imgArray;
-@property (nonatomic, strong) NSMutableArray *labelArray;
+@property (nonatomic, strong) NSMutableArray *coverViewArray;
 
 @end
 
@@ -34,27 +28,24 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.imgArray = [NSMutableArray arrayWithObjects:_imgview1,_imgview2,_imgview3,_imgview4, nil];
-    self.labelArray = [NSMutableArray arrayWithObjects:_label1,_label2,_label3,_label4, nil];
+    self.coverViewArray = [NSMutableArray arrayWithObjects:_coverView1,_coverView2,_coverView3,_coverView4, nil];
+    
+    for (MovieCoverView *coverView in self.coverViewArray) {
+        UITapGestureRecognizer *tapImgGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapcoverView:)];
+        [coverView addGestureRecognizer:tapImgGesture];
+    }
     
     UITapGestureRecognizer *exchangeGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(exchangeAction)];
     [self.exchangeView addGestureRecognizer:exchangeGesture];
-    
-    for (UIImageView *imageView in self.imgArray) {
-        UITapGestureRecognizer *tapImgGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImgView:)];
-        [imageView addGestureRecognizer:tapImgGesture];
-    }
 }
 
 - (void)setCellDataList:(NSArray *)cellDataList {
     _cellDataList = cellDataList;
     for (int i = 0; i < cellDataList.count; i ++) {
         if (i < 4) {
-            NSDictionary *cellInfo = cellDataList[i];
-            UIImageView *imgView = self.imgArray[i];
-            UILabel *titleLabel = self.labelArray[i];
-            [imgView sd_setImageWithURL:[NSURL URLWithString:cellInfo[@"cover"]]];
-            titleLabel.text = cellInfo[@"movName"];
+            MoivesModel *coverModel = cellDataList[i];
+            MovieCoverView *coverView = self.coverViewArray[i];
+            coverView.movieModel = coverModel;
         }
     }
 }
@@ -71,9 +62,9 @@
     }
 }
 
-- (void)tapImgView:(UIGestureRecognizer *)gestureRecognizer {
-    UIImageView *imageView = (UIImageView *)gestureRecognizer.view;
-    NSInteger index = imageView.tag - 100;
+- (void)tapcoverView:(UIGestureRecognizer *)gestureRecognizer {
+    MovieCoverView *coverView = (MovieCoverView *)gestureRecognizer.view;
+    NSInteger index = coverView.tag - 100;
     if (self.hotPlayCellDelegate != nil && [self.hotPlayCellDelegate respondsToSelector:@selector(hotPlayCellClickMovie:)]) {
         [self.hotPlayCellDelegate hotPlayCellClickMovie:self.cellDataList[index]];
     }

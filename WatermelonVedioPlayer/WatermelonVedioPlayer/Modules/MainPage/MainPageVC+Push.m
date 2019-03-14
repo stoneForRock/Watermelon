@@ -18,8 +18,7 @@
     [self.navigationController pushViewController:classListVC animated:YES];
 }
 
-- (void)pushToMoiveDetialVCWithMovieInfo:(NSDictionary *)movieInfo {
-    MoivesModel *movieModel = [[MoivesModel alloc] initWithDictionary:movieInfo error:nil];
+- (void)pushToMoiveDetialVCWithMovieInfo:(MoivesModel *)movieModel {
     MoivesDetialVC *moivesDetialVC = [MoivesDetialVC instanceFromXib];
     moivesDetialVC.movieModel = movieModel;
     moivesDetialVC.hidesBottomBarWhenPushed = YES;

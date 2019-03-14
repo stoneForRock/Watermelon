@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieCoverView.h"
 
 @protocol HotPlayCellDelegate <NSObject>
 @optional
 
 - (void)hotPlayCellMoreAction;
 - (void)hotPlayCellExchangeAction;
-- (void)hotPlayCellClickMovie:(NSDictionary *)movieInfo;
+- (void)hotPlayCellClickMovie:(MoivesModel *)moive;
 
 @end
 

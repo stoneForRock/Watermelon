@@ -16,12 +16,16 @@
 #import "MainNewestMovieCell.h"
 #import "MoiveClassCell.h"
 #import "HotPlayCell.h"
+#import "GussLikeCell.h"
+#import "MainListADCell.h"
 
 #define MoiveClassCellIdentifier  @"MoiveClassCell"
 #define MainNewestMovieCellIdentifier  @"MainNewestMovieCell"
 #define HotPlayCellIdentifier  @"HotPlayCell"
+#define GussLikeCellIdentifier  @"GussLikeCell"
+#define MainListADCellIdentifier  @"MainListADCell"
 
-@interface MainPageVC ()<RollingCircleScrollDelegate, UITableViewDelegate, UITableViewDataSource, MoiveClassCellDelegate, MainNewestMovieCellDelegate, HotPlayCellDelegate>
+@interface MainPageVC ()<RollingCircleScrollDelegate, UITableViewDelegate, UITableViewDataSource, MoiveClassCellDelegate, MainNewestMovieCellDelegate, HotPlayCellDelegate, GussLikeCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) RollingCircleScroll *circleScroll;
@@ -48,13 +52,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)initDataInfo {
-    self.tableDataSource = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                            @"",@"moiveClass",
-                            @"",@"newestMoive",
-                            @"",@"hotPlay",
-                            @"",@"gussLike",
-                            @"",@"广告1",
-                            nil];
+    self.tableDataSource = [NSMutableDictionary dictionaryWithCapacity:0];
 }
 
 - (void)request {
@@ -99,7 +97,21 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)refreshMovieListADWithADList:(NSArray *)adList {
-    
+    for (int i = 0; i < adList.count; i ++ ) {
+        NSString *key = [NSString stringWithFormat:@"ad%d",i+1];
+        NSDictionary *adInfo = adList[i];
+        [self.tableDataSource setObject:adInfo forKey:key];
+    }
+    [self.tableView reloadData];
+}
+
+- (void)refreshColumnList:(NSArray *)columnList {
+    for (int i = 0; i < columnList.count; i ++ ) {
+        NSString *key = [NSString stringWithFormat:@"column%d",i+1];
+        MovieColumnModel *columnModel = columnList[i];
+        [self.tableDataSource setObject:columnModel forKey:key];
+    }
+    [self.tableView reloadData];
 }
 
 - (void)initNavBarView {
@@ -149,6 +161,8 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MoiveClassCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MoiveClassCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainNewestMovieCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MainNewestMovieCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([HotPlayCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:HotPlayCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GussLikeCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:GussLikeCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainListADCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MainListADCellIdentifier];
 }
 
 #pragma mark - btnAction
@@ -188,8 +202,8 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [self pushToMoiveClassListVCWithClassList:self.tableDataSource[@"moiveClass"] currentClassInfo:classInfo];
 }
 
-- (void)newestMovieCellClickMoive:(NSDictionary *)moiveInfo {
-    [self pushToMoiveDetialVCWithMovieInfo:moiveInfo];
+- (void)newestMovieCellClickMoive:(MoivesModel *)movieModel {
+    [self pushToMoiveDetialVCWithMovieInfo:movieModel];
 }
 
 - (void)newestMovieCellMoreAction {
@@ -197,15 +211,19 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)hotPlayCellExchangeAction {
-
+    
 }
 
-- (void)hotPlayCellClickMovie:(NSDictionary *)movieInfo {
-    [self pushToMoiveDetialVCWithMovieInfo:movieInfo];
+- (void)hotPlayCellClickMovie:(MoivesModel *)movieModel {
+    [self pushToMoiveDetialVCWithMovieInfo:movieModel];
 }
 
 - (void)hotPlayCellMoreAction {
     
+}
+
+- (void)gussLikeCellClickMovie:(MoivesModel *)moive {
+    [self pushToMoiveDetialVCWithMovieInfo:moive];
 }
 
 #pragma mark - tableViewDelegate
@@ -224,6 +242,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     } else if (indexPath.section == 1) {
         MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
         newestCell.newestMovieCellDelegate = self;
+        [newestCell showTitle:@"最新片源"];
         id cellData = self.tableDataSource[@"newestMoive"];
         if (cellData && [cellData isKindOfClass:[NSArray class]]) {
             newestCell.cellDataList = cellData;
@@ -240,16 +259,44 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
         return hotPlayCell;
     } else if (indexPath.section == 3) {
         
+        GussLikeCell *gussLikeCell = [tableView dequeueReusableCellWithIdentifier:GussLikeCellIdentifier];
+        gussLikeCell.gussLikeCellDelegate = self;
+        id cellData = self.tableDataSource[@"gussLike"];
+        if (cellData && [cellData isKindOfClass:[NSArray class]]) {
+            gussLikeCell.cellDataList = cellData;
+        }
+        return gussLikeCell;
+        
     } else if (indexPath.section == 4) {
-        
-    } else if (indexPath.section == 5) {
-        
+        MainListADCell *adCell = [tableView dequeueReusableCellWithIdentifier:MainListADCellIdentifier];
+        id cellData = self.tableDataSource[@"ad1"];
+        if (cellData && [cellData isKindOfClass:[NSDictionary class]]) {
+            adCell.adInfo = cellData;
+        }
+        return adCell;
+    } else {
+        NSInteger index = indexPath.section%3;
+        if (index == 1) {
+            NSString *key = [NSString stringWithFormat:@"ad%d",(int)indexPath.section/3];
+            MainListADCell *adCell = [tableView dequeueReusableCellWithIdentifier:MainListADCellIdentifier];
+            id cellData = self.tableDataSource[key];
+            if (cellData && [cellData isKindOfClass:[NSDictionary class]]) {
+                adCell.adInfo = cellData;
+            }
+            return adCell;
+        } else {
+            NSString *key = [NSString stringWithFormat:@"column%d",(int)(indexPath.section - 4)/3 + 1];
+            MovieColumnModel *columnModel = self.tableDataSource[key];
+            MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
+            newestCell.newestMovieCellDelegate = self;
+            [newestCell showTitle:columnModel.name];
+            
+            if (columnModel && [columnModel.movies isKindOfClass:[NSArray class]]) {
+                newestCell.cellDataList = columnModel.movies;
+            }
+            return newestCell;
+        }
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -261,7 +308,15 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return self.tableDataSource.allKeys.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 4) {
+        NSDictionary *cellData = self.tableDataSource[@"ad1"];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:cellData[@"linkAddr"]] options:@{} completionHandler:nil];
+    }
 }
 
 

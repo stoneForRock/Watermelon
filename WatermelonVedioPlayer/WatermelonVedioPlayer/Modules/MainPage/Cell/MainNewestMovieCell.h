@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieCoverView.h"
 
 @protocol MainNewestMovieCellDelegate <NSObject>
 @optional
 
-- (void)newestMovieCellClickMoive:(NSDictionary *)moiveInfo;
+- (void)newestMovieCellClickMoive:(MoivesModel *)moive;
 - (void)newestMovieCellMoreAction;
 
 @end
