@@ -45,7 +45,7 @@
                                 <constraint firstAttribute="height" constant="12" id="SPP-os-zUt"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.82745098039999998" green="0.64705882349999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>

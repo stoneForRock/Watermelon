@@ -19,6 +19,8 @@
 #import "GussLikeCell.h"
 #import "MainListADCell.h"
 
+#import <MJRefresh/MJRefresh.h>
+
 #define MoiveClassCellIdentifier  @"MoiveClassCell"
 #define MainNewestMovieCellIdentifier  @"MainNewestMovieCell"
 #define HotPlayCellIdentifier  @"HotPlayCell"
@@ -64,6 +66,10 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     self.tableView.tableHeaderView = tableHeaderView;
     
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self requestMainPageData];
+    }];
 }
 
 - (void)initTopScrollWithData:(NSArray *)ads {
@@ -77,6 +83,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)refreshMoiveClassWithClass:(NSArray *)moiveClass {
+    [self.tableView.mj_header endRefreshing];
     [self.tableDataSource setObject:moiveClass forKey:@"moiveClass"];
     [self.tableView reloadData];
 }
@@ -86,7 +93,9 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [self.tableView reloadData];
 }
 
-- (void)refreshHotPlayMoiveWithList:(NSArray *)hotPlayList {
+- (void)refreshHotPlayMoiveWithList:(NSArray *)hotPlayList pageNum:(NSString *)pageNum pages:(NSString *)pages {
+    self.hotLivePageNum = pageNum;
+    self.hotLivePages = pages;
     [self.tableDataSource setObject:hotPlayList forKey:@"hotPlay"];
     [self.tableView reloadData];
 }
@@ -210,8 +219,16 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     
 }
 
+//换一批
 - (void)hotPlayCellExchangeAction {
-    
+    int currentPageNum = [self.hotLivePageNum intValue];
+    int hotPages = [self.hotLivePages intValue];
+    if (currentPageNum + 1 > hotPages) {
+        currentPageNum = 1;
+    } else {
+        currentPageNum +=1;
+    }
+    [self requestHotPlayMovieWithPageNum:[NSString stringWithFormat:@"%d",currentPageNum]];
 }
 
 - (void)hotPlayCellClickMovie:(MoivesModel *)movieModel {
@@ -277,15 +294,29 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     } else {
         NSInteger index = indexPath.section%3;
         if (index == 1) {
-            NSString *key = [NSString stringWithFormat:@"ad%d",(int)indexPath.section/3];
-            MainListADCell *adCell = [tableView dequeueReusableCellWithIdentifier:MainListADCellIdentifier];
+            int adIndex = (int)indexPath.section/3;
+            NSString *key = [NSString stringWithFormat:@"ad%d",adIndex];
             id cellData = self.tableDataSource[key];
             if (cellData && [cellData isKindOfClass:[NSDictionary class]]) {
+                MainListADCell *adCell = [tableView dequeueReusableCellWithIdentifier:MainListADCellIdentifier];
                 adCell.adInfo = cellData;
+                return adCell;
+            } else {
+                int columnIndex = (int)indexPath.section/3 + 1;
+                NSString *key = [NSString stringWithFormat:@"column%d",columnIndex];
+                MovieColumnModel *columnModel = self.tableDataSource[key];
+                MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
+                newestCell.newestMovieCellDelegate = self;
+                [newestCell showTitle:columnModel.name];
+                
+                if (columnModel && [columnModel.movies isKindOfClass:[NSArray class]]) {
+                    newestCell.cellDataList = columnModel.movies;
+                }
+                return newestCell;
             }
-            return adCell;
         } else {
-            NSString *key = [NSString stringWithFormat:@"column%d",(int)(indexPath.section - 4)/3 + 1];
+            int columnIndex = (int)indexPath.section/3;
+            NSString *key = [NSString stringWithFormat:@"column%d",columnIndex];
             MovieColumnModel *columnModel = self.tableDataSource[key];
             MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
             newestCell.newestMovieCellDelegate = self;
@@ -312,10 +343,19 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     if (indexPath.section == 4) {
         NSDictionary *cellData = self.tableDataSource[@"ad1"];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:cellData[@"linkAddr"]] options:@{} completionHandler:nil];
+    } else if (indexPath.section > 4) {
+        NSInteger index = indexPath.section%3;
+        if (index == 1) {
+            int adIndex = (int)indexPath.section/3;
+            NSString *key = [NSString stringWithFormat:@"ad%d",adIndex];
+            id cellData = self.tableDataSource[key];
+            if (cellData && [cellData isKindOfClass:[NSDictionary class]]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:cellData[@"linkAddr"]] options:@{} completionHandler:nil];
+            }
+        }
     }
 }
 

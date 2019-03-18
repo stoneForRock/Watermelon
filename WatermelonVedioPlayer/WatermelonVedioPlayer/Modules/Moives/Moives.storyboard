@@ -32,13 +32,28 @@
                     <view key="view" contentMode="scaleToFill" id="Nxa-9Z-F8u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7FF-Pc-qAO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7FF-Pc-qAO" firstAttribute="trailing" secondItem="CPL-0O-9tr" secondAttribute="trailing" id="3Pm-35-mjL"/>
+                            <constraint firstItem="7FF-Pc-qAO" firstAttribute="bottom" secondItem="CPL-0O-9tr" secondAttribute="bottom" id="XT2-Br-4qF"/>
+                            <constraint firstItem="7FF-Pc-qAO" firstAttribute="top" secondItem="Nxa-9Z-F8u" secondAttribute="top" id="fcg-eG-zTN"/>
+                            <constraint firstItem="7FF-Pc-qAO" firstAttribute="leading" secondItem="CPL-0O-9tr" secondAttribute="leading" id="sST-Gh-4gR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CPL-0O-9tr"/>
                     </view>
+                    <connections>
+                        <outlet property="tabelView" destination="7FF-Pc-qAO" id="iKi-dk-rhz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkz-ft-040" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="18"/>
+            <point key="canvasLocation" x="295.19999999999999" y="17.541229385307346"/>
         </scene>
     </scenes>
 </document>

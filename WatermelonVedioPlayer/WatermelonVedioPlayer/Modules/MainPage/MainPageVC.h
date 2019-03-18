@@ -13,13 +13,15 @@
 @interface MainPageVC : UIViewController
 
 @property (nonatomic, strong) NSMutableDictionary *tableDataSource;
+@property (nonatomic, copy) NSString *hotLivePageNum;
+@property (nonatomic, copy) NSString *hotLivePages;
 
 INSTANCE_XIB_H
 
 - (void)initTopScrollWithData:(NSArray *)ads;
 - (void)refreshMoiveClassWithClass:(NSArray *)moiveClass;
 - (void)refreshNewestMoiveWithList:(NSArray *)newestList;
-- (void)refreshHotPlayMoiveWithList:(NSArray *)hotPlayList;
+- (void)refreshHotPlayMoiveWithList:(NSArray *)hotPlayList pageNum:(NSString *)pageNum pages:(NSString *)pages;
 - (void)refreshGussLikeMoiveWithList:(NSArray *)gussLikeList;
 
 - (void)refreshMovieListADWithADList:(NSArray *)adList;

@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)lunchRequest;
 
+- (void)requestMainPageData;
+
+- (void)requestHotPlayMovieWithPageNum:(NSString *)pageNum;
+
 @end
 
 NS_ASSUME_NONNULL_END

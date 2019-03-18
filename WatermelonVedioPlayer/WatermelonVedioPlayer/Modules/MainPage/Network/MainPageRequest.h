@@ -47,10 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  获取首页热映电影列表
-
+ 
+ @param pageNum 页码
  @param finishBlock finishBlock
  */
-+ (void)getHotMovieListFinishBlock:(RequestFinishBlock)finishBlock;
++ (void)getHotMovieListWithPageNum:(NSString *)pageNum finishBlock:(RequestFinishBlock)finishBlock;
 
 /**
  获取首页猜你喜欢列表

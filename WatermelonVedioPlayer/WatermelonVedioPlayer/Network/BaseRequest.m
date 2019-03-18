@@ -76,7 +76,11 @@
         
     } onSuccess:^(id responseObject) {
         if ([responseObject[@"success"] boolValue]) {
-            callBack(YES,responseObject[@"data"],nil);
+            if (responseObject[@"pageNum"]) {
+                callBack(YES,responseObject,nil);
+            } else {
+                callBack(YES,responseObject[@"data"],nil);
+            }
         } else {
             NSNumber *errorCode = responseObject[@"code"];
             NSString *errorMsg = responseObject[@"msg"];

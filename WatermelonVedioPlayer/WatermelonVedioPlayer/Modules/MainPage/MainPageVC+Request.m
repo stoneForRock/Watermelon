@@ -26,18 +26,22 @@
             USER_Config.user.visitorToken = visitorToken;
             [USER_Config saveConfig];
             [self requestLuanchAdsRequest];
-            [self requestMainPageTopAds];
-            [self requestMainMoiveClass];
-            [self requestNewestMoive];
-            [self requestHotPlayMovie];
-            [self requestGuessLikeMovie];
-            [self requestMovieListAd];
-            [self requestColumnsMovieList];
+            [self requestMainPageData];
         } else {
             [APPDelegate.window showHUDWithErrorText:error.domain];
             [self lunchRequest];
         }
     }];
+}
+
+- (void)requestMainPageData {
+    [self requestMainPageTopAds];
+    [self requestMainMoiveClass];
+    [self requestNewestMoive];
+    [self requestHotPlayMovie];
+    [self requestGuessLikeMovie];
+    [self requestMovieListAd];
+    [self requestColumnsMovieList];
 }
 
 //获取启动页广告
@@ -72,7 +76,7 @@
     [MainPageRequest getNewMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         if (success) {
             NSMutableArray *movies = [NSMutableArray arrayWithCapacity:0];
-            for (NSDictionary *movieDic in responseObject) {
+            for (NSDictionary *movieDic in responseObject[@"data"]) {
                 MoivesModel *model = [[MoivesModel alloc] initWithDictionary:movieDic error:nil];
                 [movies addObject:model];
             }
@@ -82,14 +86,18 @@
 }
 
 - (void)requestHotPlayMovie {
-    [MainPageRequest getHotMovieListFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+    [self requestHotPlayMovieWithPageNum:@"1"];
+}
+
+- (void)requestHotPlayMovieWithPageNum:(NSString *)pageNum  {
+    [MainPageRequest getHotMovieListWithPageNum:pageNum finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         if (success) {
             NSMutableArray *movies = [NSMutableArray arrayWithCapacity:0];
-            for (NSDictionary *movieDic in responseObject) {
+            for (NSDictionary *movieDic in responseObject[@"data"]) {
                 MoivesModel *model = [[MoivesModel alloc] initWithDictionary:movieDic error:nil];
                 [movies addObject:model];
             }
-            [self refreshHotPlayMoiveWithList:movies.copy];
+            [self refreshHotPlayMoiveWithList:movies.copy pageNum:responseObject[@"pageNum"] pages:responseObject[@"pages"]];
         }
     }];
 }

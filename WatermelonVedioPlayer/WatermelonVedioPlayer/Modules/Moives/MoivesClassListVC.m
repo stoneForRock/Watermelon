@@ -7,8 +7,11 @@
 //
 
 #import "MoivesClassListVC.h"
+#import "MoivesRequest.h"
 
 @interface MoivesClassListVC ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tabelView;
 
 @end
 
@@ -16,7 +19,7 @@
 INSTANCE_XIB_M(@"Moives", MoivesClassListVC)
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 /*

@@ -39,6 +39,13 @@
 		D2C3C415223A32480052CE44 /* MainListADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C413223A32480052CE44 /* MainListADCell.m */; };
 		D2C3C416223A32480052CE44 /* MainListADCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C414223A32480052CE44 /* MainListADCell.xib */; };
 		D2C3C419223A46950052CE44 /* MovieColumnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C418223A46950052CE44 /* MovieColumnModel.m */; };
+		D2C3C425223A51DB0052CE44 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C424223A51DB0052CE44 /* Location.gpx */; };
+		D2C44BEE223F958B00DB11DF /* MoviesClassListCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BEC223F958B00DB11DF /* MoviesClassListCell1.m */; };
+		D2C44BEF223F958B00DB11DF /* MoviesClassListCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BED223F958B00DB11DF /* MoviesClassListCell1.xib */; };
+		D2C44BF3223F959C00DB11DF /* MoviesClassListCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BF1223F959C00DB11DF /* MoviesClassListCell2.m */; };
+		D2C44BF4223F959C00DB11DF /* MoviesClassListCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BF2223F959C00DB11DF /* MoviesClassListCell2.xib */; };
+		D2C44BF8223F95AB00DB11DF /* MoviesClassListCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */; };
+		D2C44BF9223F95AB00DB11DF /* MoviesClassListCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */; };
 		D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913A223259D300A021E4 /* MainSearchVC.m */; };
 		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
 		D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914422325BE600A021E4 /* MainPageRequest.m */; };
@@ -523,6 +530,16 @@
 		D2C3C414223A32480052CE44 /* MainListADCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainListADCell.xib; sourceTree = "<group>"; };
 		D2C3C417223A46950052CE44 /* MovieColumnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieColumnModel.h; sourceTree = "<group>"; };
 		D2C3C418223A46950052CE44 /* MovieColumnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieColumnModel.m; sourceTree = "<group>"; };
+		D2C3C424223A51DB0052CE44 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		D2C44BEB223F958B00DB11DF /* MoviesClassListCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesClassListCell1.h; sourceTree = "<group>"; };
+		D2C44BEC223F958B00DB11DF /* MoviesClassListCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesClassListCell1.m; sourceTree = "<group>"; };
+		D2C44BED223F958B00DB11DF /* MoviesClassListCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesClassListCell1.xib; sourceTree = "<group>"; };
+		D2C44BF0223F959C00DB11DF /* MoviesClassListCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesClassListCell2.h; sourceTree = "<group>"; };
+		D2C44BF1223F959C00DB11DF /* MoviesClassListCell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesClassListCell2.m; sourceTree = "<group>"; };
+		D2C44BF2223F959C00DB11DF /* MoviesClassListCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesClassListCell2.xib; sourceTree = "<group>"; };
+		D2C44BF5223F95AB00DB11DF /* MoviesClassListCell3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesClassListCell3.h; sourceTree = "<group>"; };
+		D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesClassListCell3.m; sourceTree = "<group>"; };
+		D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesClassListCell3.xib; sourceTree = "<group>"; };
 		D2ED9139223259D300A021E4 /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
 		D2ED913A223259D300A021E4 /* MainSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchVC.m; sourceTree = "<group>"; };
 		D2ED913D22325B6E00A021E4 /* PlayHistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayHistoryVC.h; sourceTree = "<group>"; };
@@ -1450,6 +1467,15 @@
 		D2A3AA392237D7B000B6B7A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D2C44BEB223F958B00DB11DF /* MoviesClassListCell1.h */,
+				D2C44BEC223F958B00DB11DF /* MoviesClassListCell1.m */,
+				D2C44BED223F958B00DB11DF /* MoviesClassListCell1.xib */,
+				D2C44BF0223F959C00DB11DF /* MoviesClassListCell2.h */,
+				D2C44BF1223F959C00DB11DF /* MoviesClassListCell2.m */,
+				D2C44BF2223F959C00DB11DF /* MoviesClassListCell2.xib */,
+				D2C44BF5223F95AB00DB11DF /* MoviesClassListCell3.h */,
+				D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */,
+				D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -2730,6 +2756,7 @@
 		E5D5E37C21E6220000399261 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D2C3C424223A51DB0052CE44 /* Location.gpx */,
 				E5D5E38221E6235E00399261 /* Storyboard */,
 				E5D5E38121E6234200399261 /* Images */,
 			);
@@ -2946,6 +2973,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E551313B21F0688500DD8859 /* IQKeyboardManager.bundle in Resources */,
+				D2C44BEF223F958B00DB11DF /* MoviesClassListCell1.xib in Resources */,
 				D28EF67F22389E000054CA8A /* HotPlayCell.xib in Resources */,
 				E551319721F0688500DD8859 /* ImageSelectedOn@3x.png in Resources */,
 				E551318121F0688500DD8859 /* ImageError@2x.png in Resources */,
@@ -2975,15 +3003,18 @@
 				E551317921F0688500DD8859 /* UIBarButtonItemArrowLeft.png in Resources */,
 				E551319221F0688500DD8859 /* ImageSelectedOff@3x.png in Resources */,
 				E551317D21F0688500DD8859 /* UIBarButtonItemGrid@2x.png in Resources */,
+				D2C3C425223A51DB0052CE44 /* Location.gpx in Resources */,
 				E551317B21F0688500DD8859 /* ImageSelectedSmallOn.png in Resources */,
 				E551318321F0688500DD8859 /* ImageSelectedSmallOff@3x.png in Resources */,
 				E551318F21F0688500DD8859 /* VideoOverlay.png in Resources */,
 				E551319421F0688500DD8859 /* UIBarButtonItemArrowRight@2x.png in Resources */,
 				E551318421F0688500DD8859 /* PlayButtonOverlayLargeTap.png in Resources */,
 				E551317C21F0688500DD8859 /* UIBarButtonItemGrid.png in Resources */,
+				D2C44BF4223F959C00DB11DF /* MoviesClassListCell2.xib in Resources */,
 				D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */,
 				E551318921F0688500DD8859 /* ImageError.png in Resources */,
 				D2A3AA472237E33600B6B7A3 /* MainNewestMovieCell.xib in Resources */,
+				D2C44BF9223F95AB00DB11DF /* MoviesClassListCell3.xib in Resources */,
 				D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */,
 				E551318E21F0688500DD8859 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
 				E551317E21F0688500DD8859 /* VideoOverlay@2x.png in Resources */,
@@ -3295,6 +3326,7 @@
 				E589702821F06360008924E4 /* URLPathManager.m in Sources */,
 				D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */,
 				E551338B21F06AAF00DD8859 /* ZXAnyAIDecoder.m in Sources */,
+				D2C44BEE223F958B00DB11DF /* MoviesClassListCell1.m in Sources */,
 				E551319A21F0688500DD8859 /* XMEngine.m in Sources */,
 				E55133BE21F06AAF00DD8859 /* ZXEAN13Reader.m in Sources */,
 				E55133D621F06AAF00DD8859 /* ZXExpandedProductResultParser.m in Sources */,
@@ -3402,6 +3434,7 @@
 				E551342E21F06AB000DD8859 /* ZXPDF417ResultMetadata.m in Sources */,
 				E551339121F06AAF00DD8859 /* ZXTelResultParser.m in Sources */,
 				E551347221F072DA00DD8859 /* NSString+Formatter.m in Sources */,
+				D2C44BF3223F959C00DB11DF /* MoviesClassListCell2.m in Sources */,
 				E5512D7921F0672300DD8859 /* FinderVC.m in Sources */,
 				E551347521F0739700DD8859 /* UIAlertController+Style.m in Sources */,
 				E551343A21F06AB000DD8859 /* ZXQRCodeFinderPatternFinder.m in Sources */,
@@ -3416,6 +3449,7 @@
 				D2A3AA3F2237D82500B6B7A3 /* MoivesRequest.m in Sources */,
 				E551316F21F0688500DD8859 /* RMPageControl.m in Sources */,
 				E551344021F06AB000DD8859 /* ZXPDF417Codeword.m in Sources */,
+				D2C44BF8223F95AB00DB11DF /* MoviesClassListCell3.m in Sources */,
 				E551304921F0688400DD8859 /* TZImageManager.m in Sources */,
 				E551316521F0688500DD8859 /* QNHosts.m in Sources */,
 				E551304A21F0688400DD8859 /* TZPhotoPickerController.m in Sources */,

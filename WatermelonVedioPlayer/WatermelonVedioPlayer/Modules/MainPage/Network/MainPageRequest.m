@@ -28,8 +28,8 @@
     }];
 }
 
-+ (void)getHotMovieListFinishBlock:(RequestFinishBlock)finishBlock {
-    [self sendGETRequest:@"/api/home/hotmov" parameters:@{} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
++ (void)getHotMovieListWithPageNum:(NSString *)pageNum finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/home/hotmov" parameters:@{@"page":pageNum,@"pageSize":@"4"} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         finishBlock(success,responseObject,error);
     }];
 }
