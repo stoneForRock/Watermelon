@@ -24,7 +24,21 @@
 
 - (void)setCellList:(NSArray *)cellList {
     _cellList = cellList;
-    int count = cellList.count;
+    int count = (int)cellList.count;
+    
+    self.coverView1.hidden = YES;
+    self.coverView2.hidden = YES;
+    if (count > 0) {
+        if (count < 2) {
+            self.coverView1.hidden = NO;
+            MoivesModel *movieModel = cellList[0];
+            self.coverView1.movieModel = movieModel;
+        } else {
+            self.coverView2.hidden = NO;
+            MoivesModel *movieModel = cellList[1];
+            self.coverView2.movieModel = movieModel;
+        }
+    }
     
 }
 

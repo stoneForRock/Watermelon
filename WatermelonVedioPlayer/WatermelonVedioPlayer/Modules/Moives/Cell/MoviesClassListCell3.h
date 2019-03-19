@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MoviesClassListCell3 : UITableViewCell
 
+@property (nonatomic, strong) NSArray *cellList;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,9 +9,19 @@
 #import "MoivesClassListVC.h"
 #import "MoivesRequest.h"
 
-@interface MoivesClassListVC ()
+#import "MoviesClassListCell1.h"
+#import "MoviesClassListCell2.h"
+#import "MoviesClassListCell3.h"
+
+#define MoviesClassListCell1Identifier = @"MoviesClassListCell1"
+#define MoviesClassListCell2Identifier = @"MoviesClassListCell2"
+#define MoviesClassListCell3Identifier = @"MoviesClassListCell3"
+
+@interface MoivesClassListVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
+
+@property (nonatomic, strong) NSMutableArray *tableList;
 
 @end
 
@@ -20,16 +30,34 @@ INSTANCE_XIB_M(@"Moives", MoivesClassListVC)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initDataInfo];
+    
+    [self initUI];
+    
+    [self requestData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initDataInfo {
+    
 }
-*/
+
+- (void)initUI {
+    
+}
+
+- (void)registTableCell {
+    
+}
+
+- (void)requestData {
+    
+}
+
+#pragma mark - tableDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MoviesClassListCell1Identifier];
+}
+
 
 @end
