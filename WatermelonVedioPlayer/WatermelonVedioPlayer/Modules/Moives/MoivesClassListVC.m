@@ -13,9 +13,9 @@
 #import "MoviesClassListCell2.h"
 #import "MoviesClassListCell3.h"
 
-#define MoviesClassListCell1Identifier = @"MoviesClassListCell1"
-#define MoviesClassListCell2Identifier = @"MoviesClassListCell2"
-#define MoviesClassListCell3Identifier = @"MoviesClassListCell3"
+#define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
+#define MoviesClassListCell2Identifier  @"MoviesClassListCell2"
+#define MoviesClassListCell3Identifier  @"MoviesClassListCell3"
 
 @interface MoivesClassListVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -57,6 +57,15 @@ INSTANCE_XIB_M(@"Moives", MoivesClassListVC)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MoviesClassListCell1Identifier];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.tableList.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1.0;
 }
 
 

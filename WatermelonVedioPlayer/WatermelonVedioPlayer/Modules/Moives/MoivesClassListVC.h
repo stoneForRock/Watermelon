@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,MoivesListType) {
+    MoivesList1Type = 0,//一行一个
+    MoivesList2Type = 1,//一行两个
+    MoivesList3Type = 2//一行三个
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MoivesClassListVC : UIViewController
