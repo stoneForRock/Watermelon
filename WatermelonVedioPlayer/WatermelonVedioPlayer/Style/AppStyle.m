@@ -23,15 +23,22 @@
     //setup nav
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UINavigationBar appearance] setBackgroundColor:COLORWITHRGBADIVIDE255(49, 49, 49, 1)];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1)];
     
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName : ThemeTextColor, NSFontAttributeName : [UIFont systemFontOfSize:14]} forState:UIControlStateNormal];
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName : [ThemeTextColor colorWithAlphaComponent:0.5], NSFontAttributeName : [UIFont systemFontOfSize:14]} forState:UIControlStateHighlighted];
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setBackButtonTitlePositionAdjustment:UIOffsetMake(3, 0) forBarMetrics:UIBarMetricsDefault];
     
-    UIImage *image = [UIImage imageNamed:@"nav_btn_back_light_normal"];
-    [[UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil] setBackButtonBackgroundImage:[[UIImage imageNamed:@"nav_btn_back_light_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height/2, image.size.width-1, image.size.height/2-1, image.size.width)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil] setBackButtonBackgroundImage:[[UIImage imageNamed:@"nav_btn_back_light_press"] resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height/2, image.size.width-1, image.size.height/2-1, image.size.width)] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    UIImage *image = [UIImage imageNamed:@"nav_back"];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil] setBackButtonBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height/2, image.size.width-1, image.size.height/2-1, image.size.width)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil] setBackButtonBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(image.size.height/2, image.size.width-1, image.size.height/2-1, image.size.width)] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setBackIndicatorImage:image];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:image];
+    UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+    UIOffset offset;
+    offset.horizontal = -500;
+    [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
     
     
     [[UITabBar appearance] setBarTintColor:COLORWITHRGBADIVIDE255(49, 49, 49, 1)];

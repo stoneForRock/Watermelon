@@ -37,22 +37,12 @@
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPp-uA-ADS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="hD3-8q-jj7"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yPp-uA-ADS" firstAttribute="leading" secondItem="CPL-0O-9tr" secondAttribute="leading" id="2z0-P5-BcL"/>
                             <constraint firstItem="7FF-Pc-qAO" firstAttribute="trailing" secondItem="CPL-0O-9tr" secondAttribute="trailing" id="3Pm-35-mjL"/>
-                            <constraint firstItem="7FF-Pc-qAO" firstAttribute="top" secondItem="yPp-uA-ADS" secondAttribute="bottom" id="MmT-5N-GSX"/>
-                            <constraint firstItem="yPp-uA-ADS" firstAttribute="top" secondItem="Nxa-9Z-F8u" secondAttribute="top" id="Oz0-zA-lU2"/>
+                            <constraint firstItem="7FF-Pc-qAO" firstAttribute="top" secondItem="CPL-0O-9tr" secondAttribute="top" constant="60" id="Snd-MV-72g"/>
                             <constraint firstItem="7FF-Pc-qAO" firstAttribute="bottom" secondItem="CPL-0O-9tr" secondAttribute="bottom" id="XT2-Br-4qF"/>
-                            <constraint firstItem="yPp-uA-ADS" firstAttribute="trailing" secondItem="CPL-0O-9tr" secondAttribute="trailing" id="qdS-Ke-Otr"/>
                             <constraint firstItem="7FF-Pc-qAO" firstAttribute="leading" secondItem="CPL-0O-9tr" secondAttribute="leading" id="sST-Gh-4gR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CPL-0O-9tr"/>

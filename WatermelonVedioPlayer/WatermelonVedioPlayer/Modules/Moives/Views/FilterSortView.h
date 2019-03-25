@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FilterSortView : UIView
 
-- (instancetype)initWithFilterType:(FilterSortType)type frame:(CGRect)frame;
+- (instancetype)initWithFilterType:(FilterSortType)type frame:(CGRect)frame delegate:(id<FilterSortViewDelegate>)delegate dataSource:(id<FilterSortViewDataSource>)dataSource;
 
 @property (nonatomic, assign) id<FilterSortViewDelegate> filterSortViewDelgate;
 @property (nonatomic, assign) id<FilterSortViewDataSource> filterSortViewDataSource;

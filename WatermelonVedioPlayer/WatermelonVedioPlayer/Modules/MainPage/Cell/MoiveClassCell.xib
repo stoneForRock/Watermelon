@@ -26,6 +26,9 @@
                             <constraint firstAttribute="height" constant="60" id="Qf1-Ne-ijE"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NH3-9y-hJ5"/>
+                        </connections>
                     </button>
                     <button opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW5-So-LKx">
                         <rect key="frame" x="101" y="20" width="60" height="60"/>
@@ -34,6 +37,9 @@
                             <constraint firstAttribute="height" constant="60" id="YH6-Ry-xbO"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z7M-ae-9MR"/>
+                        </connections>
                     </button>
                     <button opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8w-9T-NLR">
                         <rect key="frame" x="188" y="20" width="60" height="60"/>
@@ -42,6 +48,9 @@
                             <constraint firstAttribute="width" constant="60" id="idJ-2L-hmw"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pYd-u8-rtG"/>
+                        </connections>
                     </button>
                     <button opaque="NO" clipsSubviews="YES" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-Ik-Bnn">
                         <rect key="frame" x="275.5" y="20" width="60" height="60"/>
@@ -50,6 +59,9 @@
                             <constraint firstAttribute="width" constant="60" id="pMK-K7-VGo"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DOP-P7-w21"/>
+                        </connections>
                     </button>
                     <button opaque="NO" clipsSubviews="YES" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gez-rS-QiS">
                         <rect key="frame" x="13.5" y="115" width="60" height="60"/>
@@ -58,6 +70,9 @@
                             <constraint firstAttribute="height" constant="60" id="KQG-Z5-rTQ"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="39P-Qu-k9I"/>
+                        </connections>
                     </button>
                     <button opaque="NO" clipsSubviews="YES" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY7-FV-CjK">
                         <rect key="frame" x="101" y="115" width="60" height="60"/>
@@ -77,6 +92,9 @@
                             <constraint firstAttribute="width" constant="60" id="glW-2e-yAr"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QSP-zZ-TUb"/>
+                        </connections>
                     </button>
                     <button opaque="NO" clipsSubviews="YES" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-1r-7ZH">
                         <rect key="frame" x="275.5" y="115" width="60" height="60"/>
@@ -85,6 +103,9 @@
                             <constraint firstAttribute="height" constant="60" id="wKf-eS-Ccn"/>
                         </constraints>
                         <state key="normal" image="class_bg"/>
+                        <connections>
+                            <action selector="clickMoiveClass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HaI-Xn-ESa"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk2-sM-6mM">
                         <rect key="frame" x="3.5" y="80" width="80" height="20"/>
@@ -223,7 +244,7 @@
                 <outlet property="lab7" destination="Ml2-W5-qmO" id="Ogz-nR-Ogd"/>
                 <outlet property="lab8" destination="bmf-si-2Zh" id="1W0-wD-MpY"/>
             </connections>
-            <point key="canvasLocation" x="-934" y="14"/>
+            <point key="canvasLocation" x="-1330" y="31"/>
         </tableViewCell>
     </objects>
     <resources>

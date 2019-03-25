@@ -61,7 +61,7 @@ return [[UIStoryboard storyboardWithName:s bundle:nil] instantiateViewController
 #define IphoneXScreen ((ScreenFullWidth == 375.f && ScreenFullHeight == 812.f ? YES : NO) || (ScreenFullWidth == 414.f && ScreenFullHeight == 896.f ? YES : NO))
 
 // iPhoneX 适配
-#define SafeTopHeight    (NaviBarHeight + StatusBarHeight)
+#define SafeTopHeight    (NavigationBarHeight + StatusBarHeight)
 #define SafeBottomHeight (IphoneXScreen?34:0)
 
 #define ScreenBounds [[UIScreen mainScreen] bounds]     //屏幕
