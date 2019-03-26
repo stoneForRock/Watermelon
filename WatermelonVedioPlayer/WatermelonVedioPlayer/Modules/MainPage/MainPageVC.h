@@ -16,6 +16,9 @@
 @property (nonatomic, copy) NSString *hotLivePageNum;
 @property (nonatomic, copy) NSString *hotLivePages;
 
+//所有的类别项
+@property (nonatomic, strong) NSMutableArray *allClassMoviesItem;
+
 INSTANCE_XIB_H
 
 - (void)initTopScrollWithData:(NSArray *)ads;

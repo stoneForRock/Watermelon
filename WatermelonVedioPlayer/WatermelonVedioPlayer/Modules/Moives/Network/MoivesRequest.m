@@ -26,7 +26,7 @@
         default:
             break;
     }
-    [self sendPOSTRequest:@"/api/movie-class/list" parameters:@{@"sort":sortKey,@"clsId":classId,@"page":page,@"pageSize":@"10"} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+    [self sendPOSTRequest:@"/api/movie/list" parameters:@{@"sort":sortKey,@"clsId":classId,@"page":page,@"pageSize":@"10"} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         finishBlock(success,responseObject,error);
     }];
 }

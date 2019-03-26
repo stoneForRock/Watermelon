@@ -59,10 +59,10 @@ INSTANCE_XIB_M(@"Moives", MoivesClassListVC)
 
 - (void)requestData {
     [HUDHelper showHUDLoading:self.view text:@"请稍候..."];
-    [MoivesRequest requestMovieListWithSortType:self.sortType classId:@"" page:[NSString stringWithFormat:@"%d",self.currentPage] finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
-        [HUDHelper hideHUDView];
+    [MoivesRequest requestMovieListWithSortType:self.sortType classId:self.classId page:[NSString stringWithFormat:@"%d",self.currentPage] finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        [HUDHelper hideHUDView:self.view];
         if (success) {
-            
+             
         } else {
             [HUDHelper showHUDText:error.domain duration:1.5];
         }

@@ -12,20 +12,16 @@
 
 @implementation MainPageVC (Push)
 
-- (void)pushToMoiveClassListVCWithClassList:(NSArray *)classList currentClassInfo:(NSDictionary *)currentClassInfo {
-    
+- (void)tapClassItemPushWithCurrentClassId:(NSString *)currentClassId {
+    [self pushToMoiveClassListWithSortType:MoivesSortSynthesize topViewSortType:FilterSort layoutType:MoivesList2Type classList:self.allClassMoviesItem.copy currentClassInfo:currentClassId navTitle:nil];
 }
 
+- (void)tapMoreNewlestMovieList {
+    [self pushToMoiveClassListWithSortType:MoivesSortMostNew topViewSortType:FilterSort layoutType:MoivesList2Type classList:self.allClassMoviesItem.copy currentClassInfo:@"" navTitle:nil];
+}
 
-/**
- 点击分类Item进入列表
-
- @param sortType 排序类型
- @param classList 所有的类别
- @param currentClassId 当前类别id
- */
-- (void)tapClassItemPushWithSortType:(MoivesSortType)sortType classList:(NSArray *)classList currentClassInfo:(NSString *)currentClassId {
-    [self pushToMoiveClassListWithSortType:sortType topViewSortType:FilterSort layoutType:MoivesList2Type classList:classList currentClassInfo:currentClassId navTitle:nil];
+- (void)tapHotPlayMovieList {
+    [self pushToMoiveClassListWithSortType:MoivesSortMostPlay topViewSortType:OnlyFilter layoutType:MoivesList1Type classList:self.allClassMoviesItem.copy currentClassInfo:@"" navTitle:@"重磅热播"];
 }
 
 - (void)pushToMoiveClassListWithSortType:(MoivesSortType)sortType topViewSortType:(FilterSortType)topSortType layoutType:(MoivesListType)layoutType classList:(NSArray *)classList currentClassInfo:(NSString *)currentClassId navTitle:(NSString *)navTitle {

@@ -12,7 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainPageVC (Push)
 
-- (void)pushToMoiveClassListVCWithClassList:(NSArray *)classList currentClassInfo:(NSDictionary *)currentClassInfo;
+/**
+ 点击分类Item进入列表
+ 
+ @param currentClassId 当前类别id
+ */
+- (void)tapClassItemPushWithCurrentClassId:(NSString *)currentClassId;
+
+/**
+ 最新片源
+  */
+- (void)tapMoreNewlestMovieList;
+
+/**
+ 重磅热播
+ */
+- (void)tapHotPlayMovieList;
 
 - (void)pushToMoiveDetialVCWithMovieInfo:(MoivesModel *)movieModel;
 

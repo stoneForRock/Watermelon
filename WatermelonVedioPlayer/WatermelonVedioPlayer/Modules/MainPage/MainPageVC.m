@@ -55,6 +55,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 
 - (void)initDataInfo {
     self.tableDataSource = [NSMutableDictionary dictionaryWithCapacity:0];
+    self.allClassMoviesItem = [NSMutableArray arrayWithCapacity:0];
 }
 
 - (void)request {
@@ -86,6 +87,11 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [self.tableView.mj_header endRefreshing];
     [self.tableDataSource setObject:moiveClass forKey:@"moiveClass"];
     [self.tableView reloadData];
+    if (moiveClass) {
+        NSDictionary *dictionary = @{@"clsIcon":@"",@"clsName":@"全部",@"id":@"",@"rank":@""};//构建一个全部的项
+        self.allClassMoviesItem = [NSMutableArray arrayWithArray:moiveClass];
+        [self.allClassMoviesItem insertObject:dictionary atIndex:0];
+    }
 }
 
 - (void)refreshNewestMoiveWithList:(NSArray *)newestList {
@@ -208,7 +214,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 
 #pragma mark - cellDelegate
 - (void)clickMoiveClass:(NSDictionary *)classInfo {
-    [self pushToMoiveClassListVCWithClassList:self.tableDataSource[@"moiveClass"] currentClassInfo:classInfo];
+    [self tapClassItemPushWithCurrentClassId:classInfo[@"id"]];
 }
 
 - (void)newestMovieCellClickMoive:(MoivesModel *)movieModel {
@@ -216,7 +222,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)newestMovieCellMoreAction {
-    
+    [self tapMoreNewlestMovieList];
 }
 
 //换一批
@@ -236,7 +242,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 }
 
 - (void)hotPlayCellMoreAction {
-    
+    [self tapHotPlayMovieList];
 }
 
 - (void)gussLikeCellClickMovie:(MoivesModel *)moive {
