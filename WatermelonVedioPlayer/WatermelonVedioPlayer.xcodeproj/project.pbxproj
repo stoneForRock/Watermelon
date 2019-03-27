@@ -47,6 +47,7 @@
 		D2C44BF4223F959C00DB11DF /* MoviesClassListCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BF2223F959C00DB11DF /* MoviesClassListCell2.xib */; };
 		D2C44BF8223F95AB00DB11DF /* MoviesClassListCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */; };
 		D2C44BF9223F95AB00DB11DF /* MoviesClassListCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */; };
+		D2D53DCA224B711300001A0A /* UIView+NoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D53DC9224B711300001A0A /* UIView+NoData.m */; };
 		D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913A223259D300A021E4 /* MainSearchVC.m */; };
 		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
 		D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914422325BE600A021E4 /* MainPageRequest.m */; };
@@ -543,6 +544,8 @@
 		D2C44BF5223F95AB00DB11DF /* MoviesClassListCell3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesClassListCell3.h; sourceTree = "<group>"; };
 		D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesClassListCell3.m; sourceTree = "<group>"; };
 		D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesClassListCell3.xib; sourceTree = "<group>"; };
+		D2D53DC8224B711300001A0A /* UIView+NoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+NoData.h"; sourceTree = "<group>"; };
+		D2D53DC9224B711300001A0A /* UIView+NoData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+NoData.m"; sourceTree = "<group>"; };
 		D2ED9139223259D300A021E4 /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
 		D2ED913A223259D300A021E4 /* MainSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchVC.m; sourceTree = "<group>"; };
 		D2ED913D22325B6E00A021E4 /* PlayHistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayHistoryVC.h; sourceTree = "<group>"; };
@@ -2496,6 +2499,8 @@
 				E55134A021F0815700DD8859 /* UISearchBar+Style.m */,
 				E55134A221F0819100DD8859 /* UIView+shadowRadius.h */,
 				E55134A321F0819100DD8859 /* UIView+shadowRadius.m */,
+				D2D53DC8224B711300001A0A /* UIView+NoData.h */,
+				D2D53DC9224B711300001A0A /* UIView+NoData.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -3293,6 +3298,7 @@
 				E55133C921F06AAF00DD8859 /* ZXISBNResultParser.m in Sources */,
 				E55133B921F06AAF00DD8859 /* ZXOneDimensionalCodeWriter.m in Sources */,
 				E551317621F0688500DD8859 /* MWTapDetectingView.m in Sources */,
+				D2D53DCA224B711300001A0A /* UIView+NoData.m in Sources */,
 				E551341A21F06AB000DD8859 /* ZXQRCodeEncoder.m in Sources */,
 				E551343021F06AB000DD8859 /* ZXBitMatrix.m in Sources */,
 				E551313A21F0688500DD8859 /* IQPreviousNextView.m in Sources */,

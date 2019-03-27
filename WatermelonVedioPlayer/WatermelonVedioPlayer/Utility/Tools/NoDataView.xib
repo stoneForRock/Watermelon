@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,14 +16,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nodata" translatesAutoresizingMaskIntoConstraints="NO" id="xjJ-Kw-EqR">
-                    <rect key="frame" x="73" y="57" width="93" height="92"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="182"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="93" id="iQp-fM-Jdm"/>
-                        <constraint firstAttribute="height" constant="92" id="u9i-zf-JsT"/>
+                        <constraint firstAttribute="width" constant="240" id="iQp-fM-Jdm"/>
+                        <constraint firstAttribute="height" constant="182" id="u9i-zf-JsT"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-er-KW5">
-                    <rect key="frame" x="93" y="166" width="53.5" height="16"/>
+                    <rect key="frame" x="93.5" y="166" width="53.5" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="RqQ-2s-fYN"/>
                     </constraints>
@@ -34,19 +34,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="jTV-er-KW5" firstAttribute="top" secondItem="xjJ-Kw-EqR" secondAttribute="bottom" constant="17" id="VVh-cD-jcg"/>
+                <constraint firstItem="jTV-er-KW5" firstAttribute="top" secondItem="xjJ-Kw-EqR" secondAttribute="bottom" constant="-16" id="VVh-cD-jcg"/>
                 <constraint firstItem="jTV-er-KW5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZjL-Jm-HBH"/>
                 <constraint firstItem="xjJ-Kw-EqR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="a4z-sr-STr"/>
-                <constraint firstItem="xjJ-Kw-EqR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="57" id="n0P-9v-apk"/>
+                <constraint firstItem="xjJ-Kw-EqR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="n0P-9v-apk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="alertTextLabel" destination="jTV-er-KW5" id="oua-2v-Wte"/>
             </connections>
-            <point key="canvasLocation" x="-258" y="-106"/>
+            <point key="canvasLocation" x="-259.19999999999999" y="-106.14692653673164"/>
         </view>
     </objects>
     <resources>
-        <image name="nodata" width="93" height="92"/>
+        <image name="nodata" width="256" height="141"/>
     </resources>
 </document>

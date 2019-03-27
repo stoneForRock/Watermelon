@@ -33,16 +33,28 @@
     if (count > 0) {
         if (count == 1) {
             self.coverView1.hidden = NO;
-            MoivesModel *movieModel = cellList[0];
-            self.coverView1.movieModel = movieModel;
+            MoivesModel *movieModel1 = cellList[0];
+            self.coverView1.movieModel = movieModel1;
         } else if (count == 2){
+            self.coverView1.hidden = NO;
+            MoivesModel *movieModel1 = cellList[0];
+            self.coverView1.movieModel = movieModel1;
+            
             self.coverView2.hidden = NO;
-            MoivesModel *movieModel = cellList[1];
-            self.coverView2.movieModel = movieModel;
+            MoivesModel *movieModel2 = cellList[1];
+            self.coverView2.movieModel = movieModel2;
         } else {
+            self.coverView1.hidden = NO;
+            MoivesModel *movieModel1 = cellList[0];
+            self.coverView1.movieModel = movieModel1;
+            
+            self.coverView2.hidden = NO;
+            MoivesModel *movieModel2 = cellList[1];
+            self.coverView2.movieModel = movieModel2;
+            
             self.coverView3.hidden = NO;
-            MoivesModel *movieModel = cellList[2];
-            self.coverView3.movieModel = movieModel;
+            MoivesModel *movieModel3 = cellList[2];
+            self.coverView3.movieModel = movieModel3;
         }
     }
 }

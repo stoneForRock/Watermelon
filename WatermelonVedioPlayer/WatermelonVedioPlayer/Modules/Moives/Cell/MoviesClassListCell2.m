@@ -20,9 +20,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
 }
 
 - (void)setCellList:(NSArray *)cellList {
+    
+    self.coverView1.nameLabel.textColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1);
+    self.coverView2.nameLabel.textColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1);
     _cellList = cellList;
     int count = (int)cellList.count;
     
@@ -34,9 +38,13 @@
             MoivesModel *movieModel = cellList[0];
             self.coverView1.movieModel = movieModel;
         } else {
+            self.coverView1.hidden = NO;
+            MoivesModel *movieModel1 = cellList[0];
+            self.coverView1.movieModel = movieModel1;
+            
             self.coverView2.hidden = NO;
-            MoivesModel *movieModel = cellList[1];
-            self.coverView2.movieModel = movieModel;
+            MoivesModel *movieModel2 = cellList[1];
+            self.coverView2.movieModel = movieModel2;
         }
     }
     

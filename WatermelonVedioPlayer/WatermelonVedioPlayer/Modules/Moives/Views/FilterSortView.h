@@ -22,8 +22,10 @@ typedef NS_ENUM(NSInteger,FilterSortType) {
 
 @protocol FilterSortViewDataSource <NSObject>
 - (NSArray<NSDictionary *> *)filterDataSource;
+- (NSInteger)defaultFilterIndex;
 @optional
 - (NSArray<NSDictionary *> *)sortDataSource;
+- (NSInteger)defaultSortIndex;
 @end
 
 NS_ASSUME_NONNULL_BEGIN

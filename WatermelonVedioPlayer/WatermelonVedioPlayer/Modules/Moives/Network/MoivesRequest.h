@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger,MoivesSortType) {
-    MoivesSortMostPlay = 0,//最多播放
-    MoivesSortMostLove,    //最多喜欢
+    MoivesSortSynthesize = 0,      //综合
+    MoivesSortMostPlay,     //最多播放
     MoivesSortMostNew,     //最近更新
-    MoivesSortSynthesize      //综合
+    MoivesSortMostLove,    //最多喜欢
 };
 
 @interface MoivesRequest : BaseRequest

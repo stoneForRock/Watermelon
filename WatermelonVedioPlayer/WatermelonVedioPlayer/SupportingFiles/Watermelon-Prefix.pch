@@ -17,5 +17,6 @@
 #import "UserConfig.h"
 #import "UIView+HUD.h"
 #import "UIViewController+HUD.h"
+#import "UIView+NoData.h"
 
 #endif /* Watermelon_Prefix_pch */

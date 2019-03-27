@@ -14,7 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIView *coverContentView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIView *scoreBgView;
 

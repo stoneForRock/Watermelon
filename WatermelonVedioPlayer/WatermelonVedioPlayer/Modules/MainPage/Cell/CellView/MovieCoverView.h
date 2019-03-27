@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieCoverView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) MoivesModel *movieModel;
 
 @end

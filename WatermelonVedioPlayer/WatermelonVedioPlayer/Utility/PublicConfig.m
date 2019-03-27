@@ -29,7 +29,7 @@ NSString *const  qiNiuOrderSpace = @"order";
 
 NSString * const kPushClientId = @"kPushClientId";
 
-NSString * const _APPNAME = @"西瓜视频";
+NSString * const _APPNAME = @"百合视频";
 #pragma mark - APP BUNDLEID -
 NSString *const kAppBundleIdProduct = @"com.VedioPlayer.WatermelonVedioPlayer";
 
