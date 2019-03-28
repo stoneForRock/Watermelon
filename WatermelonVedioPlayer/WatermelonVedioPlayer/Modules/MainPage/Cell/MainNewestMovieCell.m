@@ -49,13 +49,27 @@
     }
 }
 
+- (void)setColumnModel:(MovieColumnModel *)columnModel {
+    _columnModel = columnModel;
+    [self showTitle:columnModel.name];
+    if (columnModel && [columnModel.movies isKindOfClass:[NSArray class]]) {
+        self.cellDataList = columnModel.movies;
+    }
+}
+
 - (void)showTitle:(NSString *)title {
     self.titleLabel.text = title;
 }
 
 - (IBAction)moreAction:(UIButton *)sender {
-    if (self.newestMovieCellDelegate != nil && [self.newestMovieCellDelegate respondsToSelector:@selector(newestMovieCellMoreAction)]) {
-        [self.newestMovieCellDelegate newestMovieCellMoreAction];
+    if (self.columnModel) {
+        if (self.newestMovieCellDelegate != nil && [self.newestMovieCellDelegate respondsToSelector:@selector(topicDetialActionWithColumn:)]) {
+            [self.newestMovieCellDelegate topicDetialActionWithColumn:self.columnModel];
+        }
+    } else {
+        if (self.newestMovieCellDelegate != nil && [self.newestMovieCellDelegate respondsToSelector:@selector(newestMovieCellMoreAction)]) {
+            [self.newestMovieCellDelegate newestMovieCellMoreAction];
+        }
     }
 }
 

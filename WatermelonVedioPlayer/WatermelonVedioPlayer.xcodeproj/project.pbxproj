@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2EE9B7F0A5DB0395B0BFC376 /* libPods-WatermelonVedioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD732287E55022B83E2E3B /* libPods-WatermelonVedioPlayer.a */; };
 		3DBFCD2152011D2879E28B4C /* libPods-WatermelonVedioPlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFB3A77A34150B607236DFF /* libPods-WatermelonVedioPlayerUITests.a */; };
+		D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */; };
 		D2756E29224218B000EB45B3 /* FilterSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2756E28224218B000EB45B3 /* FilterSortView.m */; };
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
 		D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2798130222F6C6F0036D408 /* ForgetPswVC.m */; };
@@ -483,6 +484,8 @@
 		7C86A34D0E59AC61E7669CEE /* Pods-WatermelonVedioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayer/Pods-WatermelonVedioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		85E57562F7E066C4B204858B /* Pods-WatermelonVedioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerUITests/Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0801926F123F5A02F8C3B4 /* Pods-WatermelonVedioPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerTests/Pods-WatermelonVedioPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D25C2F25224CA394006361C3 /* SpecialTopicMoiveListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialTopicMoiveListVC.h; sourceTree = "<group>"; };
+		D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialTopicMoiveListVC.m; sourceTree = "<group>"; };
 		D2756E27224218B000EB45B3 /* FilterSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterSortView.h; sourceTree = "<group>"; };
 		D2756E28224218B000EB45B3 /* FilterSortView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterSortView.m; sourceTree = "<group>"; };
 		D279812C222F6C590036D408 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
@@ -1440,6 +1443,8 @@
 				D2A3AA2F2237D76F00B6B7A3 /* MoivesDetialVC.m */,
 				D2A3AA312237D78700B6B7A3 /* MoivesClassListVC.h */,
 				D2A3AA322237D78700B6B7A3 /* MoivesClassListVC.m */,
+				D25C2F25224CA394006361C3 /* SpecialTopicMoiveListVC.h */,
+				D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */,
 				D2A3AA342237D79400B6B7A3 /* Moives.storyboard */,
 			);
 			path = Moives;
@@ -3245,6 +3250,7 @@
 				E55133DD21F06AB000DD8859 /* ZXTextParsedResult.m in Sources */,
 				E55133EB21F06AB000DD8859 /* ZXDataMatrixASCIIEncoder.m in Sources */,
 				E55133FA21F06AB000DD8859 /* ZXAI01320xDecoder.m in Sources */,
+				D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */,
 				E55133A421F06AAF00DD8859 /* ZXQRCodeDecoder.m in Sources */,
 				E551338321F06AAF00DD8859 /* ZXGenericGF.m in Sources */,
 				E551338F21F06AAF00DD8859 /* ZXPDF417ErrorCorrection.m in Sources */,

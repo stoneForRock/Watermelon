@@ -7,7 +7,6 @@
 //
 
 #import "UIView+Frame.h"
-#import "NoDataView.h"
 
 @implementation UIView (Frame)
 - (CGPoint) sc_origin
@@ -195,28 +194,4 @@
     }
 }
 
-#define kNoDataViewTag 1200012
-
-- (void)sc_showNoDataView:(NSString *)text
-{
-    NoDataView *noDataView = [self viewWithTag:kNoDataViewTag];
-    if (!noDataView) {
-        noDataView = [[[UINib nibWithNibName:@"NoDataView" bundle:nil] instantiateWithOwner:nil options:nil] firstObject];
-        noDataView.frame = CGRectMake((self.sc_width-240)/2, (self.sc_height-240)/2, 240, 240);
-        [self addSubview:noDataView];
-        noDataView.tag = kNoDataViewTag;
-    }
-    if (text) {
-        noDataView.alertTextLabel.text = text;
-    }
-    noDataView.hidden = NO;
-}
-
-- (void)sc_hideNoDataView
-{
-    NoDataView *noDataView = [self viewWithTag:kNoDataViewTag];
-    if (noDataView) {
-        noDataView.hidden = YES;
-    }
-}
 @end

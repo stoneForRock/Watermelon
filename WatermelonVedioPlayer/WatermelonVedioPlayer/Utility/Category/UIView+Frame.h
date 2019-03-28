@@ -45,10 +45,5 @@
  */
 - (UITableView *)getSuperTableView;
 
-/**
- 缺失页提示
- */
-- (void)sc_showNoDataView:(NSString *)text;
-- (void)sc_hideNoDataView;
 
 @end

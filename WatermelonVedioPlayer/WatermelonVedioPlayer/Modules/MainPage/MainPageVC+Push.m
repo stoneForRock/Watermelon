@@ -9,6 +9,7 @@
 #import "MainPageVC+Push.h"
 #import "MoivesClassListVC.h"
 #import "MoivesDetialVC.h"
+#import "SpecialTopicMoiveListVC.h"
 
 @implementation MainPageVC (Push)
 
@@ -34,6 +35,13 @@
     classListVC.navTitle = navTitle;
     classListVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:classListVC animated:YES];
+}
+
+- (void)pushToTopicDetialMovieListWithColumn:(MovieColumnModel *)columnModel {
+    SpecialTopicMoiveListVC *topicListVC = [SpecialTopicMoiveListVC instanceFromXib];
+    topicListVC.columnModel = columnModel;
+    topicListVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:topicListVC animated:YES];
 }
 
 - (void)pushToMoiveDetialVCWithMovieInfo:(MoivesModel *)movieModel {

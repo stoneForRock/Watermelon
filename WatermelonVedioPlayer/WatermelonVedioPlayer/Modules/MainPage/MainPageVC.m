@@ -225,6 +225,11 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [self tapMoreNewlestMovieList];
 }
 
+//点击专题查看专题详情页
+- (void)topicDetialActionWithColumn:(MovieColumnModel *)columnModel {
+    [self pushToTopicDetialMovieListWithColumn:columnModel];
+}
+
 //换一批
 - (void)hotPlayCellExchangeAction {
     int currentPageNum = [self.hotLivePageNum intValue];
@@ -313,11 +318,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
                 MovieColumnModel *columnModel = self.tableDataSource[key];
                 MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
                 newestCell.newestMovieCellDelegate = self;
-                [newestCell showTitle:columnModel.name];
-                
-                if (columnModel && [columnModel.movies isKindOfClass:[NSArray class]]) {
-                    newestCell.cellDataList = columnModel.movies;
-                }
+                newestCell.columnModel = columnModel;
                 return newestCell;
             }
         } else {
@@ -326,11 +327,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
             MovieColumnModel *columnModel = self.tableDataSource[key];
             MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
             newestCell.newestMovieCellDelegate = self;
-            [newestCell showTitle:columnModel.name];
-            
-            if (columnModel && [columnModel.movies isKindOfClass:[NSArray class]]) {
-                newestCell.cellDataList = columnModel.movies;
-            }
+            newestCell.columnModel = columnModel;
             return newestCell;
         }
     }
@@ -371,15 +368,4 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

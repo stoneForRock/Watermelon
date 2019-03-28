@@ -29,6 +29,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)tapHotPlayMovieList;
 
+/**
+ 进入专题详情页
+
+ @param columnModel 专题Model
+ */
+- (void)pushToTopicDetialMovieListWithColumn:(MovieColumnModel *)columnModel;
+
+/**
+ 进入视频详情页面
+
+ @param movieModel 视频model
+ */
 - (void)pushToMoiveDetialVCWithMovieInfo:(MoivesModel *)movieModel;
 
 @end
