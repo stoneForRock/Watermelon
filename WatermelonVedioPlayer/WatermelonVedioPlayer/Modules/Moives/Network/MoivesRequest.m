@@ -31,4 +31,10 @@
     }];
 }
 
++ (void)getColumnMoviesWithNavId:(NSString *)navId finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/column/movies" parameters:@{@"navId":navId} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
 @end

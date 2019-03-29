@@ -19,8 +19,6 @@
 
 @end
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface MainNewestMovieCell : UITableViewCell
 
 @property (nonatomic, strong) NSArray *cellDataList;
@@ -31,5 +29,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showTitle:(NSString *)title;
 
 @end
-
-NS_ASSUME_NONNULL_END

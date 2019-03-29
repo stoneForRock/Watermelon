@@ -9,11 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "MovieCoverView.h"
 
+@protocol MoviesClassListCell3Delegate <NSObject>
+@optional
+
+- (void)tapMoiveItemAction:(MoivesModel *)movieModel;
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MoviesClassListCell3 : UITableViewCell
 
 @property (nonatomic, strong) NSArray *cellList;
+@property (nonatomic, assign) id<MoviesClassListCell3Delegate> moviesClassListCell3Delegate;
 
 @end
 

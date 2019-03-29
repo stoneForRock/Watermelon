@@ -269,6 +269,7 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
         return classCell;
     } else if (indexPath.section == 1) {
         MainNewestMovieCell *newestCell = [tableView dequeueReusableCellWithIdentifier:MainNewestMovieCellIdentifier];
+        newestCell.columnModel = nil;
         newestCell.newestMovieCellDelegate = self;
         [newestCell showTitle:@"最新片源"];
         id cellData = self.tableDataSource[@"newestMoive"];

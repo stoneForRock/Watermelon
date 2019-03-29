@@ -20,10 +20,40 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    UITapGestureRecognizer *tapItem1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem1:)];
+    [self.coverView1 addGestureRecognizer:tapItem1];
+    
+    UITapGestureRecognizer *tapItem2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem2:)];
+    [self.coverView2 addGestureRecognizer:tapItem2];
+    
+    UITapGestureRecognizer *tapItem3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem3:)];
+    [self.coverView3 addGestureRecognizer:tapItem3];
+    
+}
+
+- (void)tapItem1:(UIGestureRecognizer *)tapGesture {
+    if (self.moviesClassListCell3Delegate != nil && [self.moviesClassListCell3Delegate respondsToSelector:@selector(tapMoiveItemAction:)]) {
+        [self.moviesClassListCell3Delegate tapMoiveItemAction:_cellList[0]];
+    }
+}
+
+- (void)tapItem2:(UIGestureRecognizer *)tapGesture {
+    if (self.moviesClassListCell3Delegate != nil && [self.moviesClassListCell3Delegate respondsToSelector:@selector(tapMoiveItemAction:)]) {
+        [self.moviesClassListCell3Delegate tapMoiveItemAction:_cellList[1]];
+    }
+}
+
+- (void)tapItem3:(UIGestureRecognizer *)tapGesture {
+    if (self.moviesClassListCell3Delegate != nil && [self.moviesClassListCell3Delegate respondsToSelector:@selector(tapMoiveItemAction:)]) {
+        [self.moviesClassListCell3Delegate tapMoiveItemAction:_cellList[2]];
+    }
 }
 
 - (void)setCellList:(NSArray *)cellList {
+    self.coverView1.nameLabel.textColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1);
+    self.coverView2.nameLabel.textColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1);
+    self.coverView3.nameLabel.textColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1);
     _cellList = cellList;
     int count = (int)cellList.count;
     

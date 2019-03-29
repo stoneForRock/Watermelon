@@ -36,6 +36,22 @@
 		D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA322312A4200E3DF62 /* Channel.storyboard */; };
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
+		D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */; };
+		D2BE4BEB224DFED4005BBAC6 /* QCValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BCB224DFED4005BBAC6 /* QCValueTrackingSlider.m */; };
+		D2BE4BEC224DFED4005BBAC6 /* QCPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D2BE4BCD224DFED4005BBAC6 /* QCPlayer.bundle */; };
+		D2BE4BED224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD0224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m */; };
+		D2BE4BEE224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD1224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m */; };
+		D2BE4BEF224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD2224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m */; };
+		D2BE4BF0224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD3224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m */; };
+		D2BE4BF1224DFED4005BBAC6 /* UIView+QCCustomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD4224DFED4005BBAC6 /* UIView+QCCustomControlView.m */; };
+		D2BE4BF2224DFED4005BBAC6 /* UIImageView+QCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD6224DFED4005BBAC6 /* UIImageView+QCCache.m */; };
+		D2BE4BF3224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BDB224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m */; };
+		D2BE4BF4224DFED4005BBAC6 /* QCMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BDF224DFED4005BBAC6 /* QCMaterialDesignSpinner.m */; };
+		D2BE4BF5224DFED4005BBAC6 /* QCValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE0224DFED4005BBAC6 /* QCValuePopUpView.m */; };
+		D2BE4BF6224DFED4005BBAC6 /* QCPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE1224DFED4005BBAC6 /* QCPlayerModel.m */; };
+		D2BE4BF7224DFED4005BBAC6 /* QCBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE3224DFED4005BBAC6 /* QCBrightnessView.m */; };
+		D2BE4BF8224DFED4005BBAC6 /* QCPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE6224DFED4005BBAC6 /* QCPlayerView.m */; };
+		D2BE4BF9224DFED4005BBAC6 /* QCPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE8224DFED4005BBAC6 /* QCPlayerControlView.m */; };
 		D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C4092239EBE20052CE44 /* MovieCoverView.m */; };
 		D2C3C40C2239EBF00052CE44 /* MovieCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */; };
 		D2C3C415223A32480052CE44 /* MainListADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C413223A32480052CE44 /* MainListADCell.m */; };
@@ -528,6 +544,39 @@
 		D2ACDCA322312A4200E3DF62 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finder.storyboard; sourceTree = "<group>"; };
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieLiveView.h; sourceTree = "<group>"; };
+		D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieLiveView.m; sourceTree = "<group>"; };
+		D2BE4BCB224DFED4005BBAC6 /* QCValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCValueTrackingSlider.m; sourceTree = "<group>"; };
+		D2BE4BCC224DFED4005BBAC6 /* QCBrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCBrightnessView.h; sourceTree = "<group>"; };
+		D2BE4BCD224DFED4005BBAC6 /* QCPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QCPlayer.bundle; sourceTree = "<group>"; };
+		D2BE4BCE224DFED4005BBAC6 /* QCPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerControlView.h; sourceTree = "<group>"; };
+		D2BE4BD0224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+QCPlayerRotation.m"; sourceTree = "<group>"; };
+		D2BE4BD1224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QCPlayerRotation.m"; sourceTree = "<group>"; };
+		D2BE4BD2224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+QCPlayerRotation.m"; sourceTree = "<group>"; };
+		D2BE4BD3224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+QCCurrentViewController.m"; sourceTree = "<group>"; };
+		D2BE4BD4224DFED4005BBAC6 /* UIView+QCCustomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QCCustomControlView.m"; sourceTree = "<group>"; };
+		D2BE4BD5224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+QCPlayerRotation.h"; sourceTree = "<group>"; };
+		D2BE4BD6224DFED4005BBAC6 /* UIImageView+QCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+QCCache.m"; sourceTree = "<group>"; };
+		D2BE4BD7224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QCPlayerRotation.h"; sourceTree = "<group>"; };
+		D2BE4BD8224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+QCPlayerRotation.h"; sourceTree = "<group>"; };
+		D2BE4BD9224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+QCPlayerRotation.h"; sourceTree = "<group>"; };
+		D2BE4BDA224DFED4005BBAC6 /* UIImageView+QCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+QCCache.h"; sourceTree = "<group>"; };
+		D2BE4BDB224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+QCPlayerRotation.m"; sourceTree = "<group>"; };
+		D2BE4BDC224DFED4005BBAC6 /* UIView+QCCustomControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QCCustomControlView.h"; sourceTree = "<group>"; };
+		D2BE4BDD224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+QCCurrentViewController.h"; sourceTree = "<group>"; };
+		D2BE4BDE224DFED4005BBAC6 /* QCPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerView.h; sourceTree = "<group>"; };
+		D2BE4BDF224DFED4005BBAC6 /* QCMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		D2BE4BE0224DFED4005BBAC6 /* QCValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCValuePopUpView.m; sourceTree = "<group>"; };
+		D2BE4BE1224DFED4005BBAC6 /* QCPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPlayerModel.m; sourceTree = "<group>"; };
+		D2BE4BE2224DFED4005BBAC6 /* QCPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayer.h; sourceTree = "<group>"; };
+		D2BE4BE3224DFED4005BBAC6 /* QCBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCBrightnessView.m; sourceTree = "<group>"; };
+		D2BE4BE4224DFED4005BBAC6 /* QCValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCValueTrackingSlider.h; sourceTree = "<group>"; };
+		D2BE4BE5224DFED4005BBAC6 /* QCMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		D2BE4BE6224DFED4005BBAC6 /* QCPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPlayerView.m; sourceTree = "<group>"; };
+		D2BE4BE7224DFED4005BBAC6 /* QCPlayerControlViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerControlViewDelegate.h; sourceTree = "<group>"; };
+		D2BE4BE8224DFED4005BBAC6 /* QCPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPlayerControlView.m; sourceTree = "<group>"; };
+		D2BE4BE9224DFED4005BBAC6 /* QCPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerModel.h; sourceTree = "<group>"; };
+		D2BE4BEA224DFED4005BBAC6 /* QCValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCValuePopUpView.h; sourceTree = "<group>"; };
 		D2C3C4062239E4F90052CE44 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
 		D2C3C4082239EBE20052CE44 /* MovieCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCoverView.h; sourceTree = "<group>"; };
 		D2C3C4092239EBE20052CE44 /* MovieCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCoverView.m; sourceTree = "<group>"; };
@@ -1464,6 +1513,8 @@
 			children = (
 				D2756E27224218B000EB45B3 /* FilterSortView.h */,
 				D2756E28224218B000EB45B3 /* FilterSortView.m */,
+				D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */,
+				D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1504,6 +1555,52 @@
 				D2ACDC97223119CE00E3DF62 /* UIViewController+HUD.m */,
 			);
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		D2BE4BCA224DFED4005BBAC6 /* ZFPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D2BE4BCB224DFED4005BBAC6 /* QCValueTrackingSlider.m */,
+				D2BE4BCC224DFED4005BBAC6 /* QCBrightnessView.h */,
+				D2BE4BCD224DFED4005BBAC6 /* QCPlayer.bundle */,
+				D2BE4BCE224DFED4005BBAC6 /* QCPlayerControlView.h */,
+				D2BE4BCF224DFED4005BBAC6 /* Category */,
+				D2BE4BDE224DFED4005BBAC6 /* QCPlayerView.h */,
+				D2BE4BDF224DFED4005BBAC6 /* QCMaterialDesignSpinner.m */,
+				D2BE4BE0224DFED4005BBAC6 /* QCValuePopUpView.m */,
+				D2BE4BE1224DFED4005BBAC6 /* QCPlayerModel.m */,
+				D2BE4BE2224DFED4005BBAC6 /* QCPlayer.h */,
+				D2BE4BE3224DFED4005BBAC6 /* QCBrightnessView.m */,
+				D2BE4BE4224DFED4005BBAC6 /* QCValueTrackingSlider.h */,
+				D2BE4BE5224DFED4005BBAC6 /* QCMaterialDesignSpinner.h */,
+				D2BE4BE6224DFED4005BBAC6 /* QCPlayerView.m */,
+				D2BE4BE7224DFED4005BBAC6 /* QCPlayerControlViewDelegate.h */,
+				D2BE4BE8224DFED4005BBAC6 /* QCPlayerControlView.m */,
+				D2BE4BE9224DFED4005BBAC6 /* QCPlayerModel.h */,
+				D2BE4BEA224DFED4005BBAC6 /* QCValuePopUpView.h */,
+			);
+			path = ZFPlayer;
+			sourceTree = "<group>";
+		};
+		D2BE4BCF224DFED4005BBAC6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D2BE4BD0224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m */,
+				D2BE4BD1224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m */,
+				D2BE4BD2224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m */,
+				D2BE4BD3224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m */,
+				D2BE4BD4224DFED4005BBAC6 /* UIView+QCCustomControlView.m */,
+				D2BE4BD5224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.h */,
+				D2BE4BD6224DFED4005BBAC6 /* UIImageView+QCCache.m */,
+				D2BE4BD7224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.h */,
+				D2BE4BD8224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.h */,
+				D2BE4BD9224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.h */,
+				D2BE4BDA224DFED4005BBAC6 /* UIImageView+QCCache.h */,
+				D2BE4BDB224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m */,
+				D2BE4BDC224DFED4005BBAC6 /* UIView+QCCustomControlView.h */,
+				D2BE4BDD224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.h */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		D2C3C4072239EB6F0052CE44 /* CellView */ = {
@@ -2752,6 +2849,7 @@
 		E5D5E37B21E621E900399261 /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
+				D2BE4BCA224DFED4005BBAC6 /* ZFPlayer */,
 				E55131A921F06AAE00DD8859 /* ZXing */,
 				E5512F6A21F0688300DD8859 /* AMapSDK */,
 				E5512F9421F0688300DD8859 /* GtSdkLib-noidfa */,
@@ -3019,6 +3117,7 @@
 				E551319221F0688500DD8859 /* ImageSelectedOff@3x.png in Resources */,
 				E551317D21F0688500DD8859 /* UIBarButtonItemGrid@2x.png in Resources */,
 				D2C3C425223A51DB0052CE44 /* Location.gpx in Resources */,
+				D2BE4BEC224DFED4005BBAC6 /* QCPlayer.bundle in Resources */,
 				E551317B21F0688500DD8859 /* ImageSelectedSmallOn.png in Resources */,
 				E551318321F0688500DD8859 /* ImageSelectedSmallOff@3x.png in Resources */,
 				E551318F21F0688500DD8859 /* VideoOverlay.png in Resources */,
@@ -3147,6 +3246,7 @@
 				E55133BF21F06AAF00DD8859 /* ZXRSSExpandedFieldParser.m in Sources */,
 				D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */,
 				E55133E121F06AB000DD8859 /* ZXURIParsedResult.m in Sources */,
+				D2BE4BF0224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m in Sources */,
 				E55133BD21F06AAF00DD8859 /* ZXAztecBinaryShiftToken.m in Sources */,
 				E551340F21F06AB000DD8859 /* ZXMaxiCodeReader.m in Sources */,
 				E551341121F06AB000DD8859 /* ZXQRCodeFormatInformation.m in Sources */,
@@ -3180,6 +3280,7 @@
 				E55134B521F085D600DD8859 /* APPUser.m in Sources */,
 				E551339D21F06AAF00DD8859 /* ZXQRCodeDataMask.m in Sources */,
 				E551314121F0688500DD8859 /* IQUIView+Hierarchy.m in Sources */,
+				D2BE4BEF224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m in Sources */,
 				E551340521F06AB000DD8859 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				E551343321F06AB000DD8859 /* ZXByQuadrantReader.m in Sources */,
 				D2A3AA462237E33600B6B7A3 /* MainNewestMovieCell.m in Sources */,
@@ -3213,6 +3314,7 @@
 				E551338221F06AAF00DD8859 /* ZXMonochromeRectangleDetector.m in Sources */,
 				E551343F21F06AB000DD8859 /* ZXIntArray.m in Sources */,
 				E551315621F0688500DD8859 /* QN_GTM_Base64.m in Sources */,
+				D2BE4BF4224DFED4005BBAC6 /* QCMaterialDesignSpinner.m in Sources */,
 				E55133CA21F06AAF00DD8859 /* ZXPDF417.m in Sources */,
 				E551343921F06AB000DD8859 /* ZXCode39Writer.m in Sources */,
 				E55133FE21F06AB000DD8859 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
@@ -3249,6 +3351,7 @@
 				E551339521F06AAF00DD8859 /* ZXQRCodeMaskUtil.m in Sources */,
 				E55133DD21F06AB000DD8859 /* ZXTextParsedResult.m in Sources */,
 				E55133EB21F06AB000DD8859 /* ZXDataMatrixASCIIEncoder.m in Sources */,
+				D2BE4BF8224DFED4005BBAC6 /* QCPlayerView.m in Sources */,
 				E55133FA21F06AB000DD8859 /* ZXAI01320xDecoder.m in Sources */,
 				D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */,
 				E55133A421F06AAF00DD8859 /* ZXQRCodeDecoder.m in Sources */,
@@ -3272,6 +3375,7 @@
 				E589702E21F0644C008924E4 /* QiniuOperator.m in Sources */,
 				E551304B21F0688400DD8859 /* TZPhotoPreviewCell.m in Sources */,
 				E551339921F06AAF00DD8859 /* ZXPDF417BarcodeMatrix.m in Sources */,
+				D2BE4BEE224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m in Sources */,
 				E551316C21F0688500DD8859 /* QNDnspodEnterprise.m in Sources */,
 				E55133B521F06AAF00DD8859 /* ZXWifiResultParser.m in Sources */,
 				D279812E222F6C590036D408 /* RegisterVC.m in Sources */,
@@ -3281,11 +3385,13 @@
 				E551340C21F06AB000DD8859 /* ZXEAN8Writer.m in Sources */,
 				E55133D421F06AAF00DD8859 /* ZXAbstractRSSReader.m in Sources */,
 				E551344221F06AB000DD8859 /* ZXDataMatrixTextEncoder.m in Sources */,
+				D2BE4BF9224DFED4005BBAC6 /* QCPlayerControlView.m in Sources */,
 				E55133EC21F06AB000DD8859 /* ZXSMTPResultParser.m in Sources */,
 				E55134D221F1DF4700DD8859 /* LoginManager+Logout.m in Sources */,
 				E551343B21F06AB000DD8859 /* ZXExpandedProductParsedResult.m in Sources */,
 				E551313521F0688500DD8859 /* IQTextView.m in Sources */,
 				E551316321F0688500DD8859 /* QNResolver.m in Sources */,
+				D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */,
 				D2C3C415223A32480052CE44 /* MainListADCell.m in Sources */,
 				E551337721F06AAF00DD8859 /* ZXAI01weightDecoder.m in Sources */,
 				E551342421F06AB000DD8859 /* ZXAztecWriter.m in Sources */,
@@ -3340,6 +3446,7 @@
 				E55133D821F06AB000DD8859 /* ZXAztecReader.m in Sources */,
 				E551315121F0688500DD8859 /* QNEtag.m in Sources */,
 				E551344821F06AB000DD8859 /* ZXPDF417DetectionResult.m in Sources */,
+				D2BE4BF3224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m in Sources */,
 				E55133AB21F06AAF00DD8859 /* ZXCode39Reader.m in Sources */,
 				E589702821F06360008924E4 /* URLPathManager.m in Sources */,
 				D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */,
@@ -3356,6 +3463,7 @@
 				E551342321F06AB000DD8859 /* ZXInvertedLuminanceSource.m in Sources */,
 				E551343121F06AB000DD8859 /* ZXReedSolomonEncoder.m in Sources */,
 				E55133B021F06AAF00DD8859 /* ZXPDF417DetectorResult.m in Sources */,
+				D2BE4BF2224DFED4005BBAC6 /* UIImageView+QCCache.m in Sources */,
 				E55133A821F06AAF00DD8859 /* ZXPDF417Common.m in Sources */,
 				E551341721F06AB000DD8859 /* ZXAztecSimpleToken.m in Sources */,
 				E55134C921F1DF1300DD8859 /* LoginRequest.m in Sources */,
@@ -3416,6 +3524,7 @@
 				E551349021F0794100DD8859 /* UIView+HudTost.m in Sources */,
 				E551315421F0688500DD8859 /* QNALAssetFile.m in Sources */,
 				E551341421F06AB000DD8859 /* ZXAI01decoder.m in Sources */,
+				D2BE4BF6224DFED4005BBAC6 /* QCPlayerModel.m in Sources */,
 				E551338C21F06AAF00DD8859 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
 				E551316721F0688500DD8859 /* QNLruCache.m in Sources */,
 				E551338D21F06AAF00DD8859 /* ZXVCardResultParser.m in Sources */,
@@ -3453,7 +3562,9 @@
 				E551339121F06AAF00DD8859 /* ZXTelResultParser.m in Sources */,
 				E551347221F072DA00DD8859 /* NSString+Formatter.m in Sources */,
 				D2C44BF3223F959C00DB11DF /* MoviesClassListCell2.m in Sources */,
+				D2BE4BF1224DFED4005BBAC6 /* UIView+QCCustomControlView.m in Sources */,
 				E5512D7921F0672300DD8859 /* FinderVC.m in Sources */,
+				D2BE4BF7224DFED4005BBAC6 /* QCBrightnessView.m in Sources */,
 				E551347521F0739700DD8859 /* UIAlertController+Style.m in Sources */,
 				E551343A21F06AB000DD8859 /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				E55133E621F06AB000DD8859 /* ZXQRCodeMode.m in Sources */,
@@ -3489,12 +3600,15 @@
 				E551348121F0751E00DD8859 /* UIImage+fixOrientation.m in Sources */,
 				E551340821F06AB000DD8859 /* ZXRSSExpandedRow.m in Sources */,
 				E551316021F0688500DD8859 /* QNIpModel.m in Sources */,
+				D2BE4BED224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m in Sources */,
 				E551344921F06AB000DD8859 /* ZXBinaryBitmap.m in Sources */,
 				E551339A21F06AAF00DD8859 /* ZXUPCAReader.m in Sources */,
 				E551340421F06AB000DD8859 /* ZXResultPoint.m in Sources */,
 				E551315321F0688500DD8859 /* QNAsyncRun.m in Sources */,
 				E55133D021F06AAF00DD8859 /* ZXCode128Writer.m in Sources */,
 				E551340121F06AB000DD8859 /* ZXBoolArray.m in Sources */,
+				D2BE4BEB224DFED4005BBAC6 /* QCValueTrackingSlider.m in Sources */,
+				D2BE4BF5224DFED4005BBAC6 /* QCValuePopUpView.m in Sources */,
 				E55133C321F06AAF00DD8859 /* ZXVINResultParser.m in Sources */,
 				E551349821F07D3D00DD8859 /* NSString+MD5.m in Sources */,
 				E55133DA21F06AB000DD8859 /* ZXAztecCode.m in Sources */,

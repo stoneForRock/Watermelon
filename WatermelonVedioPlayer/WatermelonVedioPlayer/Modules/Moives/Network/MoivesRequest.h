@@ -28,6 +28,14 @@ typedef NS_ENUM(NSInteger,MoivesSortType) {
  @param finishBlock finishBlock
  */
 + (void)requestMovieListWithSortType:(MoivesSortType)sortType classId:(NSString *)classId page:(NSString *)page finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 获取专栏页栏目详情电影列表
+
+ @param navId 栏目id
+ @param finishBlock finishBlock
+ */
++ (void)getColumnMoviesWithNavId:(NSString *)navId finishBlock:(RequestFinishBlock)finishBlock;
 @end
 
 NS_ASSUME_NONNULL_END

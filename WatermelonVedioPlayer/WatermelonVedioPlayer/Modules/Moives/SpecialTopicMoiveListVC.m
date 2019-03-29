@@ -10,10 +10,12 @@
 #import "UIView+Frame.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MoviesClassListCell3.h"
-#import <MJRefresh/MJRefresh.h>
+#import "MoivesRequest.h"
+#import "HUDHelper.h"
+#import "MoivesDetialVC.h"
 
 #define MoviesClassListCell3Identifier  @"MoviesClassListCell3"
-@interface SpecialTopicMoiveListVC ()<UINavigationControllerDelegate,UITableViewDelegate, UITableViewDataSource>
+@interface SpecialTopicMoiveListVC ()<UINavigationControllerDelegate,UITableViewDelegate, UITableViewDataSource, MoviesClassListCell3Delegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *topCoverImgview;
 @property (weak, nonatomic) IBOutlet UIImageView *topMaskImgview;
@@ -74,7 +76,15 @@ INSTANCE_XIB_M(@"Moives", SpecialTopicMoiveListVC)
 }
 
 - (void)requestData {
-    
+    [HUDHelper showHUDLoading:self.view text:@"请稍候..."];
+    [MoivesRequest getColumnMoviesWithNavId:self.columnModel.navId finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        [HUDHelper hideHUDView:self.view];
+        if (success) {
+            [self formartStyleCell3Data:responseObject];
+        } else {
+            [HUDHelper showHUDText:error.domain duration:1.5];
+        }
+    }];
 }
 
 - (void)formartStyleCell3Data:(NSArray *)data {
@@ -107,6 +117,7 @@ INSTANCE_XIB_M(@"Moives", SpecialTopicMoiveListVC)
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSArray *cellList = self.tableList[indexPath.row];
     cell.cellList = cellList;
+    cell.moviesClassListCell3Delegate = self;
     return cell;
 }
 
@@ -120,6 +131,13 @@ INSTANCE_XIB_M(@"Moives", SpecialTopicMoiveListVC)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1.0;
+}
+
+- (void)tapMoiveItemAction:(MoivesModel *)movieModel {
+    MoivesDetialVC *moivesDetialVC = [MoivesDetialVC instanceFromXib];
+    moivesDetialVC.movieModel = movieModel;
+    moivesDetialVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:moivesDetialVC animated:YES];
 }
 
 @end

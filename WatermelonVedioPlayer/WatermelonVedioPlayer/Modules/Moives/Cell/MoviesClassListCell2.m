@@ -21,6 +21,24 @@
     [super awakeFromNib];
     // Initialization code
     
+    UITapGestureRecognizer *tapItem1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem1:)];
+    [self.coverView1 addGestureRecognizer:tapItem1];
+    
+    UITapGestureRecognizer *tapItem2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem2:)];
+    [self.coverView2 addGestureRecognizer:tapItem2];
+    
+}
+
+- (void)tapItem1:(UIGestureRecognizer *)tapGesture {
+    if (self.moviesClassListCell2Delegate != nil && [self.moviesClassListCell2Delegate respondsToSelector:@selector(tapMoiveItemAction:)]) {
+        [self.moviesClassListCell2Delegate tapMoiveItemAction:_cellList[0]];
+    }
+}
+
+- (void)tapItem2:(UIGestureRecognizer *)tapGesture {
+    if (self.moviesClassListCell2Delegate != nil && [self.moviesClassListCell2Delegate respondsToSelector:@selector(tapMoiveItemAction:)]) {
+        [self.moviesClassListCell2Delegate tapMoiveItemAction:_cellList[1]];
+    }
 }
 
 - (void)setCellList:(NSArray *)cellList {

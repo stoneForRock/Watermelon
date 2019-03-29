@@ -12,11 +12,12 @@
 #import "HUDHelper.h"
 #import "MoivesModel.h"
 #import <MJRefresh/MJRefresh.h>
+#import "MoivesDetialVC.h"
 
 #define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
 #define MoviesClassListCell2Identifier  @"MoviesClassListCell2"
 
-@interface MoivesClassListVC ()<UITableViewDelegate, UITableViewDataSource, FilterSortViewDelegate, FilterSortViewDataSource>
+@interface MoivesClassListVC ()<UITableViewDelegate, UITableViewDataSource, FilterSortViewDelegate, FilterSortViewDataSource, MoviesClassListCell2Delegate>
 
 @property (strong, nonatomic) FilterSortView *filterSortView;
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -180,6 +181,7 @@ INSTANCE_XIB_M(@"Moives", MoivesClassListVC)
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSArray *cellList = self.tableList[indexPath.row];
         cell.cellList = cellList;
+        cell.moviesClassListCell2Delegate = self;
         return cell;
     } else {
         return nil;
@@ -202,9 +204,19 @@ INSTANCE_XIB_M(@"Moives", MoivesClassListVC)
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (self.listType == MoivesList1Type) {
         MoivesModel *cellModel = self.tableList[indexPath.row];
-        
+        [self pushToMovieDetailWithMovie:cellModel];
     }
 }
 
+- (void)tapMoiveItemAction:(MoivesModel *)movieModel {
+    [self pushToMovieDetailWithMovie:movieModel];
+}
+
+- (void)pushToMovieDetailWithMovie:(MoivesModel *)movieModel {
+    MoivesDetialVC *moivesDetialVC = [MoivesDetialVC instanceFromXib];
+    moivesDetialVC.movieModel = movieModel;
+    moivesDetialVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:moivesDetialVC animated:YES];
+}
 
 @end
