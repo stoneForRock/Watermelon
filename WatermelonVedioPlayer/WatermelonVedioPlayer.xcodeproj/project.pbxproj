@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		2EE9B7F0A5DB0395B0BFC376 /* libPods-WatermelonVedioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD732287E55022B83E2E3B /* libPods-WatermelonVedioPlayer.a */; };
 		3DBFCD2152011D2879E28B4C /* libPods-WatermelonVedioPlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFB3A77A34150B607236DFF /* libPods-WatermelonVedioPlayerUITests.a */; };
+		D21E0EC0225352890043FDAE /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EA0225352880043FDAE /* MMMaterialDesignSpinner.m */; };
+		D21E0EC1225352890043FDAE /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EA2225352880043FDAE /* ASValuePopUpView.m */; };
+		D21E0EC2225352890043FDAE /* ZFPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EA4225352880043FDAE /* ZFPlayerControlView.m */; };
+		D21E0EC3225352890043FDAE /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EA6225352880043FDAE /* ASValueTrackingSlider.m */; };
+		D21E0EC4225352890043FDAE /* ZFPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D21E0EAA225352880043FDAE /* ZFPlayer.bundle */; };
+		D21E0EC5225352890043FDAE /* UITabBarController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EAD225352880043FDAE /* UITabBarController+ZFPlayerRotation.m */; };
+		D21E0EC6225352890043FDAE /* UIWindow+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EB4225352880043FDAE /* UIWindow+CurrentViewController.m */; };
+		D21E0EC7225352890043FDAE /* UIView+CustomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EB5225352880043FDAE /* UIView+CustomControlView.m */; };
+		D21E0EC8225352890043FDAE /* UINavigationController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EB6225352880043FDAE /* UINavigationController+ZFPlayerRotation.m */; };
+		D21E0EC9225352890043FDAE /* UIAlertController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EB7225352880043FDAE /* UIAlertController+ZFPlayerRotation.m */; };
+		D21E0ECA225352890043FDAE /* UIImageView+ZFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EB8225352880043FDAE /* UIImageView+ZFCache.m */; };
+		D21E0ECB225352890043FDAE /* UIViewController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EB9225352890043FDAE /* UIViewController+ZFPlayerRotation.m */; };
+		D21E0ECC225352890043FDAE /* ZFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBA225352890043FDAE /* ZFPlayerView.m */; };
+		D21E0ECD225352890043FDAE /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBD225352890043FDAE /* ZFPlayerModel.m */; };
+		D21E0ECE225352890043FDAE /* ZFBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBF225352890043FDAE /* ZFBrightnessView.m */; };
+		D21E0ED1225359FD0043FDAE /* MovieDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */; };
 		D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */; };
 		D2756E29224218B000EB45B3 /* FilterSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2756E28224218B000EB45B3 /* FilterSortView.m */; };
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
@@ -37,21 +53,6 @@
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
 		D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */; };
-		D2BE4BEB224DFED4005BBAC6 /* QCValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BCB224DFED4005BBAC6 /* QCValueTrackingSlider.m */; };
-		D2BE4BEC224DFED4005BBAC6 /* QCPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D2BE4BCD224DFED4005BBAC6 /* QCPlayer.bundle */; };
-		D2BE4BED224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD0224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m */; };
-		D2BE4BEE224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD1224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m */; };
-		D2BE4BEF224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD2224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m */; };
-		D2BE4BF0224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD3224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m */; };
-		D2BE4BF1224DFED4005BBAC6 /* UIView+QCCustomControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD4224DFED4005BBAC6 /* UIView+QCCustomControlView.m */; };
-		D2BE4BF2224DFED4005BBAC6 /* UIImageView+QCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BD6224DFED4005BBAC6 /* UIImageView+QCCache.m */; };
-		D2BE4BF3224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BDB224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m */; };
-		D2BE4BF4224DFED4005BBAC6 /* QCMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BDF224DFED4005BBAC6 /* QCMaterialDesignSpinner.m */; };
-		D2BE4BF5224DFED4005BBAC6 /* QCValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE0224DFED4005BBAC6 /* QCValuePopUpView.m */; };
-		D2BE4BF6224DFED4005BBAC6 /* QCPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE1224DFED4005BBAC6 /* QCPlayerModel.m */; };
-		D2BE4BF7224DFED4005BBAC6 /* QCBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE3224DFED4005BBAC6 /* QCBrightnessView.m */; };
-		D2BE4BF8224DFED4005BBAC6 /* QCPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE6224DFED4005BBAC6 /* QCPlayerView.m */; };
-		D2BE4BF9224DFED4005BBAC6 /* QCPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BE8224DFED4005BBAC6 /* QCPlayerControlView.m */; };
 		D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C4092239EBE20052CE44 /* MovieCoverView.m */; };
 		D2C3C40C2239EBF00052CE44 /* MovieCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */; };
 		D2C3C415223A32480052CE44 /* MainListADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C413223A32480052CE44 /* MainListADCell.m */; };
@@ -500,6 +501,39 @@
 		7C86A34D0E59AC61E7669CEE /* Pods-WatermelonVedioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayer/Pods-WatermelonVedioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		85E57562F7E066C4B204858B /* Pods-WatermelonVedioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerUITests/Pods-WatermelonVedioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0801926F123F5A02F8C3B4 /* Pods-WatermelonVedioPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayerTests/Pods-WatermelonVedioPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D21E0EA0225352880043FDAE /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		D21E0EA1225352880043FDAE /* ZFPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerControlView.h; sourceTree = "<group>"; };
+		D21E0EA2225352880043FDAE /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		D21E0EA3225352880043FDAE /* ZFBrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBrightnessView.h; sourceTree = "<group>"; };
+		D21E0EA4225352880043FDAE /* ZFPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerControlView.m; sourceTree = "<group>"; };
+		D21E0EA5225352880043FDAE /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		D21E0EA6225352880043FDAE /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		D21E0EA7225352880043FDAE /* ZFPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerModel.h; sourceTree = "<group>"; };
+		D21E0EA8225352880043FDAE /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		D21E0EA9225352880043FDAE /* ZFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayer.h; sourceTree = "<group>"; };
+		D21E0EAA225352880043FDAE /* ZFPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZFPlayer.bundle; sourceTree = "<group>"; };
+		D21E0EAC225352880043FDAE /* UIWindow+CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+CurrentViewController.h"; sourceTree = "<group>"; };
+		D21E0EAD225352880043FDAE /* UITabBarController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		D21E0EAE225352880043FDAE /* UINavigationController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		D21E0EAF225352880043FDAE /* UIView+CustomControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomControlView.h"; sourceTree = "<group>"; };
+		D21E0EB0225352880043FDAE /* UIViewController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		D21E0EB1225352880043FDAE /* UIImageView+ZFCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZFCache.h"; sourceTree = "<group>"; };
+		D21E0EB2225352880043FDAE /* UIAlertController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		D21E0EB3225352880043FDAE /* UITabBarController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
+		D21E0EB4225352880043FDAE /* UIWindow+CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+CurrentViewController.m"; sourceTree = "<group>"; };
+		D21E0EB5225352880043FDAE /* UIView+CustomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomControlView.m"; sourceTree = "<group>"; };
+		D21E0EB6225352880043FDAE /* UINavigationController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		D21E0EB7225352880043FDAE /* UIAlertController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		D21E0EB8225352880043FDAE /* UIImageView+ZFCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZFCache.m"; sourceTree = "<group>"; };
+		D21E0EB9225352890043FDAE /* UIViewController+ZFPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZFPlayerRotation.m"; sourceTree = "<group>"; };
+		D21E0EBA225352890043FDAE /* ZFPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerView.m; sourceTree = "<group>"; };
+		D21E0EBB225352890043FDAE /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		D21E0EBC225352890043FDAE /* ZFPlayerControlViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerControlViewDelegate.h; sourceTree = "<group>"; };
+		D21E0EBD225352890043FDAE /* ZFPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerModel.m; sourceTree = "<group>"; };
+		D21E0EBE225352890043FDAE /* ZFPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerView.h; sourceTree = "<group>"; };
+		D21E0EBF225352890043FDAE /* ZFBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBrightnessView.m; sourceTree = "<group>"; };
+		D21E0ECF225359FD0043FDAE /* MovieDetailInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailInfoView.h; sourceTree = "<group>"; };
+		D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailInfoView.m; sourceTree = "<group>"; };
 		D25C2F25224CA394006361C3 /* SpecialTopicMoiveListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialTopicMoiveListVC.h; sourceTree = "<group>"; };
 		D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialTopicMoiveListVC.m; sourceTree = "<group>"; };
 		D2756E27224218B000EB45B3 /* FilterSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterSortView.h; sourceTree = "<group>"; };
@@ -546,37 +580,6 @@
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieLiveView.h; sourceTree = "<group>"; };
 		D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieLiveView.m; sourceTree = "<group>"; };
-		D2BE4BCB224DFED4005BBAC6 /* QCValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCValueTrackingSlider.m; sourceTree = "<group>"; };
-		D2BE4BCC224DFED4005BBAC6 /* QCBrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCBrightnessView.h; sourceTree = "<group>"; };
-		D2BE4BCD224DFED4005BBAC6 /* QCPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QCPlayer.bundle; sourceTree = "<group>"; };
-		D2BE4BCE224DFED4005BBAC6 /* QCPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerControlView.h; sourceTree = "<group>"; };
-		D2BE4BD0224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+QCPlayerRotation.m"; sourceTree = "<group>"; };
-		D2BE4BD1224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QCPlayerRotation.m"; sourceTree = "<group>"; };
-		D2BE4BD2224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+QCPlayerRotation.m"; sourceTree = "<group>"; };
-		D2BE4BD3224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+QCCurrentViewController.m"; sourceTree = "<group>"; };
-		D2BE4BD4224DFED4005BBAC6 /* UIView+QCCustomControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QCCustomControlView.m"; sourceTree = "<group>"; };
-		D2BE4BD5224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+QCPlayerRotation.h"; sourceTree = "<group>"; };
-		D2BE4BD6224DFED4005BBAC6 /* UIImageView+QCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+QCCache.m"; sourceTree = "<group>"; };
-		D2BE4BD7224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QCPlayerRotation.h"; sourceTree = "<group>"; };
-		D2BE4BD8224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+QCPlayerRotation.h"; sourceTree = "<group>"; };
-		D2BE4BD9224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+QCPlayerRotation.h"; sourceTree = "<group>"; };
-		D2BE4BDA224DFED4005BBAC6 /* UIImageView+QCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+QCCache.h"; sourceTree = "<group>"; };
-		D2BE4BDB224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+QCPlayerRotation.m"; sourceTree = "<group>"; };
-		D2BE4BDC224DFED4005BBAC6 /* UIView+QCCustomControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QCCustomControlView.h"; sourceTree = "<group>"; };
-		D2BE4BDD224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+QCCurrentViewController.h"; sourceTree = "<group>"; };
-		D2BE4BDE224DFED4005BBAC6 /* QCPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerView.h; sourceTree = "<group>"; };
-		D2BE4BDF224DFED4005BBAC6 /* QCMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMaterialDesignSpinner.m; sourceTree = "<group>"; };
-		D2BE4BE0224DFED4005BBAC6 /* QCValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCValuePopUpView.m; sourceTree = "<group>"; };
-		D2BE4BE1224DFED4005BBAC6 /* QCPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPlayerModel.m; sourceTree = "<group>"; };
-		D2BE4BE2224DFED4005BBAC6 /* QCPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayer.h; sourceTree = "<group>"; };
-		D2BE4BE3224DFED4005BBAC6 /* QCBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCBrightnessView.m; sourceTree = "<group>"; };
-		D2BE4BE4224DFED4005BBAC6 /* QCValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCValueTrackingSlider.h; sourceTree = "<group>"; };
-		D2BE4BE5224DFED4005BBAC6 /* QCMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMaterialDesignSpinner.h; sourceTree = "<group>"; };
-		D2BE4BE6224DFED4005BBAC6 /* QCPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPlayerView.m; sourceTree = "<group>"; };
-		D2BE4BE7224DFED4005BBAC6 /* QCPlayerControlViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerControlViewDelegate.h; sourceTree = "<group>"; };
-		D2BE4BE8224DFED4005BBAC6 /* QCPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPlayerControlView.m; sourceTree = "<group>"; };
-		D2BE4BE9224DFED4005BBAC6 /* QCPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPlayerModel.h; sourceTree = "<group>"; };
-		D2BE4BEA224DFED4005BBAC6 /* QCValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCValuePopUpView.h; sourceTree = "<group>"; };
 		D2C3C4062239E4F90052CE44 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
 		D2C3C4082239EBE20052CE44 /* MovieCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCoverView.h; sourceTree = "<group>"; };
 		D2C3C4092239EBE20052CE44 /* MovieCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCoverView.m; sourceTree = "<group>"; };
@@ -1458,6 +1461,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D21E0EAB225352880043FDAE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D21E0EAC225352880043FDAE /* UIWindow+CurrentViewController.h */,
+				D21E0EAD225352880043FDAE /* UITabBarController+ZFPlayerRotation.m */,
+				D21E0EAE225352880043FDAE /* UINavigationController+ZFPlayerRotation.h */,
+				D21E0EAF225352880043FDAE /* UIView+CustomControlView.h */,
+				D21E0EB0225352880043FDAE /* UIViewController+ZFPlayerRotation.h */,
+				D21E0EB1225352880043FDAE /* UIImageView+ZFCache.h */,
+				D21E0EB2225352880043FDAE /* UIAlertController+ZFPlayerRotation.h */,
+				D21E0EB3225352880043FDAE /* UITabBarController+ZFPlayerRotation.h */,
+				D21E0EB4225352880043FDAE /* UIWindow+CurrentViewController.m */,
+				D21E0EB5225352880043FDAE /* UIView+CustomControlView.m */,
+				D21E0EB6225352880043FDAE /* UINavigationController+ZFPlayerRotation.m */,
+				D21E0EB7225352880043FDAE /* UIAlertController+ZFPlayerRotation.m */,
+				D21E0EB8225352880043FDAE /* UIImageView+ZFCache.m */,
+				D21E0EB9225352890043FDAE /* UIViewController+ZFPlayerRotation.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		D2A3AA242237AF6600B6B7A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1515,6 +1539,8 @@
 				D2756E28224218B000EB45B3 /* FilterSortView.m */,
 				D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */,
 				D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */,
+				D21E0ECF225359FD0043FDAE /* MovieDetailInfoView.h */,
+				D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1560,47 +1586,26 @@
 		D2BE4BCA224DFED4005BBAC6 /* ZFPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				D2BE4BCB224DFED4005BBAC6 /* QCValueTrackingSlider.m */,
-				D2BE4BCC224DFED4005BBAC6 /* QCBrightnessView.h */,
-				D2BE4BCD224DFED4005BBAC6 /* QCPlayer.bundle */,
-				D2BE4BCE224DFED4005BBAC6 /* QCPlayerControlView.h */,
-				D2BE4BCF224DFED4005BBAC6 /* Category */,
-				D2BE4BDE224DFED4005BBAC6 /* QCPlayerView.h */,
-				D2BE4BDF224DFED4005BBAC6 /* QCMaterialDesignSpinner.m */,
-				D2BE4BE0224DFED4005BBAC6 /* QCValuePopUpView.m */,
-				D2BE4BE1224DFED4005BBAC6 /* QCPlayerModel.m */,
-				D2BE4BE2224DFED4005BBAC6 /* QCPlayer.h */,
-				D2BE4BE3224DFED4005BBAC6 /* QCBrightnessView.m */,
-				D2BE4BE4224DFED4005BBAC6 /* QCValueTrackingSlider.h */,
-				D2BE4BE5224DFED4005BBAC6 /* QCMaterialDesignSpinner.h */,
-				D2BE4BE6224DFED4005BBAC6 /* QCPlayerView.m */,
-				D2BE4BE7224DFED4005BBAC6 /* QCPlayerControlViewDelegate.h */,
-				D2BE4BE8224DFED4005BBAC6 /* QCPlayerControlView.m */,
-				D2BE4BE9224DFED4005BBAC6 /* QCPlayerModel.h */,
-				D2BE4BEA224DFED4005BBAC6 /* QCValuePopUpView.h */,
+				D21E0EBB225352890043FDAE /* ASValuePopUpView.h */,
+				D21E0EA2225352880043FDAE /* ASValuePopUpView.m */,
+				D21E0EA5225352880043FDAE /* ASValueTrackingSlider.h */,
+				D21E0EA6225352880043FDAE /* ASValueTrackingSlider.m */,
+				D21E0EAB225352880043FDAE /* Category */,
+				D21E0EA8225352880043FDAE /* MMMaterialDesignSpinner.h */,
+				D21E0EA0225352880043FDAE /* MMMaterialDesignSpinner.m */,
+				D21E0EA3225352880043FDAE /* ZFBrightnessView.h */,
+				D21E0EBF225352890043FDAE /* ZFBrightnessView.m */,
+				D21E0EAA225352880043FDAE /* ZFPlayer.bundle */,
+				D21E0EA9225352880043FDAE /* ZFPlayer.h */,
+				D21E0EA1225352880043FDAE /* ZFPlayerControlView.h */,
+				D21E0EA4225352880043FDAE /* ZFPlayerControlView.m */,
+				D21E0EBC225352890043FDAE /* ZFPlayerControlViewDelegate.h */,
+				D21E0EA7225352880043FDAE /* ZFPlayerModel.h */,
+				D21E0EBD225352890043FDAE /* ZFPlayerModel.m */,
+				D21E0EBE225352890043FDAE /* ZFPlayerView.h */,
+				D21E0EBA225352890043FDAE /* ZFPlayerView.m */,
 			);
 			path = ZFPlayer;
-			sourceTree = "<group>";
-		};
-		D2BE4BCF224DFED4005BBAC6 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				D2BE4BD0224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m */,
-				D2BE4BD1224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m */,
-				D2BE4BD2224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m */,
-				D2BE4BD3224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m */,
-				D2BE4BD4224DFED4005BBAC6 /* UIView+QCCustomControlView.m */,
-				D2BE4BD5224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.h */,
-				D2BE4BD6224DFED4005BBAC6 /* UIImageView+QCCache.m */,
-				D2BE4BD7224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.h */,
-				D2BE4BD8224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.h */,
-				D2BE4BD9224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.h */,
-				D2BE4BDA224DFED4005BBAC6 /* UIImageView+QCCache.h */,
-				D2BE4BDB224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m */,
-				D2BE4BDC224DFED4005BBAC6 /* UIView+QCCustomControlView.h */,
-				D2BE4BDD224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.h */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		D2C3C4072239EB6F0052CE44 /* CellView */ = {
@@ -3113,11 +3118,11 @@
 				E551318821F0688500DD8859 /* VideoOverlay@3x.png in Resources */,
 				E551319921F0688500DD8859 /* ImageSelectedSmallOn@2x.png in Resources */,
 				E551317A21F0688500DD8859 /* UIBarButtonItemGrid@3x.png in Resources */,
+				D21E0EC4225352890043FDAE /* ZFPlayer.bundle in Resources */,
 				E551317921F0688500DD8859 /* UIBarButtonItemArrowLeft.png in Resources */,
 				E551319221F0688500DD8859 /* ImageSelectedOff@3x.png in Resources */,
 				E551317D21F0688500DD8859 /* UIBarButtonItemGrid@2x.png in Resources */,
 				D2C3C425223A51DB0052CE44 /* Location.gpx in Resources */,
-				D2BE4BEC224DFED4005BBAC6 /* QCPlayer.bundle in Resources */,
 				E551317B21F0688500DD8859 /* ImageSelectedSmallOn.png in Resources */,
 				E551318321F0688500DD8859 /* ImageSelectedSmallOff@3x.png in Resources */,
 				E551318F21F0688500DD8859 /* VideoOverlay.png in Resources */,
@@ -3246,13 +3251,13 @@
 				E55133BF21F06AAF00DD8859 /* ZXRSSExpandedFieldParser.m in Sources */,
 				D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */,
 				E55133E121F06AB000DD8859 /* ZXURIParsedResult.m in Sources */,
-				D2BE4BF0224DFED4005BBAC6 /* UIWindow+QCCurrentViewController.m in Sources */,
 				E55133BD21F06AAF00DD8859 /* ZXAztecBinaryShiftToken.m in Sources */,
 				E551340F21F06AB000DD8859 /* ZXMaxiCodeReader.m in Sources */,
 				E551341121F06AB000DD8859 /* ZXQRCodeFormatInformation.m in Sources */,
 				E55133C621F06AAF00DD8859 /* ZXPDF417DecodedBitStreamParser.m in Sources */,
 				E551340021F06AB000DD8859 /* ZXModulusGF.m in Sources */,
 				E551345B21F06E5800DD8859 /* DGBKeyChain.m in Sources */,
+				D21E0EC0225352890043FDAE /* MMMaterialDesignSpinner.m in Sources */,
 				E551304E21F0688400DD8859 /* MJPhotoView.m in Sources */,
 				E551340621F06AB000DD8859 /* ZXRGBLuminanceSource.m in Sources */,
 				E551346C21F071AC00DD8859 /* NSString+Tool.m in Sources */,
@@ -3275,12 +3280,12 @@
 				E551314D21F0688500DD8859 /* QNPHAssetResource.m in Sources */,
 				E55133C821F06AAF00DD8859 /* ZXDataMatrixDataBlock.m in Sources */,
 				E551315821F0688500DD8859 /* QNResponseInfo.m in Sources */,
+				D21E0EC2225352890043FDAE /* ZFPlayerControlView.m in Sources */,
 				E551344521F06AB000DD8859 /* ZXCalendarParsedResult.m in Sources */,
 				E55133FD21F06AB000DD8859 /* ZXDataMatrixSymbolInfo.m in Sources */,
 				E55134B521F085D600DD8859 /* APPUser.m in Sources */,
 				E551339D21F06AAF00DD8859 /* ZXQRCodeDataMask.m in Sources */,
 				E551314121F0688500DD8859 /* IQUIView+Hierarchy.m in Sources */,
-				D2BE4BEF224DFED4005BBAC6 /* UINavigationController+QCPlayerRotation.m in Sources */,
 				E551340521F06AB000DD8859 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				E551343321F06AB000DD8859 /* ZXByQuadrantReader.m in Sources */,
 				D2A3AA462237E33600B6B7A3 /* MainNewestMovieCell.m in Sources */,
@@ -3291,6 +3296,7 @@
 				E55133CC21F06AAF00DD8859 /* ZXAI01AndOtherAIs.m in Sources */,
 				E551316421F0688500DD8859 /* QNResolvUtil.m in Sources */,
 				E551339321F06AAF00DD8859 /* ZXRSS14Reader.m in Sources */,
+				D21E0EC9225352890043FDAE /* UIAlertController+ZFPlayerRotation.m in Sources */,
 				E551313F21F0688500DD8859 /* IQUITextFieldView+Additions.m in Sources */,
 				E551341C21F06AB000DD8859 /* ZXCode128Reader.m in Sources */,
 				E551304821F0688400DD8859 /* TZPhotoPreviewController.m in Sources */,
@@ -3301,6 +3307,7 @@
 				E551342F21F06AB000DD8859 /* ZXDecoderResult.m in Sources */,
 				E551340B21F06AB000DD8859 /* ZXDataMatrixWriter.m in Sources */,
 				E551313C21F0688500DD8859 /* IQKeyboardManager.m in Sources */,
+				D21E0ECE225352890043FDAE /* ZFBrightnessView.m in Sources */,
 				D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */,
 				D2A3AA332237D78700B6B7A3 /* MoivesClassListVC.m in Sources */,
 				E551340721F06AB000DD8859 /* ZXMultiFormatOneDReader.m in Sources */,
@@ -3314,11 +3321,11 @@
 				E551338221F06AAF00DD8859 /* ZXMonochromeRectangleDetector.m in Sources */,
 				E551343F21F06AB000DD8859 /* ZXIntArray.m in Sources */,
 				E551315621F0688500DD8859 /* QN_GTM_Base64.m in Sources */,
-				D2BE4BF4224DFED4005BBAC6 /* QCMaterialDesignSpinner.m in Sources */,
 				E55133CA21F06AAF00DD8859 /* ZXPDF417.m in Sources */,
 				E551343921F06AB000DD8859 /* ZXCode39Writer.m in Sources */,
 				E55133FE21F06AB000DD8859 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
 				E55133E421F06AB000DD8859 /* ZXDataMatrixSymbolInfo144.m in Sources */,
+				D21E0EC7225352890043FDAE /* UIView+CustomControlView.m in Sources */,
 				E55133CF21F06AAF00DD8859 /* ZXBinarizer.m in Sources */,
 				E551317021F0688500DD8859 /* MWPhotoBrowser.m in Sources */,
 				E55133F221F06AB000DD8859 /* ZXAztecEncoder.m in Sources */,
@@ -3351,7 +3358,6 @@
 				E551339521F06AAF00DD8859 /* ZXQRCodeMaskUtil.m in Sources */,
 				E55133DD21F06AB000DD8859 /* ZXTextParsedResult.m in Sources */,
 				E55133EB21F06AB000DD8859 /* ZXDataMatrixASCIIEncoder.m in Sources */,
-				D2BE4BF8224DFED4005BBAC6 /* QCPlayerView.m in Sources */,
 				E55133FA21F06AB000DD8859 /* ZXAI01320xDecoder.m in Sources */,
 				D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */,
 				E55133A421F06AAF00DD8859 /* ZXQRCodeDecoder.m in Sources */,
@@ -3372,10 +3378,10 @@
 				D28EF67E22389E000054CA8A /* HotPlayCell.m in Sources */,
 				E551314621F0688500DD8859 /* XTSafeCollection.m in Sources */,
 				E551337D21F06AAF00DD8859 /* ZXParsedResult.m in Sources */,
+				D21E0EC6225352890043FDAE /* UIWindow+CurrentViewController.m in Sources */,
 				E589702E21F0644C008924E4 /* QiniuOperator.m in Sources */,
 				E551304B21F0688400DD8859 /* TZPhotoPreviewCell.m in Sources */,
 				E551339921F06AAF00DD8859 /* ZXPDF417BarcodeMatrix.m in Sources */,
-				D2BE4BEE224DFED4005BBAC6 /* UIViewController+QCPlayerRotation.m in Sources */,
 				E551316C21F0688500DD8859 /* QNDnspodEnterprise.m in Sources */,
 				E55133B521F06AAF00DD8859 /* ZXWifiResultParser.m in Sources */,
 				D279812E222F6C590036D408 /* RegisterVC.m in Sources */,
@@ -3385,7 +3391,6 @@
 				E551340C21F06AB000DD8859 /* ZXEAN8Writer.m in Sources */,
 				E55133D421F06AAF00DD8859 /* ZXAbstractRSSReader.m in Sources */,
 				E551344221F06AB000DD8859 /* ZXDataMatrixTextEncoder.m in Sources */,
-				D2BE4BF9224DFED4005BBAC6 /* QCPlayerControlView.m in Sources */,
 				E55133EC21F06AB000DD8859 /* ZXSMTPResultParser.m in Sources */,
 				E55134D221F1DF4700DD8859 /* LoginManager+Logout.m in Sources */,
 				E551343B21F06AB000DD8859 /* ZXExpandedProductParsedResult.m in Sources */,
@@ -3435,25 +3440,29 @@
 				E551337921F06AAF00DD8859 /* ZXQRCodeWriter.m in Sources */,
 				E55133E521F06AB000DD8859 /* ZXResultParser.m in Sources */,
 				E55133E921F06AB000DD8859 /* ZXPDF417ScanningDecoder.m in Sources */,
+				D21E0ECD225352890043FDAE /* ZFPlayerModel.m in Sources */,
+				D21E0ED1225359FD0043FDAE /* MovieDetailInfoView.m in Sources */,
 				E551338A21F06AAF00DD8859 /* ZXOneDReader.m in Sources */,
 				E551343C21F06AB000DD8859 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				E55133C121F06AAF00DD8859 /* ZXPDF417BarcodeRow.m in Sources */,
 				E55133AA21F06AAF00DD8859 /* ZXImage.m in Sources */,
 				E55133A921F06AAF00DD8859 /* ZXRSSExpandedDecodedChar.m in Sources */,
+				D21E0EC8225352890043FDAE /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				D2ACDC95223119B600E3DF62 /* UIView+HUD.m in Sources */,
 				D28EF6832238D71A0054CA8A /* GussLikeCell.m in Sources */,
 				E551344721F06AB000DD8859 /* ZXQRCodeBlockPair.m in Sources */,
 				E55133D821F06AB000DD8859 /* ZXAztecReader.m in Sources */,
 				E551315121F0688500DD8859 /* QNEtag.m in Sources */,
 				E551344821F06AB000DD8859 /* ZXPDF417DetectionResult.m in Sources */,
-				D2BE4BF3224DFED4005BBAC6 /* UITabBarController+QCPlayerRotation.m in Sources */,
 				E55133AB21F06AAF00DD8859 /* ZXCode39Reader.m in Sources */,
 				E589702821F06360008924E4 /* URLPathManager.m in Sources */,
 				D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */,
 				E551338B21F06AAF00DD8859 /* ZXAnyAIDecoder.m in Sources */,
 				D2C44BEE223F958B00DB11DF /* MoviesClassListCell1.m in Sources */,
 				E551319A21F0688500DD8859 /* XMEngine.m in Sources */,
+				D21E0ECA225352890043FDAE /* UIImageView+ZFCache.m in Sources */,
 				E55133BE21F06AAF00DD8859 /* ZXEAN13Reader.m in Sources */,
+				D21E0EC1225352890043FDAE /* ASValuePopUpView.m in Sources */,
 				E55133D621F06AAF00DD8859 /* ZXExpandedProductResultParser.m in Sources */,
 				E551342B21F06AB000DD8859 /* ZXAI01392xDecoder.m in Sources */,
 				E551314A21F0688500DD8859 /* QNUpToken.m in Sources */,
@@ -3463,7 +3472,6 @@
 				E551342321F06AB000DD8859 /* ZXInvertedLuminanceSource.m in Sources */,
 				E551343121F06AB000DD8859 /* ZXReedSolomonEncoder.m in Sources */,
 				E55133B021F06AAF00DD8859 /* ZXPDF417DetectorResult.m in Sources */,
-				D2BE4BF2224DFED4005BBAC6 /* UIImageView+QCCache.m in Sources */,
 				E55133A821F06AAF00DD8859 /* ZXPDF417Common.m in Sources */,
 				E551341721F06AB000DD8859 /* ZXAztecSimpleToken.m in Sources */,
 				E55134C921F1DF1300DD8859 /* LoginRequest.m in Sources */,
@@ -3501,6 +3509,7 @@
 				E55133A621F06AAF00DD8859 /* ZXMultiFormatWriter.m in Sources */,
 				E551343621F06AB000DD8859 /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				E551341321F06AB000DD8859 /* ZXBitArrayBuilder.m in Sources */,
+				D21E0ECB225352890043FDAE /* UIViewController+ZFPlayerRotation.m in Sources */,
 				E55133C721F06AAF00DD8859 /* ZXPDF417BoundingBox.m in Sources */,
 				E551343821F06AB000DD8859 /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
 				E551339C21F06AAF00DD8859 /* ZXITFWriter.m in Sources */,
@@ -3524,7 +3533,6 @@
 				E551349021F0794100DD8859 /* UIView+HudTost.m in Sources */,
 				E551315421F0688500DD8859 /* QNALAssetFile.m in Sources */,
 				E551341421F06AB000DD8859 /* ZXAI01decoder.m in Sources */,
-				D2BE4BF6224DFED4005BBAC6 /* QCPlayerModel.m in Sources */,
 				E551338C21F06AAF00DD8859 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
 				E551316721F0688500DD8859 /* QNLruCache.m in Sources */,
 				E551338D21F06AAF00DD8859 /* ZXVCardResultParser.m in Sources */,
@@ -3546,6 +3554,7 @@
 				E55133DB21F06AB000DD8859 /* ZXDataMatrixC40Encoder.m in Sources */,
 				E55133F021F06AB000DD8859 /* ZXCharacterSetECI.m in Sources */,
 				E551342021F06AB000DD8859 /* ZXQRCodeMatrixUtil.m in Sources */,
+				D21E0ECC225352890043FDAE /* ZFPlayerView.m in Sources */,
 				E55133DF21F06AB000DD8859 /* ZXITFReader.m in Sources */,
 				E55133F521F06AB000DD8859 /* ZXSMSMMSResultParser.m in Sources */,
 				E55133DE21F06AB000DD8859 /* ZXUPCAWriter.m in Sources */,
@@ -3562,9 +3571,7 @@
 				E551339121F06AAF00DD8859 /* ZXTelResultParser.m in Sources */,
 				E551347221F072DA00DD8859 /* NSString+Formatter.m in Sources */,
 				D2C44BF3223F959C00DB11DF /* MoviesClassListCell2.m in Sources */,
-				D2BE4BF1224DFED4005BBAC6 /* UIView+QCCustomControlView.m in Sources */,
 				E5512D7921F0672300DD8859 /* FinderVC.m in Sources */,
-				D2BE4BF7224DFED4005BBAC6 /* QCBrightnessView.m in Sources */,
 				E551347521F0739700DD8859 /* UIAlertController+Style.m in Sources */,
 				E551343A21F06AB000DD8859 /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				E55133E621F06AB000DD8859 /* ZXQRCodeMode.m in Sources */,
@@ -3586,6 +3593,7 @@
 				E551341521F06AB000DD8859 /* ZXQRCodeMultiReader.m in Sources */,
 				E551315D21F0688500DD8859 /* QNGetAddrInfo.m in Sources */,
 				E551338021F06AAF00DD8859 /* ZXEANManufacturerOrgSupport.m in Sources */,
+				D21E0EC3225352890043FDAE /* ASValueTrackingSlider.m in Sources */,
 				E551343721F06AB000DD8859 /* ZXRSSExpandedReader.m in Sources */,
 				E55133CD21F06AAF00DD8859 /* ZXCapture.m in Sources */,
 				E55133E821F06AB000DD8859 /* ZXAztecHighLevelEncoder.m in Sources */,
@@ -3600,15 +3608,12 @@
 				E551348121F0751E00DD8859 /* UIImage+fixOrientation.m in Sources */,
 				E551340821F06AB000DD8859 /* ZXRSSExpandedRow.m in Sources */,
 				E551316021F0688500DD8859 /* QNIpModel.m in Sources */,
-				D2BE4BED224DFED4005BBAC6 /* UIAlertController+QCPlayerRotation.m in Sources */,
 				E551344921F06AB000DD8859 /* ZXBinaryBitmap.m in Sources */,
 				E551339A21F06AAF00DD8859 /* ZXUPCAReader.m in Sources */,
 				E551340421F06AB000DD8859 /* ZXResultPoint.m in Sources */,
 				E551315321F0688500DD8859 /* QNAsyncRun.m in Sources */,
 				E55133D021F06AAF00DD8859 /* ZXCode128Writer.m in Sources */,
 				E551340121F06AB000DD8859 /* ZXBoolArray.m in Sources */,
-				D2BE4BEB224DFED4005BBAC6 /* QCValueTrackingSlider.m in Sources */,
-				D2BE4BF5224DFED4005BBAC6 /* QCValuePopUpView.m in Sources */,
 				E55133C321F06AAF00DD8859 /* ZXVINResultParser.m in Sources */,
 				E551349821F07D3D00DD8859 /* NSString+MD5.m in Sources */,
 				E55133DA21F06AB000DD8859 /* ZXAztecCode.m in Sources */,
@@ -3626,6 +3631,7 @@
 				E551346F21F0727900DD8859 /* NSObject+Safe.m in Sources */,
 				E551317521F0688500DD8859 /* MWPhoto.m in Sources */,
 				E551345F21F06F3A00DD8859 /* SegmentView.m in Sources */,
+				D21E0EC5225352890043FDAE /* UITabBarController+ZFPlayerRotation.m in Sources */,
 				E5DC59FD21E4D1900018F12A /* AppDelegate.m in Sources */,
 				E551316621F0688500DD8859 /* QNDnsManager.m in Sources */,
 				E551345221F06C3600DD8859 /* PublicConfig.m in Sources */,

@@ -36,6 +36,55 @@ typedef NS_ENUM(NSInteger,MoivesSortType) {
  @param finishBlock finishBlock
  */
 + (void)getColumnMoviesWithNavId:(NSString *)navId finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 获取影片详情
+
+ @param movieId 影片id
+ @param finishBlock finishBlock
+ */
++ (void)requestMovieDetailWithMovieId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 获取收藏影片列表
+
+ @param finishBlock finishBlock
+ */
++ (void)getFavListFinishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 添加收藏
+
+ @param movieId 电影id
+ @param finishBlock finishBlock
+ */
++ (void)addFavMovieWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 取消收藏
+
+ @param movieId 影片id
+ @param finishBlock finishBlock
+ */
++ (void)cancelFavMovieWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 赞、踩-影片
+ 注：赞或踩之后不能取消/切换
+ @param movieId 影片id
+ @param status 类型[1 - 赞，2 - 踩]
+ @param finishBlock finishBlock
+ */
++ (void)praiseMovieWithId:(NSString *)movieId status:(NSString *)status finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 获取影片详情关联相似影片列表
+
+ @param movieId movieId
+ @param finishBlock finishBlock
+ */
++ (void)getMovieAlikeListWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,24 +1,20 @@
 //
-//  MovieLiveView.h
+//  MovieDetailInfoView.h
 //  WatermelonVedioPlayer
 //
-//  Created by dachen on 2019/3/29.
+//  Created by dachen on 2019/4/2.
 //  Copyright © 2019年 VedioPlayer. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "MoivesModel.h"
 
-#define PlayerControlViewShow @"playerControlViewShow"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MovieLiveView : UIView
+@interface MovieDetailInfoView : UIView
 
-@property (nonatomic, strong) MoivesModel *movieModel;
+@property (nonatomic, strong) MoivesModel *infoModel;
 @property (nonatomic, strong) NSDictionary *adInfo;//广告
-
-- (void)failLoadAdInfo;
 
 @end
 

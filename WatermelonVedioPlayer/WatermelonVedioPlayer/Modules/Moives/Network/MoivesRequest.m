@@ -37,4 +37,40 @@
     }];
 }
 
++ (void)requestMovieDetailWithMovieId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/movie/detail" parameters:@{@"id":movieId} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
++ (void)getFavListFinishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/fav/list" parameters:@{} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
++ (void)addFavMovieWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendPOSTRequest:@"/api/fav/add" parameters:@{@"id":movieId} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
++ (void)cancelFavMovieWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendPOSTRequest:@"/api/fav/del" parameters:@{@"id":movieId} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
++ (void)praiseMovieWithId:(NSString *)movieId status:(NSString *)status finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendPOSTRequest:@"/api/fav/love" parameters:@{@"id":movieId,@"status":status} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
++ (void)getMovieAlikeListWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/movie/alike" parameters:@{@"id":movieId} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
 @end
