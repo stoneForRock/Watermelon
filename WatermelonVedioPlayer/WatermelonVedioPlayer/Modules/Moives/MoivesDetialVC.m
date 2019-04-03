@@ -40,6 +40,7 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
 
 - (void)dealloc {
     self.navigationController.delegate = nil;
+    [self.liveView resetPlayer];
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -144,7 +145,7 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
     [MoivesRequest requestMovieDetailWithMovieId:self.movieModel.moiveId finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         [HUDHelper hideHUDView:self.view];
         if (success) {
-            MoivesModel *model = [[MoivesModel alloc] initWithDictionary:responseObject error:nil];
+            MoivesModel *model = [[MoivesModel alloc] initWithDetailDictionary:responseObject];
             if (model) {
                 self.movieModel = model;
             }

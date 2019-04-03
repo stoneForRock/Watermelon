@@ -47,8 +47,16 @@
         [self.introduceView addSubview:self.introduceBtn];
         
         self.adImgView.frame = CGRectMake(15, 10, frame.size.width - 30, 80);
-        self.nameLabel.frame = CGRectMake(15, CGRectGetMaxY(self.adImgView.frame) + 10, frame.size.width - 120, 40);
+        self.nameLabel.frame = CGRectMake(15, CGRectGetMaxY(self.adImgView.frame) + 10, frame.size.width - 185, 40);
         self.timeLabel.frame = CGRectMake(15, CGRectGetMaxY(self.nameLabel.frame), frame.size.width - 30, 30);
+        self.praiseBtn.frame = CGRectMake(CGRectGetMaxX(self.nameLabel.frame) + 5, CGRectGetMinY(self.nameLabel.frame) + 8, 24, 24);
+        self.progressBGView.frame = CGRectMake(CGRectGetMaxX(self.praiseBtn.frame) + 10, CGRectGetMinY(self.nameLabel.frame) + 10, 80, 6);
+        self.progressLabel.frame = CGRectMake(CGRectGetMaxX(self.praiseBtn.frame) + 10, CGRectGetMaxY(self.progressBGView.frame), 80, 18);
+        self.unpraiseBtn.frame = CGRectMake(CGRectGetMaxX(self.progressBGView.frame) + 10, CGRectGetMinY(self.nameLabel.frame) + 8, 24, 24);
+        
+        self.introduceView.frame = CGRectMake(15, CGRectGetMaxY(self.timeLabel.frame) + 10, frame.size.width - 30, 80);
+        self.introduceLabel.frame = CGRectMake(0, 0, self.introduceView.frame.size.width - 60, 80);
+        self.introduceBtn.frame = CGRectMake(CGRectGetMaxX(self.introduceLabel.frame), 0, 60, 80);
     }
     return self;
 }
@@ -56,7 +64,13 @@
 - (void)setInfoModel:(MoivesModel *)infoModel {
     _infoModel = infoModel;
     self.nameLabel.text = infoModel.movName;
-    self.timeLabel.text = [NSString stringWithFormat:@"%@ * %.2f万次播放",infoModel.createTime,[infoModel.playCount doubleValue]/10000];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@ · %.2f万次播放",infoModel.createTime,[infoModel.playCount doubleValue]/10000];
+    double likeCount = [infoModel.loveCnt doubleValue];
+    double disLikeCnt = [infoModel.dislikeCnt doubleValue];
+    double progress = likeCount/(likeCount + disLikeCnt);
+    self.progressLabel.text = [NSString stringWithFormat:@"%.f%%觉得很赞",progress*100];
+    self.progressView.frame = CGRectMake(0, 0, progress*self.progressBGView.bounds.size.width, self.progressBGView.bounds.size.height);
+    self.introduceLabel.text = infoModel.movDesc;
 }
 
 - (void)setAdInfo:(NSDictionary *)adInfo {
@@ -107,7 +121,7 @@
     if (!_timeLabel) {
         _timeLabel = [[UILabel alloc] init];
         _timeLabel.font = [UIFont systemFontOfSize:13];
-        _timeLabel.textColor = COLORWITHRGBADIVIDE255(194, 154, 104, 1);
+        _timeLabel.textColor = COLORWITHRGBADIVIDE255(51, 51, 51, 1);
     }
     return _timeLabel;
 }
@@ -154,7 +168,8 @@
 - (UILabel *)progressLabel {
     if (!_progressLabel) {
         _progressLabel = [[UILabel alloc] init];
-        _progressLabel.font = [UIFont systemFontOfSize:12];
+        _progressLabel.font = [UIFont systemFontOfSize:9];
+        _progressLabel.textAlignment = NSTextAlignmentCenter;
         _progressLabel.textColor = COLORWITHRGBADIVIDE255(194, 154, 104, 1);
     }
     return _progressLabel;
@@ -183,9 +198,13 @@
 - (UIButton *)introduceBtn {
     if (!_introduceBtn) {
         _introduceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _introduceBtn.titleLabel.font = [UIFont systemFontOfSize:12];
         [_introduceBtn setTitle:@"简介" forState:UIControlStateNormal];
+        [_introduceBtn setTitleColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1) forState:UIControlStateNormal];
         [_introduceBtn setImage:[UIImage imageNamed:@"arrow_right"] forState:UIControlStateNormal];
         [_introduceBtn addTarget:self action:@selector(introduceShowAction:) forControlEvents:UIControlEventTouchUpInside];
+        _introduceBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
+        _introduceBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
     }
     return _introduceBtn;
 }

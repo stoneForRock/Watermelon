@@ -29,4 +29,17 @@
                                                        }];
 }
 
+- (instancetype)initWithDetailDictionary:(NSDictionary *)movieDic {
+    self = [super initWithDictionary:movieDic error:nil];
+    if (self) {
+        self.createTime = movieDic[@"createDate"]?movieDic[@"createDate"]:@"";
+        self.duration = movieDic[@"duration"]?movieDic[@"duration"]:@"";
+        self.durationStr = movieDic[@"durationStr"]?movieDic[@"durationStr"]:@"";
+        self.isFav = movieDic[@"isFav"]?movieDic[@"isFav"]:@"";
+        self.loveStatus = movieDic[@"loveStatus"]?movieDic[@"loveStatus"]:@"";
+        self.relTagName = movieDic[@"relTagName"]?movieDic[@"relTagName"]:@[];
+    }
+    return self;
+}
+
 @end

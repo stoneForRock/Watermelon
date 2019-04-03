@@ -26,7 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString<Optional> *status;
 @property (nonatomic, copy) NSString<Optional> *updateTime;
 
+@property (nonatomic, copy) NSString<Optional> *duration;
+@property (nonatomic, copy) NSString<Optional> *durationStr;
+@property (nonatomic, copy) NSString<Optional> *isFav;
+@property (nonatomic, copy) NSString<Optional> *loveStatus;
+@property (nonatomic, strong) NSArray<Optional> *relTagName;
 
+- (instancetype)initWithDetailDictionary:(NSDictionary *)movieDic;
 @end
 
 NS_ASSUME_NONNULL_END

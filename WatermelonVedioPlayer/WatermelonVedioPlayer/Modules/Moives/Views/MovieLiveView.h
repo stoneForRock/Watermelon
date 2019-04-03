@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSDictionary *adInfo;//广告
 
 - (void)failLoadAdInfo;
+- (void)resetPlayer;
 
 @end
 
