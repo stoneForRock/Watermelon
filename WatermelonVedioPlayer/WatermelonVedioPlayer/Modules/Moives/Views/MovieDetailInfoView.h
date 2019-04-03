@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) MoivesModel *infoModel;
 @property (nonatomic, strong) NSDictionary *adInfo;//广告
 
+- (void)failLoadAdInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

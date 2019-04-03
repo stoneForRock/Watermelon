@@ -11,6 +11,7 @@
 #import "MovieLiveView.h"
 #import "MoivesRequest.h"
 #import "MainPageRequest.h"
+#import "MovieDetailInfoView.h"
 
 @interface MoivesDetialVC ()<UINavigationControllerDelegate>
 
@@ -20,6 +21,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *tableList;
+
+@property (nonatomic, strong) MovieDetailInfoView *infoView;
 
 @end
 
@@ -63,6 +66,9 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
     
     self.backBtn.frame = CGRectMake(10, 0, 26, 44);
     self.movieTitleLabel.frame = CGRectMake(CGRectGetMaxX(self.backBtn.frame) + 10, 0, 200, 44);
+    
+    self.infoView = [[MovieDetailInfoView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), [UIScreen mainScreen].bounds.size.width, 300)];
+    [self.view addSubview:self.infoView];
 }
 
 - (void)initDataInfo {
@@ -112,6 +118,26 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
     }];
 }
 
+- (void)requestDetailAdInfo {
+    [MainPageRequest getADListWithType:ADListVideoDetialType finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (success) {
+            if ([responseObject isKindOfClass:[NSArray class]]) {
+                NSArray *allAdList = (NSArray *)responseObject;
+                if (allAdList.count > 0) {
+                    NSDictionary *adInfo = allAdList[0];
+                    self.infoView.adInfo = adInfo;
+                } else {
+                    [self.infoView failLoadAdInfo];
+                }
+            } else {
+                [self.infoView failLoadAdInfo];
+            }
+        } else {
+            [self.infoView failLoadAdInfo];
+        }
+    }];
+}
+
 //获取影片详情信息
 - (void)getMovieDetailRequest {
     [HUDHelper showHUDLoading:self.view text:@"请稍候..."];
@@ -123,8 +149,10 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
                 self.movieModel = model;
             }
             self.liveView.movieModel = self.movieModel;
+            self.infoView.infoModel = self.movieModel;
             [self refreshSelfViewWithMovieModel:self.movieModel];
             [self requestBeforPlayAdInfo];
+            [self requestDetailAdInfo];
             [self movieAlikeListRequest];
         } else {
             [HUDHelper showHUDText:error.domain duration:1.5 inView:self.view];
