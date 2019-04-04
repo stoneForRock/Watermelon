@@ -12,7 +12,7 @@
 @protocol MovieDetailInfoViewDelegate <NSObject>
 @optional
 
-- (void)showIntroduceInfo:(NSString *)introduceInfo;
+- (void)showIntroduceMovie:(MoivesModel *)movie;
 - (void)dwonLoadMovie:(MoivesModel *)movie;
 - (void)shareMovie:(MoivesModel *)movie;
 

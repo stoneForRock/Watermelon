@@ -164,8 +164,8 @@
 }
 
 - (void)introduceShowAction:(UIButton *)sender {
-    if (self.infoViewDelegate != nil && [self.infoViewDelegate respondsToSelector:@selector(showIntroduceInfo:)]) {
-        [self.infoViewDelegate showIntroduceInfo:self.infoModel.movDesc];
+    if (self.infoViewDelegate != nil && [self.infoViewDelegate respondsToSelector:@selector(showIntroduceMovie:)]) {
+        [self.infoViewDelegate showIntroduceMovie:self.infoModel];
     }
 }
 

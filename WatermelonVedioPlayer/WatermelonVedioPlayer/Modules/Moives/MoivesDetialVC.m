@@ -13,10 +13,11 @@
 #import "MainPageRequest.h"
 #import "MovieDetailInfoView.h"
 #import "MoviesClassListCell1.h"
+#import "MovieIntroduceView.h"
 
 #define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
 
-@interface MoivesDetialVC ()<UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MoivesDetialVC ()<UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource,MovieDetailInfoViewDelegate>
 
 @property (nonatomic, strong) UIButton *backBtn;
 @property (nonatomic, strong) UILabel *movieTitleLabel;
@@ -26,7 +27,7 @@
 @property (nonatomic, strong) NSMutableArray *tableList;
 
 @property (nonatomic, strong) MovieDetailInfoView *infoView;
-
+@property (nonatomic, strong) MovieIntroduceView *introduceView;
 @end
 
 @implementation MoivesDetialVC
@@ -80,6 +81,7 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MoviesClassListCell1 class]) bundle:nil] forCellReuseIdentifier:MoviesClassListCell1Identifier];
     
     self.infoView = [[MovieDetailInfoView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), [UIScreen mainScreen].bounds.size.width, 350.5)];
+    self.infoView.infoViewDelegate = self;
     self.tableView.tableHeaderView = self.infoView;
 }
 
@@ -180,6 +182,18 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
         }
         [self.tableView reloadData];
     }];
+}
+
+#pragma mark - MovieDetailInfoViewDelegate
+- (void)showIntroduceMovie:(MoivesModel *)movie {
+    [MovieIntroduceView showIntroduceViewWithMovie:movie rect:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), self.view.frame.size.width, self.tableView.frame.size.height) inView:self.view];}
+
+- (void)dwonLoadMovie:(MoivesModel *)movie {
+    
+}
+
+- (void)shareMovie:(MoivesModel *)movie {
+    
 }
 
 #pragma mark - tableDelegate

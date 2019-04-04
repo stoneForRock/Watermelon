@@ -60,5 +60,20 @@
             </objects>
             <point key="canvasLocation" x="316" y="-40"/>
         </scene>
+        <!--Play HistoryVC-->
+        <scene sceneID="fN2-dh-xpk">
+            <objects>
+                <viewController storyboardIdentifier="PlayHistoryVC" id="sR5-iU-n2G" customClass="PlayHistoryVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0M5-9S-Glj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GS9-tO-4jU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gL-8H-VgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="-40"/>
+        </scene>
     </scenes>
 </document>

@@ -71,6 +71,7 @@
 		D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914422325BE600A021E4 /* MainPageRequest.m */; };
 		D2ED914822325C7300A021E4 /* RollingCircleScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914722325C7300A021E4 /* RollingCircleScroll.m */; };
 		D2FF0F972256021000408A1B /* MovieIntroduceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FF0F962256021000408A1B /* MovieIntroduceView.m */; };
+		D2FF0F99225605BC00408A1B /* MovieIntroduceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FF0F98225605BC00408A1B /* MovieIntroduceView.xib */; };
 		D7F4BEB8BB94363495C2612F /* libPods-WatermelonVedioPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D90BB39DABAD190FF7E792 /* libPods-WatermelonVedioPlayerTests.a */; };
 		E5512D7321F0662300DD8859 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7221F0662300DD8859 /* MineVC.m */; };
 		E5512D7621F0671400DD8859 /* ChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7521F0671400DD8859 /* ChannelVC.m */; };
@@ -612,6 +613,7 @@
 		D2ED914722325C7300A021E4 /* RollingCircleScroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollingCircleScroll.m; sourceTree = "<group>"; };
 		D2FF0F952256021000408A1B /* MovieIntroduceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieIntroduceView.h; sourceTree = "<group>"; };
 		D2FF0F962256021000408A1B /* MovieIntroduceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieIntroduceView.m; sourceTree = "<group>"; };
+		D2FF0F98225605BC00408A1B /* MovieIntroduceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieIntroduceView.xib; sourceTree = "<group>"; };
 		E5512D7121F0662300DD8859 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E5512D7221F0662300DD8859 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E5512D7421F0671400DD8859 /* ChannelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelVC.h; sourceTree = "<group>"; };
@@ -1546,6 +1548,7 @@
 				D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */,
 				D2FF0F952256021000408A1B /* MovieIntroduceView.h */,
 				D2FF0F962256021000408A1B /* MovieIntroduceView.m */,
+				D2FF0F98225605BC00408A1B /* MovieIntroduceView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3120,6 +3123,7 @@
 				E551318A21F0688500DD8859 /* UIBarButtonItemArrowRight@3x.png in Resources */,
 				D2A3AA352237D79400B6B7A3 /* Moives.storyboard in Resources */,
 				E551318521F0688500DD8859 /* ImageError@3x.png in Resources */,
+				D2FF0F99225605BC00408A1B /* MovieIntroduceView.xib in Resources */,
 				E551318821F0688500DD8859 /* VideoOverlay@3x.png in Resources */,
 				E551319921F0688500DD8859 /* ImageSelectedSmallOn@2x.png in Resources */,
 				E551317A21F0688500DD8859 /* UIBarButtonItemGrid@3x.png in Resources */,
