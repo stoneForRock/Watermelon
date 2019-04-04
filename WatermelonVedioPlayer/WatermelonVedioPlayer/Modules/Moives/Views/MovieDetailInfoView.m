@@ -8,6 +8,8 @@
 
 #import "MovieDetailInfoView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "MoivesRequest.h"
+#import "HUDHelper.h"
 
 @interface MovieDetailInfoView ()
 
@@ -24,6 +26,13 @@
 @property (nonatomic, strong) UILabel *introduceLabel;
 @property (nonatomic, strong) UIView *introduceView;
 @property (nonatomic, strong) UIButton *introduceBtn;
+
+@property (nonatomic, strong) UIButton *loveBtn;
+@property (nonatomic, strong) UIButton *downLoadBtn;
+@property (nonatomic, strong) UIButton *shareBtn;
+
+@property (nonatomic, strong) UIView *lineView;
+@property (nonatomic, strong) UILabel *gussLikeLabel;
 
 @end
 
@@ -46,6 +55,13 @@
         [self.introduceView addSubview:self.introduceLabel];
         [self.introduceView addSubview:self.introduceBtn];
         
+        [self addSubview:self.loveBtn];
+        [self addSubview:self.downLoadBtn];
+        [self addSubview:self.shareBtn];
+        
+        [self addSubview:self.lineView];
+        [self addSubview:self.gussLikeLabel];
+        
         self.adImgView.frame = CGRectMake(15, 10, frame.size.width - 30, 80);
         self.nameLabel.frame = CGRectMake(15, CGRectGetMaxY(self.adImgView.frame) + 10, frame.size.width - 185, 40);
         self.timeLabel.frame = CGRectMake(15, CGRectGetMaxY(self.nameLabel.frame), frame.size.width - 30, 30);
@@ -55,8 +71,18 @@
         self.unpraiseBtn.frame = CGRectMake(CGRectGetMaxX(self.progressBGView.frame) + 10, CGRectGetMinY(self.nameLabel.frame) + 8, 24, 24);
         
         self.introduceView.frame = CGRectMake(15, CGRectGetMaxY(self.timeLabel.frame) + 10, frame.size.width - 30, 80);
-        self.introduceLabel.frame = CGRectMake(0, 0, self.introduceView.frame.size.width - 60, 80);
+        self.introduceLabel.frame = CGRectMake(15, 0, self.introduceView.frame.size.width - 75, 80);
         self.introduceBtn.frame = CGRectMake(CGRectGetMaxX(self.introduceLabel.frame), 0, 60, 80);
+        
+        self.loveBtn.frame = CGRectMake(frame.size.width - 155, CGRectGetMaxY(self.introduceView.frame) + 10, 27, 27);
+        self.downLoadBtn.frame = CGRectMake(CGRectGetMaxX(self.loveBtn.frame) + 25, CGRectGetMaxY(self.introduceView.frame) + 10, 27, 27);
+        self.shareBtn.frame = CGRectMake(CGRectGetMaxX(self.downLoadBtn.frame) + 25, CGRectGetMaxY(self.introduceView.frame) + 10, 27, 27);
+        
+        self.lineView.frame = CGRectMake(15, CGRectGetMaxY(self.loveBtn.frame) + 10, frame.size.width - 30, 0.5);
+        self.gussLikeLabel.frame = CGRectMake(15, CGRectGetMaxY(self.lineView.frame) + 10, frame.size.width - 30, 40);
+        
+        UITapGestureRecognizer *tapAD = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAd:)];
+        [self.adImgView addGestureRecognizer:tapAD];
     }
     return self;
 }
@@ -71,6 +97,23 @@
     self.progressLabel.text = [NSString stringWithFormat:@"%.f%%觉得很赞",progress*100];
     self.progressView.frame = CGRectMake(0, 0, progress*self.progressBGView.bounds.size.width, self.progressBGView.bounds.size.height);
     self.introduceLabel.text = infoModel.movDesc;
+    
+    if ([infoModel.loveStatus integerValue] == 1) {
+        self.praiseBtn.selected = YES;
+        self.unpraiseBtn.selected = NO;
+    } else if ([infoModel.loveStatus integerValue] == 2) {
+        self.praiseBtn.selected = NO;
+        self.unpraiseBtn.selected = YES;
+    } else {
+        self.praiseBtn.selected = NO;
+        self.unpraiseBtn.selected = NO;
+    }
+    
+    if ([infoModel.isFav boolValue]) {
+        self.loveBtn.selected = YES;
+    } else {
+        self.loveBtn.selected = NO;
+    }
 }
 
 - (void)setAdInfo:(NSDictionary *)adInfo {
@@ -84,16 +127,82 @@
 
 #pragma mark - btnAction
 
+- (void)tapAd:(UIGestureRecognizer *)gesture {
+    if (self.adInfo) {
+        NSString *urlString = self.adInfo[@"linkAddr"]?self.adInfo[@"linkAddr"]:@"";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString] options:@{} completionHandler:nil];
+    }
+}
+
 - (void)praiseAction:(UIButton *)sender {
-    
+    //没有点过赞或者踩的，才可以操作
+    if ([self.infoModel.loveStatus intValue] == 0) {
+        sender.selected = YES;
+        [MoivesRequest praiseMovieWithId:self.infoModel.moiveId status:@"1" finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (success) {
+                self.infoModel.loveStatus = @"1";
+            } else {
+                [HUDHelper showHUDText:error.domain duration:1.5 inView:self];
+                self.praiseBtn.selected = NO;
+            }
+        }];
+    }
 }
 
 - (void)unpraiseAction:(UIButton *)sender {
-    
+    if ([self.infoModel.loveStatus intValue] == 0) {
+        sender.selected = YES;
+        [MoivesRequest praiseMovieWithId:self.infoModel.moiveId status:@"2" finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (success) {
+                self.infoModel.loveStatus = @"2";
+            } else {
+                [HUDHelper showHUDText:error.domain duration:1.5 inView:self];
+                self.unpraiseBtn.selected = NO;
+            }
+        }];
+    }
 }
 
 - (void)introduceShowAction:(UIButton *)sender {
+    if (self.infoViewDelegate != nil && [self.infoViewDelegate respondsToSelector:@selector(showIntroduceInfo:)]) {
+        [self.infoViewDelegate showIntroduceInfo:self.infoModel.movDesc];
+    }
+}
+
+- (void)loveAction:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [MoivesRequest addFavMovieWithId:self.infoModel.moiveId finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (success) {
+                self.infoModel.isFav = @"1";
+            } else {
+                [HUDHelper showHUDText:error.domain duration:1.5 inView:self];
+                self.loveBtn.selected = NO;
+            }
+        }];
+    } else {
+        [MoivesRequest cancelFavMovieWithId:self.infoModel.moiveId finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (success) {
+                self.infoModel.isFav = @"0";
+            } else {
+                [HUDHelper showHUDText:error.domain duration:1.5 inView:self];
+                self.loveBtn.selected = YES;
+            }
+        }];
+    }
     
+}
+
+- (void)downLoadAction:(UIButton *)sender {
+    if (self.infoViewDelegate != nil && [self.infoViewDelegate respondsToSelector:@selector(dwonLoadMovie:)]) {
+        [self.infoViewDelegate dwonLoadMovie:self.infoModel];
+    }
+}
+
+- (void)shareAction:(UIButton *)sender {
+    if (self.infoViewDelegate != nil && [self.infoViewDelegate respondsToSelector:@selector(shareMovie:)]) {
+        [self.infoViewDelegate shareMovie:self.infoModel];
+    }
 }
 
 #pragma mark - lazyLoad
@@ -111,7 +220,7 @@
 - (UILabel *)nameLabel {
     if (!_nameLabel) {
         _nameLabel = [[UILabel alloc] init];
-        _nameLabel.font = [UIFont boldSystemFontOfSize:20];
+        _nameLabel.font = [UIFont boldSystemFontOfSize:18];
         _nameLabel.textColor = COLORWITHRGBADIVIDE255(51, 51, 51, 1);
     }
     return _nameLabel;
@@ -198,7 +307,7 @@
 - (UIButton *)introduceBtn {
     if (!_introduceBtn) {
         _introduceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _introduceBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+        _introduceBtn.titleLabel.font = [UIFont systemFontOfSize:13];
         [_introduceBtn setTitle:@"简介" forState:UIControlStateNormal];
         [_introduceBtn setTitleColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1) forState:UIControlStateNormal];
         [_introduceBtn setImage:[UIImage imageNamed:@"arrow_right"] forState:UIControlStateNormal];
@@ -207,6 +316,54 @@
         _introduceBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
     }
     return _introduceBtn;
+}
+
+- (UIButton *)loveBtn {
+    if (!_loveBtn) {
+        _loveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_loveBtn setImage:[UIImage imageNamed:@"favor_nopress"] forState:UIControlStateNormal];
+        [_loveBtn setImage:[UIImage imageNamed:@"favor_press"] forState:UIControlStateSelected];
+        [_loveBtn addTarget:self action:@selector(loveAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loveBtn;
+}
+
+- (UIButton *)downLoadBtn {
+    if (!_downLoadBtn) {
+        _downLoadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_downLoadBtn setImage:[UIImage imageNamed:@"download_nopress"] forState:UIControlStateNormal];
+        [_downLoadBtn setImage:[UIImage imageNamed:@"download_press"] forState:UIControlStateSelected];
+        [_downLoadBtn addTarget:self action:@selector(downLoadAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _downLoadBtn;
+}
+
+- (UIButton *)shareBtn {
+    if (!_shareBtn) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setImage:[UIImage imageNamed:@"send_nopress"] forState:UIControlStateNormal];
+        [_shareBtn setImage:[UIImage imageNamed:@"send_press"] forState:UIControlStateSelected];
+        [_shareBtn addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _shareBtn;
+}
+
+- (UIView *)lineView {
+    if (!_lineView) {
+        _lineView = [[UIView alloc] init];
+        _lineView.backgroundColor = COLORWITHRGBADIVIDE255(241, 242, 227, 1);
+    }
+    return _lineView;
+}
+
+- (UILabel *)gussLikeLabel {
+    if (!_gussLikeLabel) {
+        _gussLikeLabel = [[UILabel alloc] init];
+        _gussLikeLabel.textColor = COLORWITHRGBADIVIDE255(51, 51, 51, 1);
+        _gussLikeLabel.font = [UIFont boldSystemFontOfSize:18];
+        _gussLikeLabel.text = @"猜你喜欢";
+    }
+    return _gussLikeLabel;
 }
 
 @end

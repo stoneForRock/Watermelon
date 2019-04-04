@@ -9,12 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "MoivesModel.h"
 
+@protocol MovieDetailInfoViewDelegate <NSObject>
+@optional
+
+- (void)showIntroduceInfo:(NSString *)introduceInfo;
+- (void)dwonLoadMovie:(MoivesModel *)movie;
+- (void)shareMovie:(MoivesModel *)movie;
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieDetailInfoView : UIView
 
 @property (nonatomic, strong) MoivesModel *infoModel;
 @property (nonatomic, strong) NSDictionary *adInfo;//广告
+
+@property (nonatomic, assign) id<MovieDetailInfoViewDelegate> infoViewDelegate;
 
 - (void)failLoadAdInfo;
 

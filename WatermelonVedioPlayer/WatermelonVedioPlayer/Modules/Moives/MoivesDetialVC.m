@@ -12,8 +12,11 @@
 #import "MoivesRequest.h"
 #import "MainPageRequest.h"
 #import "MovieDetailInfoView.h"
+#import "MoviesClassListCell1.h"
 
-@interface MoivesDetialVC ()<UINavigationControllerDelegate>
+#define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
+
+@interface MoivesDetialVC ()<UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UIButton *backBtn;
 @property (nonatomic, strong) UILabel *movieTitleLabel;
@@ -68,13 +71,21 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
     self.backBtn.frame = CGRectMake(10, 0, 26, 44);
     self.movieTitleLabel.frame = CGRectMake(CGRectGetMaxX(self.backBtn.frame) + 10, 0, 200, 44);
     
-    self.infoView = [[MovieDetailInfoView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), [UIScreen mainScreen].bounds.size.width, 300)];
-    [self.view addSubview:self.infoView];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - self.liveView.frame.size.height) style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.tableView];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MoviesClassListCell1 class]) bundle:nil] forCellReuseIdentifier:MoviesClassListCell1Identifier];
+    
+    self.infoView = [[MovieDetailInfoView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), [UIScreen mainScreen].bounds.size.width, 350.5)];
+    self.tableView.tableHeaderView = self.infoView;
 }
 
 - (void)initDataInfo {
     self.movieTitleLabel.text = self.movieModel.movName;
-    
+    self.tableList = [NSMutableArray arrayWithCapacity:0];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(controlViewShow:) name:PlayerControlViewShow object:nil];
 }
 
@@ -92,11 +103,6 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
         self.movieTitleLabel.hidden = YES;
         self.backBtn.hidden = YES;
     }
-}
-
-//更新页面信息
-- (void)refreshSelfViewWithMovieModel:(MoivesModel *)movieModel {
-    
 }
 
 - (void)requestBeforPlayAdInfo {
@@ -151,7 +157,6 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
             }
             self.liveView.movieModel = self.movieModel;
             self.infoView.infoModel = self.movieModel;
-            [self refreshSelfViewWithMovieModel:self.movieModel];
             [self requestBeforPlayAdInfo];
             [self requestDetailAdInfo];
             [self movieAlikeListRequest];
@@ -164,8 +169,47 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
 //获取关联相似影片
 - (void)movieAlikeListRequest {
     [MoivesRequest getMovieAlikeListWithId:self.movieModel.moiveId finishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        [self.tableList removeAllObjects];
+        if (success) {
+            for (NSDictionary *movieDic in responseObject) {
+                MoivesModel *model = [[MoivesModel alloc] initWithDictionary:movieDic error:nil];
+                if (model) {
+                    [self.tableList addObject:model];
+                }
+            }
+        }
+        [self.tableView reloadData];
     }];
+}
+
+#pragma mark - tableDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MoviesClassListCell1 *cell = [tableView dequeueReusableCellWithIdentifier:MoviesClassListCell1Identifier];
+    MoivesModel *cellModel = self.tableList[indexPath.row];
+    cell.movieModel = cellModel;
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.tableList.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1.0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MoivesModel *cellModel = self.tableList[indexPath.row];
+    
+    MoivesDetialVC *moivesDetialVC = [MoivesDetialVC instanceFromXib];
+    moivesDetialVC.movieModel = cellModel;
+    moivesDetialVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:moivesDetialVC animated:YES];
 }
 
 #pragma mark - btnAction

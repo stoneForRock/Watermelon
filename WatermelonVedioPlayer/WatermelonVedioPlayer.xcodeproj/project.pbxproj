@@ -70,6 +70,7 @@
 		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
 		D2ED914522325BE600A021E4 /* MainPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914422325BE600A021E4 /* MainPageRequest.m */; };
 		D2ED914822325C7300A021E4 /* RollingCircleScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED914722325C7300A021E4 /* RollingCircleScroll.m */; };
+		D2FF0F972256021000408A1B /* MovieIntroduceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FF0F962256021000408A1B /* MovieIntroduceView.m */; };
 		D7F4BEB8BB94363495C2612F /* libPods-WatermelonVedioPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D90BB39DABAD190FF7E792 /* libPods-WatermelonVedioPlayerTests.a */; };
 		E5512D7321F0662300DD8859 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7221F0662300DD8859 /* MineVC.m */; };
 		E5512D7621F0671400DD8859 /* ChannelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5512D7521F0671400DD8859 /* ChannelVC.m */; };
@@ -609,6 +610,8 @@
 		D2ED914422325BE600A021E4 /* MainPageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPageRequest.m; sourceTree = "<group>"; };
 		D2ED914622325C7300A021E4 /* RollingCircleScroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RollingCircleScroll.h; sourceTree = "<group>"; };
 		D2ED914722325C7300A021E4 /* RollingCircleScroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollingCircleScroll.m; sourceTree = "<group>"; };
+		D2FF0F952256021000408A1B /* MovieIntroduceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieIntroduceView.h; sourceTree = "<group>"; };
+		D2FF0F962256021000408A1B /* MovieIntroduceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieIntroduceView.m; sourceTree = "<group>"; };
 		E5512D7121F0662300DD8859 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E5512D7221F0662300DD8859 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E5512D7421F0671400DD8859 /* ChannelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelVC.h; sourceTree = "<group>"; };
@@ -1541,6 +1544,8 @@
 				D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */,
 				D21E0ECF225359FD0043FDAE /* MovieDetailInfoView.h */,
 				D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */,
+				D2FF0F952256021000408A1B /* MovieIntroduceView.h */,
+				D2FF0F962256021000408A1B /* MovieIntroduceView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3529,6 +3534,7 @@
 				E551344E21F06AB000DD8859 /* ZXAI013x0xDecoder.m in Sources */,
 				E551347B21F0745600DD8859 /* UIDevice+Tool.m in Sources */,
 				E551342921F06AB000DD8859 /* ZXRSSExpandedDecodedNumeric.m in Sources */,
+				D2FF0F972256021000408A1B /* MovieIntroduceView.m in Sources */,
 				E551340321F06AB000DD8859 /* ZXUPCEANExtension5Support.m in Sources */,
 				E551349021F0794100DD8859 /* UIView+HudTost.m in Sources */,
 				E551315421F0688500DD8859 /* QNALAssetFile.m in Sources */,
