@@ -25,6 +25,7 @@
 		D21E0ECD225352890043FDAE /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBD225352890043FDAE /* ZFPlayerModel.m */; };
 		D21E0ECE225352890043FDAE /* ZFBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBF225352890043FDAE /* ZFBrightnessView.m */; };
 		D21E0ED1225359FD0043FDAE /* MovieDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */; };
+		D23F33E2225B529300BA5789 /* ChannelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D23F33E1225B529300BA5789 /* ChannelRequest.m */; };
 		D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */; };
 		D2756E29224218B000EB45B3 /* FilterSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2756E28224218B000EB45B3 /* FilterSortView.m */; };
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
@@ -539,6 +540,8 @@
 		D21E0EBF225352890043FDAE /* ZFBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBrightnessView.m; sourceTree = "<group>"; };
 		D21E0ECF225359FD0043FDAE /* MovieDetailInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailInfoView.h; sourceTree = "<group>"; };
 		D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailInfoView.m; sourceTree = "<group>"; };
+		D23F33E0225B529300BA5789 /* ChannelRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelRequest.h; sourceTree = "<group>"; };
+		D23F33E1225B529300BA5789 /* ChannelRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelRequest.m; sourceTree = "<group>"; };
 		D25C2F25224CA394006361C3 /* SpecialTopicMoiveListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialTopicMoiveListVC.h; sourceTree = "<group>"; };
 		D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialTopicMoiveListVC.m; sourceTree = "<group>"; };
 		D2756E27224218B000EB45B3 /* FilterSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterSortView.h; sourceTree = "<group>"; };
@@ -1493,6 +1496,22 @@
 				D21E0EB9225352890043FDAE /* UIViewController+ZFPlayerRotation.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		D23F33DE225B527000BA5789 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D23F33E0225B529300BA5789 /* ChannelRequest.h */,
+				D23F33E1225B529300BA5789 /* ChannelRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D23F33DF225B527E00BA5789 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D296438F225B1DD900A2C1DA /* Cell */ = {
@@ -2779,6 +2798,8 @@
 		E589702321F06247008924E4 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				D23F33DF225B527E00BA5789 /* Cell */,
+				D23F33DE225B527000BA5789 /* Network */,
 				E5512D7421F0671400DD8859 /* ChannelVC.h */,
 				E5512D7521F0671400DD8859 /* ChannelVC.m */,
 				D2ACDCA322312A4200E3DF62 /* Channel.storyboard */,
@@ -3333,6 +3354,7 @@
 				E551341821F06AB000DD8859 /* ZXPDF417Reader.m in Sources */,
 				E55133AD21F06AAF00DD8859 /* ZXGridSampler.m in Sources */,
 				E55133CC21F06AAF00DD8859 /* ZXAI01AndOtherAIs.m in Sources */,
+				D23F33E2225B529300BA5789 /* ChannelRequest.m in Sources */,
 				E551316421F0688500DD8859 /* QNResolvUtil.m in Sources */,
 				E551339321F06AAF00DD8859 /* ZXRSS14Reader.m in Sources */,
 				D21E0EC9225352890043FDAE /* UIAlertController+ZFPlayerRotation.m in Sources */,
