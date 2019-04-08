@@ -18,7 +18,33 @@ INSTANCE_XIB_M(@"Channel", ChannelVC)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self initDataInfo];
+    
+    [self initUI];
+    [self requestChannelInfo];
+}
+
+- (void)initUI {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
+    [button sizeToFit];
+    button.frame = CGRectMake(0, 0, 21, 21);
+    [button addTarget:self action:@selector(searchAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
+- (void)initDataInfo {
+    
+}
+
+- (void)requestChannelInfo {
+    
+}
+
+//搜索
+- (void)searchAction:(UIButton *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

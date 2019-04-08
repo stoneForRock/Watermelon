@@ -38,6 +38,14 @@ INSTANCE_XIB_M(@"Finder", FinderVC)
 - (void)initUI {
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FinderCell class]) bundle:nil] forCellReuseIdentifier:FinderCellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
+    [button sizeToFit];
+    button.frame = CGRectMake(0, 0, 21, 21);
+    [button addTarget:self action:@selector(searchAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
 }
 
 - (void)initDataInfo {
@@ -84,6 +92,11 @@ INSTANCE_XIB_M(@"Finder", FinderVC)
             [HUDHelper showHUDWithErrorText:error.domain inView:self.view];
         }
     }];
+}
+
+//搜索
+- (void)searchAction:(UIButton *)sender {
+    
 }
 
 #pragma mark - UITableViewDelegate
