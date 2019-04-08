@@ -363,7 +363,9 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
     }
 }
 
-
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

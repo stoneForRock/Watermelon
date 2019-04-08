@@ -34,6 +34,9 @@
 		D28EF67F22389E000054CA8A /* HotPlayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28EF67D22389E000054CA8A /* HotPlayCell.xib */; };
 		D28EF6832238D71A0054CA8A /* GussLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28EF6812238D71A0054CA8A /* GussLikeCell.m */; };
 		D28EF6842238D71A0054CA8A /* GussLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28EF6822238D71A0054CA8A /* GussLikeCell.xib */; };
+		D2964393225B1EFB00A2C1DA /* FinderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2964391225B1EFB00A2C1DA /* FinderCell.m */; };
+		D2964394225B1EFB00A2C1DA /* FinderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2964392225B1EFB00A2C1DA /* FinderCell.xib */; };
+		D2964398225B26F200A2C1DA /* FinderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2964397225B26F200A2C1DA /* FinderRequest.m */; };
 		D2A3AA232237AC8D00B6B7A3 /* MainPageVC+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */; };
 		D2A3AA292237AF8B00B6B7A3 /* MoiveClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */; };
 		D2A3AA2C2237B6E100B6B7A3 /* MoiveClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A3AA2B2237B6E100B6B7A3 /* MoiveClassCell.m */; };
@@ -551,6 +554,11 @@
 		D28EF6802238D71A0054CA8A /* GussLikeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GussLikeCell.h; sourceTree = "<group>"; };
 		D28EF6812238D71A0054CA8A /* GussLikeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GussLikeCell.m; sourceTree = "<group>"; };
 		D28EF6822238D71A0054CA8A /* GussLikeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GussLikeCell.xib; sourceTree = "<group>"; };
+		D2964390225B1EFB00A2C1DA /* FinderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderCell.h; sourceTree = "<group>"; };
+		D2964391225B1EFB00A2C1DA /* FinderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderCell.m; sourceTree = "<group>"; };
+		D2964392225B1EFB00A2C1DA /* FinderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinderCell.xib; sourceTree = "<group>"; };
+		D2964396225B26F200A2C1DA /* FinderRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderRequest.h; sourceTree = "<group>"; };
+		D2964397225B26F200A2C1DA /* FinderRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderRequest.m; sourceTree = "<group>"; };
 		D2A3AA212237AC8D00B6B7A3 /* MainPageVC+Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainPageVC+Request.h"; sourceTree = "<group>"; };
 		D2A3AA222237AC8D00B6B7A3 /* MainPageVC+Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MainPageVC+Request.m"; sourceTree = "<group>"; };
 		D2A3AA272237AF8B00B6B7A3 /* MoiveClassCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoiveClassCell.xib; sourceTree = "<group>"; };
@@ -1485,6 +1493,25 @@
 				D21E0EB9225352890043FDAE /* UIViewController+ZFPlayerRotation.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		D296438F225B1DD900A2C1DA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2964390225B1EFB00A2C1DA /* FinderCell.h */,
+				D2964391225B1EFB00A2C1DA /* FinderCell.m */,
+				D2964392225B1EFB00A2C1DA /* FinderCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2964395225B26DB00A2C1DA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2964396225B26F200A2C1DA /* FinderRequest.h */,
+				D2964397225B26F200A2C1DA /* FinderRequest.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D2A3AA242237AF6600B6B7A3 /* Cell */ = {
@@ -2762,6 +2789,8 @@
 		E589702421F06257008924E4 /* Finder */ = {
 			isa = PBXGroup;
 			children = (
+				D2964395225B26DB00A2C1DA /* Network */,
+				D296438F225B1DD900A2C1DA /* Cell */,
 				E5512D7721F0672300DD8859 /* FinderVC.h */,
 				E5512D7821F0672300DD8859 /* FinderVC.m */,
 				D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */,
@@ -3103,6 +3132,7 @@
 				D28EF67F22389E000054CA8A /* HotPlayCell.xib in Resources */,
 				E551319721F0688500DD8859 /* ImageSelectedOn@3x.png in Resources */,
 				E551318121F0688500DD8859 /* ImageError@2x.png in Resources */,
+				D2964394225B1EFB00A2C1DA /* FinderCell.xib in Resources */,
 				D28EF6842238D71A0054CA8A /* GussLikeCell.xib in Resources */,
 				E551349521F079AB00DD8859 /* NoDataView.xib in Resources */,
 				E551318021F0688500DD8859 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
@@ -3456,6 +3486,7 @@
 				E55133C121F06AAF00DD8859 /* ZXPDF417BarcodeRow.m in Sources */,
 				E55133AA21F06AAF00DD8859 /* ZXImage.m in Sources */,
 				E55133A921F06AAF00DD8859 /* ZXRSSExpandedDecodedChar.m in Sources */,
+				D2964398225B26F200A2C1DA /* FinderRequest.m in Sources */,
 				D21E0EC8225352890043FDAE /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				D2ACDC95223119B600E3DF62 /* UIView+HUD.m in Sources */,
 				D28EF6832238D71A0054CA8A /* GussLikeCell.m in Sources */,
@@ -3635,6 +3666,7 @@
 				E551338921F06AAF00DD8859 /* ZXStringUtils.m in Sources */,
 				E55133D321F06AAF00DD8859 /* ZXMultiFinderPatternFinder.m in Sources */,
 				E55133F421F06AB000DD8859 /* ZXAddressBookAUResultParser.m in Sources */,
+				D2964393225B1EFB00A2C1DA /* FinderCell.m in Sources */,
 				E55133EA21F06AB000DD8859 /* ZXHybridBinarizer.m in Sources */,
 				E551339221F06AAF00DD8859 /* ZXQRCodeAlignmentPattern.m in Sources */,
 				E551348D21F0782000DD8859 /* UIView+Frame.m in Sources */,

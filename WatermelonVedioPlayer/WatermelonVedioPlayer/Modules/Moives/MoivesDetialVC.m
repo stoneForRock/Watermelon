@@ -186,7 +186,8 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
 
 #pragma mark - MovieDetailInfoViewDelegate
 - (void)showIntroduceMovie:(MoivesModel *)movie {
-    [MovieIntroduceView showIntroduceViewWithMovie:movie rect:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), self.view.frame.size.width, self.tableView.frame.size.height) inView:self.view];}
+    [MovieIntroduceView showIntroduceViewWithMovie:movie rect:CGRectMake(0, CGRectGetMaxY(self.liveView.frame), self.view.frame.size.width, self.tableView.frame.size.height) inView:self.view];
+}
 
 - (void)dwonLoadMovie:(MoivesModel *)movie {
     
