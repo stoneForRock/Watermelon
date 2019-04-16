@@ -10,6 +10,8 @@
 
 @interface MainSearchVC ()
 
+@property (nonatomic, strong) UIView *navBarView;
+
 @end
 
 @implementation MainSearchVC
@@ -19,6 +21,23 @@ INSTANCE_XIB_M(@"MainPage", MainSearchVC)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initDataInfo];
+    [self initView];
+}
+
+- (void)initView {
+    
+}
+
+- (void)initNavView {
+    
+}
+
+- (void)initDataInfo {
+    
+}
+
+- (void)searchRequestWithKey:(NSString *)key {
     
 }
 
