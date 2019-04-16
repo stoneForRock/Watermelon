@@ -23,7 +23,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFL-7k-Tan" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478" y="56"/>
+            <point key="canvasLocation" x="-740" y="92"/>
+        </scene>
+        <!--Recommend ColumnVC-->
+        <scene sceneID="XZL-Q8-XEO">
+            <objects>
+                <viewController storyboardIdentifier="RecommendColumnVC" id="rAc-PJ-Q3h" customClass="RecommendColumnVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcN-aI-6lH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ea0-FW-cyS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s45-g3-gNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="91"/>
+        </scene>
+        <!--Tag FilterVC-->
+        <scene sceneID="rpo-vv-AjV">
+            <objects>
+                <viewController storyboardIdentifier="TagFilterVC" id="Zlw-1c-Jmp" customClass="TagFilterVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Byg-6f-tJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.63529411759999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="28J-1n-7JF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m71-I2-yOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="90"/>
         </scene>
     </scenes>
 </document>

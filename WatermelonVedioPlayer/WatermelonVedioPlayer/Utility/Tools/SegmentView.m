@@ -20,11 +20,23 @@
 {
     UIView *_indicator;
     NSMutableArray *_segmentButtons;
+    CGFloat segmentWidth;
+    CGFloat segmentHeight;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        segmentWidth = frame.size.width;
+        segmentHeight = frame.size.height;
+    }
+    return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    segmentWidth = kSegmentWidth;
+    segmentHeight = kSegmentHeight;
     self.backgroundColor = [UIColor whiteColor];
 }
 
@@ -46,24 +58,24 @@
     }
     
     _segmentButtons = [NSMutableArray arrayWithCapacity:titles.count];
-    CGFloat varLength = kSegmentWidth/titles.count;
+    CGFloat varLength = segmentWidth/titles.count;
     [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:obj forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [button setTitleColor:ThemeColor forState:UIControlStateSelected];
-        button.titleLabel.font = [UIFont systemFontOfSize:14];
-        button.frame = CGRectMake(varLength*idx, 0, varLength, kSegmentHeight);
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [button setTitleColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1) forState:UIControlStateSelected];
+        button.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        button.frame = CGRectMake(varLength*idx, 0, varLength, self->segmentHeight);
         button.tag = idx;
         [button addTarget:self action:@selector(segmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
-        [_segmentButtons addObject:button];
+        [self->_segmentButtons addObject:button];
         button.selected = idx==0;
     }];
     
     if (!_indicator) {
-        _indicator = [[UIView alloc] initWithFrame:CGRectMake((varLength-kIndicatorLength)/2, kSegmentHeight - 2, kIndicatorLength, 2)];
-        _indicator.backgroundColor = ThemeColor;
+        _indicator = [[UIView alloc] initWithFrame:CGRectMake((varLength-kIndicatorLength)/2, segmentHeight - 2, kIndicatorLength, 2)];
+        _indicator.backgroundColor = COLORWITHRGBADIVIDE255(194, 154, 104, 1);
         [self addSubview:_indicator];
     }
 }
@@ -75,7 +87,9 @@
 - (void)setSegmentSelectedIndex:(NSUInteger)index animated:(BOOL)animated
 {
     [self setSegmentSelectedIndexNoDelegate:index animated:animated];
-    [self.delegate segmentView:self didSelectIndex:self.selectedIndex];
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(segmentView:didSelectIndex:)]) {
+        [self.delegate segmentView:self didSelectIndex:self.selectedIndex];
+    }
 }
 
 - (void)setSegmentSelectedIndexNoDelegate:(NSUInteger)index animated:(BOOL)animated{
@@ -91,10 +105,10 @@
         }
     }];
     
-    CGFloat varLength = kSegmentWidth/_segmentButtons.count;
+    CGFloat varLength = segmentWidth/_segmentButtons.count;
     [UIView animateWithDuration:animated?.2:0 animations:^{
         //        _indicator.frame = CGRectMake(index*varLength, 42, varLength, 2);
-        _indicator.sc_left = index*varLength+(varLength-kIndicatorLength)/2;
+        self->_indicator.sc_left = index*varLength+(varLength-kIndicatorLength)/2;
     }];
     
     self.selectedIndex = index;

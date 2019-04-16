@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHc-dd-xsY">
-                        <rect key="frame" x="15" y="145.5" width="179" height="34"/>
+                        <rect key="frame" x="15" y="145.5" width="232" height="34"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="gpa-Ir-GLq"/>
                         </constraints>
@@ -44,27 +44,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N17-Kr-5sN">
-                        <rect key="frame" x="241" y="149" width="27" height="27"/>
+                        <rect key="frame" x="290" y="155" width="15" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="27" id="HRY-sJ-hJS"/>
-                            <constraint firstAttribute="width" constant="27" id="v8i-vZ-864"/>
+                            <constraint firstAttribute="width" constant="15" id="CrP-9l-y6I"/>
+                            <constraint firstAttribute="height" constant="15" id="xf4-Qw-r3G"/>
                         </constraints>
                         <state key="normal" image="download_nopress"/>
                         <state key="highlighted" image="download_press"/>
                         <connections>
                             <action selector="downLoadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nPb-En-tPy"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-Kc-Qa4">
-                        <rect key="frame" x="278" y="149" width="27" height="27"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="27" id="5Z1-Gu-dAH"/>
-                            <constraint firstAttribute="width" constant="27" id="YRA-IN-BPt"/>
-                        </constraints>
-                        <state key="normal" image="send_nopress"/>
-                        <state key="highlighted" image="send_press"/>
-                        <connections>
-                            <action selector="shareAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="R3C-a0-dF2"/>
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlayButtonOverlayLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-oA-lv2">
@@ -75,10 +63,10 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuc-yH-P8n">
-                        <rect key="frame" x="204" y="149" width="27" height="27"/>
+                        <rect key="frame" x="255" y="155" width="15" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="27" id="Jda-jv-FxX"/>
-                            <constraint firstAttribute="width" constant="27" id="fl6-FV-W5S"/>
+                            <constraint firstAttribute="height" constant="15" id="H99-M9-kti"/>
+                            <constraint firstAttribute="width" constant="15" id="Swv-zf-vFq"/>
                         </constraints>
                         <state key="normal" image="favor_nopress"/>
                         <state key="selected" image="favor_press"/>
@@ -89,23 +77,21 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="oHC-QG-vAz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0jV-Jq-xsj"/>
+                    <constraint firstAttribute="trailing" secondItem="N17-Kr-5sN" secondAttribute="trailing" constant="15" id="212-fn-a97"/>
                     <constraint firstAttribute="trailing" secondItem="vnr-sd-i0T" secondAttribute="trailing" id="3B7-a7-t0c"/>
-                    <constraint firstItem="yuc-yH-P8n" firstAttribute="leading" secondItem="cHc-dd-xsY" secondAttribute="trailing" constant="10" id="7Hv-UK-QGE"/>
-                    <constraint firstItem="N17-Kr-5sN" firstAttribute="top" secondItem="vnr-sd-i0T" secondAttribute="bottom" constant="4" id="DdN-10-KDq"/>
+                    <constraint firstItem="N17-Kr-5sN" firstAttribute="top" secondItem="vnr-sd-i0T" secondAttribute="bottom" constant="10" id="4RB-pS-b7q"/>
                     <constraint firstItem="Le1-oA-lv2" firstAttribute="centerY" secondItem="vnr-sd-i0T" secondAttribute="centerY" id="IgI-tf-Xsm"/>
                     <constraint firstItem="vnr-sd-i0T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Q8G-3i-ygn"/>
-                    <constraint firstAttribute="trailing" secondItem="mBP-Kc-Qa4" secondAttribute="trailing" constant="15" id="QWv-Lr-Zlb"/>
                     <constraint firstItem="oHC-QG-vAz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="R6p-uz-nGp"/>
+                    <constraint firstItem="yuc-yH-P8n" firstAttribute="leading" secondItem="cHc-dd-xsY" secondAttribute="trailing" constant="8" id="Tz2-LY-zir"/>
                     <constraint firstItem="cHc-dd-xsY" firstAttribute="top" secondItem="vnr-sd-i0T" secondAttribute="bottom" constant="0.5" id="WXP-sl-EnY"/>
                     <constraint firstItem="vnr-sd-i0T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wmy-1f-rtJ"/>
                     <constraint firstItem="Le1-oA-lv2" firstAttribute="centerX" secondItem="vnr-sd-i0T" secondAttribute="centerX" id="azL-9s-0i4"/>
                     <constraint firstAttribute="bottom" secondItem="cHc-dd-xsY" secondAttribute="bottom" constant="10" id="d9Q-gN-9me"/>
+                    <constraint firstItem="yuc-yH-P8n" firstAttribute="top" secondItem="vnr-sd-i0T" secondAttribute="bottom" constant="10" id="dTW-JP-dgC"/>
                     <constraint firstItem="cHc-dd-xsY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gGR-S7-DOJ"/>
-                    <constraint firstItem="mBP-Kc-Qa4" firstAttribute="leading" secondItem="N17-Kr-5sN" secondAttribute="trailing" constant="10" id="jFH-EE-gRf"/>
-                    <constraint firstItem="yuc-yH-P8n" firstAttribute="top" secondItem="vnr-sd-i0T" secondAttribute="bottom" constant="4" id="tTn-bK-ubE"/>
-                    <constraint firstItem="mBP-Kc-Qa4" firstAttribute="top" secondItem="vnr-sd-i0T" secondAttribute="bottom" constant="4" id="uJA-k6-3rn"/>
+                    <constraint firstItem="N17-Kr-5sN" firstAttribute="leading" secondItem="yuc-yH-P8n" secondAttribute="trailing" constant="20" id="hPf-h7-FOf"/>
                     <constraint firstAttribute="trailing" secondItem="oHC-QG-vAz" secondAttribute="trailing" constant="15" id="x5R-FJ-Xud"/>
-                    <constraint firstItem="N17-Kr-5sN" firstAttribute="leading" secondItem="yuc-yH-P8n" secondAttribute="trailing" constant="10" id="y5c-K8-KUy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
@@ -115,7 +101,7 @@
                 <outlet property="movNameLabel" destination="oHC-QG-vAz" id="ENL-0J-stS"/>
                 <outlet property="playCountLabel" destination="cHc-dd-xsY" id="2u4-QF-qOe"/>
             </connections>
-            <point key="canvasLocation" x="-93" y="192"/>
+            <point key="canvasLocation" x="-94.400000000000006" y="191.6041979010495"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -124,7 +110,5 @@
         <image name="download_press" width="27" height="27"/>
         <image name="favor_nopress" width="27" height="27"/>
         <image name="favor_press" width="27" height="27"/>
-        <image name="send_nopress" width="27" height="27"/>
-        <image name="send_press" width="27" height="27"/>
     </resources>
 </document>

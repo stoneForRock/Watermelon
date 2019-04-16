@@ -479,6 +479,8 @@
 		E5DC5A0B21E4D1920018F12A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5A0A21E4D1920018F12A /* main.m */; };
 		E5DC5A1521E4D1920018F12A /* WatermelonVedioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5A1421E4D1920018F12A /* WatermelonVedioPlayerTests.m */; };
 		E5DC5A2021E4D1920018F12A /* WatermelonVedioPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5A1F21E4D1920018F12A /* WatermelonVedioPlayerUITests.m */; };
+		E5EF76AA2261D99700BB2B49 /* RecommendColumnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF76A92261D99700BB2B49 /* RecommendColumnVC.m */; };
+		E5EF76AF2261E05E00BB2B49 /* TagFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF76AE2261E05E00BB2B49 /* TagFilterVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1419,6 +1421,10 @@
 		E5DC5A1B21E4D1920018F12A /* WatermelonVedioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatermelonVedioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DC5A1F21E4D1920018F12A /* WatermelonVedioPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatermelonVedioPlayerUITests.m; sourceTree = "<group>"; };
 		E5DC5A2121E4D1920018F12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5EF76A82261D99700BB2B49 /* RecommendColumnVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendColumnVC.h; sourceTree = "<group>"; };
+		E5EF76A92261D99700BB2B49 /* RecommendColumnVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendColumnVC.m; sourceTree = "<group>"; };
+		E5EF76AD2261E05E00BB2B49 /* TagFilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagFilterVC.h; sourceTree = "<group>"; };
+		E5EF76AE2261E05E00BB2B49 /* TagFilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagFilterVC.m; sourceTree = "<group>"; };
 		FB223E3BC7EC3699964F3CA4 /* Pods-WatermelonVedioPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatermelonVedioPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatermelonVedioPlayer/Pods-WatermelonVedioPlayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1505,13 +1511,6 @@
 				D23F33E1225B529300BA5789 /* ChannelRequest.m */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		D23F33DF225B527E00BA5789 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		D296438F225B1DD900A2C1DA /* Cell */ = {
@@ -2798,7 +2797,9 @@
 		E589702321F06247008924E4 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
-				D23F33DF225B527E00BA5789 /* Cell */,
+				E5EF76AC2261E04400BB2B49 /* TagFilter */,
+				E5EF76AB2261E03500BB2B49 /* RecommendColumn */,
+				E5EF76A72261D94500BB2B49 /* Views */,
 				D23F33DE225B527000BA5789 /* Network */,
 				E5512D7421F0671400DD8859 /* ChannelVC.h */,
 				E5512D7521F0671400DD8859 /* ChannelVC.m */,
@@ -3021,6 +3022,31 @@
 				E5DC5A2121E4D1920018F12A /* Info.plist */,
 			);
 			path = WatermelonVedioPlayerUITests;
+			sourceTree = "<group>";
+		};
+		E5EF76A72261D94500BB2B49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5EF76AB2261E03500BB2B49 /* RecommendColumn */ = {
+			isa = PBXGroup;
+			children = (
+				E5EF76A82261D99700BB2B49 /* RecommendColumnVC.h */,
+				E5EF76A92261D99700BB2B49 /* RecommendColumnVC.m */,
+			);
+			path = RecommendColumn;
+			sourceTree = "<group>";
+		};
+		E5EF76AC2261E04400BB2B49 /* TagFilter */ = {
+			isa = PBXGroup;
+			children = (
+				E5EF76AD2261E05E00BB2B49 /* TagFilterVC.h */,
+				E5EF76AE2261E05E00BB2B49 /* TagFilterVC.m */,
+			);
+			path = TagFilter;
 			sourceTree = "<group>";
 		};
 		FC12F39FDD7EC0BCAEE1E185 /* Pods */ = {
@@ -3335,6 +3361,7 @@
 				E551338421F06AAF00DD8859 /* ZXURIResultParser.m in Sources */,
 				E551338721F06AAF00DD8859 /* ZXEAN8Reader.m in Sources */,
 				E551316121F0688500DD8859 /* QNTxtResolver.m in Sources */,
+				E5EF76AA2261D99700BB2B49 /* RecommendColumnVC.m in Sources */,
 				E55133D521F06AAF00DD8859 /* ZXPDF417Detector.m in Sources */,
 				E55133F821F06AB000DD8859 /* ZXAI01393xDecoder.m in Sources */,
 				E551314D21F0688500DD8859 /* QNPHAssetResource.m in Sources */,
@@ -3677,6 +3704,7 @@
 				E551315321F0688500DD8859 /* QNAsyncRun.m in Sources */,
 				E55133D021F06AAF00DD8859 /* ZXCode128Writer.m in Sources */,
 				E551340121F06AB000DD8859 /* ZXBoolArray.m in Sources */,
+				E5EF76AF2261E05E00BB2B49 /* TagFilterVC.m in Sources */,
 				E55133C321F06AAF00DD8859 /* ZXVINResultParser.m in Sources */,
 				E551349821F07D3D00DD8859 /* NSString+MD5.m in Sources */,
 				E55133DA21F06AB000DD8859 /* ZXAztecCode.m in Sources */,

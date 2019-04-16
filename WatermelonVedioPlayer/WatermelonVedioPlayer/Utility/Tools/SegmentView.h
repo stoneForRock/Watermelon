@@ -10,6 +10,7 @@
 
 @class SegmentView;
 @protocol SegmentViewDelegate <NSObject>
+@optional
 - (void)segmentView:(SegmentView *)segmentView didSelectIndex:(NSUInteger)index;
 @end
 

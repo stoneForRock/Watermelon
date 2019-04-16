@@ -43,8 +43,8 @@
     
     [[UITabBar appearance] setBarTintColor:COLORWITHRGBADIVIDE255(49, 49, 49, 1)];
     [UITabBar appearance].translucent = NO;
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(194, 154, 104, 1), NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(139, 54, 55, 1), NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(107, 107, 107, 1), NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(194, 154, 104, 1), NSFontAttributeName : [UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
     
     
     //setup searchbar

@@ -7,8 +7,16 @@
 //
 
 #import "ChannelVC.h"
+#import "SegmentView.h"
+#import "RecommendColumnVC.h"
+#import "TagFilterVC.h"
 
-@interface ChannelVC ()
+@interface ChannelVC ()<SegmentViewDelegate>
+
+@property (nonatomic, strong) UIView *navBarView;
+@property (nonatomic, strong) SegmentView *segmentView;
+@property (nonatomic, strong) RecommendColumnVC *columnVC;
+@property (nonatomic, strong) TagFilterVC *tagVC;
 
 @end
 
@@ -20,18 +28,34 @@ INSTANCE_XIB_M(@"Channel", ChannelVC)
     [super viewDidLoad];
     
     [self initDataInfo];
-    
     [self initUI];
     [self requestChannelInfo];
 }
 
 - (void)initUI {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
-    [button sizeToFit];
-    button.frame = CGRectMake(0, 0, 21, 21);
-    [button addTarget:self action:@selector(searchAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [self initNavBarView];
+    [self initSubController];
+}
+
+- (void)initSubController {
+    
+    self.tagVC = [TagFilterVC instanceFromXib];
+    [self addChildViewController:self.tagVC];
+    [self.view addSubview:self.tagVC.view];
+    
+    self.columnVC = [RecommendColumnVC instanceFromXib];
+    [self addChildViewController:self.columnVC];
+    [self.view addSubview:self.columnVC.view];
+}
+
+- (void)initNavBarView {
+    self.navBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenFullWidth - 30, 44)];
+    self.navigationItem.titleView = self.navBarView;
+    
+    self.segmentView = [[SegmentView alloc] initWithFrame:CGRectMake(20, 0, ScreenFullWidth - 70, 44)];
+    self.segmentView.delegate = self;
+    [self.segmentView setSegmentTitles:@[@"专栏推荐",@"标签筛选"]];
+    [self.navBarView addSubview:self.segmentView];
 }
 
 - (void)initDataInfo {
@@ -42,9 +66,10 @@ INSTANCE_XIB_M(@"Channel", ChannelVC)
     
 }
 
-//搜索
-- (void)searchAction:(UIButton *)sender {
-    
+#pragma mark - SegmentViewDelegate
+
+- (void)segmentView:(SegmentView *)segmentView didSelectIndex:(NSUInteger)index {
+    self.columnVC.view.hidden = (index != 0);
 }
 
 - (void)didReceiveMemoryWarning {
