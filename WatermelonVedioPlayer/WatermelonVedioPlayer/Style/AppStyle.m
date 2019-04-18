@@ -48,21 +48,17 @@
     
     
     //setup searchbar
-    [[UISearchBar appearance] setBarTintColor:[UIColor themeBackgroundColor]];
+    [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setTitle:@"取消"];
+    [[UISearchBar appearance] setBarTintColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1)];
     [[UISearchBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UISearchBar appearance] setBackgroundImage:[UIImage sc_imageWithColor:ThemeColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"search_bar_btn_search"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
-    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"search_bar_btn_search_highlight"]forSearchBarIcon:UISearchBarIconSearch state:UIControlStateHighlighted];
-    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"search_bar_btn_clear"] forSearchBarIcon:UISearchBarIconClear state:UIControlStateNormal];
-    UIImage *backgroundImage = [UIImage imageNamed:@"search_bar_textfield"];
-    backgroundImage = [backgroundImage stretchableImageWithLeftCapWidth:backgroundImage.size.width * 0.5 topCapHeight:backgroundImage.size.height * 0.5];
-    [[UISearchBar appearance] setSearchFieldBackgroundImage:backgroundImage forState:UIControlStateNormal];
-    [[UISearchBar appearance] setSearchTextPositionAdjustment:UIOffsetMake(8, 0)];
-    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSForegroundColorAttributeName : [UIColor colorWithRGB:0x0096ff]}];
-    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName:ThemeColor} forState:UIControlStateNormal];
+    [[UISearchBar appearance] setBackgroundImage:[UIImage sc_imageWithColor:COLORWITHRGBADIVIDE255(30, 30, 30, 1.0)] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"search"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
+    [[UISearchBar appearance] setImage:[UIImage imageNamed:@"search"]forSearchBarIcon:UISearchBarIconSearch state:UIControlStateHighlighted];
+    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSForegroundColorAttributeName : COLORWITHRGBADIVIDE255(151, 151, 151, 1.0)}];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName:COLORWITHRGBADIVIDE255(151, 151, 151, 1.0)} forState:UIControlStateNormal];
     
     //UITextField的光标颜色可以用这个控制
-    [[UITextField appearance] setTintColor:ThemeColor];
+    [[UITextField appearance] setTintColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1)];
     
 }
 

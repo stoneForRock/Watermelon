@@ -11,7 +11,7 @@
 @implementation UIColor (Theme)
 
 + (UIColor *)themeTintColor {
-    return [self colorWithRGB:0xA366FF];
+    return COLORWITHRGBADIVIDE255(194, 154, 104, 1);
 }
 
 + (UIColor *)themeTextColor {

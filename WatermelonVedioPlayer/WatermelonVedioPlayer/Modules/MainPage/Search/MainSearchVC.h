@@ -16,4 +16,10 @@ INSTANCE_XIB_H
 
 @end
 
+@interface UIButton (search)
+
++ (instancetype)buttonWithSearchTypeWithTitle:(NSString *)title btnHeight:(CGFloat)btnHeight;
+
+@end
+
 NS_ASSUME_NONNULL_END

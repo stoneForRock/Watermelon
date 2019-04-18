@@ -85,6 +85,16 @@ typedef NS_ENUM(NSInteger,MoivesSortType) {
  */
 + (void)getMovieAlikeListWithId:(NSString *)movieId finishBlock:(RequestFinishBlock)finishBlock;
 
+/**
+ 根据关键字搜索影片
+
+ @param movieKeyword 关键字
+ @param currentPage 当前页
+ @param pageSize 每页数量
+ @param finishBlock finishBlock
+ */
++ (void)searchMovieWithKeyword:(NSString *)movieKeyword currentPage:(NSInteger)currentPage pageSize:(NSInteger)pageSize finishBlock:(RequestFinishBlock)finishBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

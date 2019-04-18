@@ -73,4 +73,9 @@
     }];
 }
 
++ (void)searchMovieWithKeyword:(NSString *)movieKeyword currentPage:(NSInteger)currentPage pageSize:(NSInteger)pageSize finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/movie/search" parameters:@{@"page":@(currentPage),@"pageSize":@(pageSize),@"keyword":movieKeyword} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
 @end
