@@ -9,6 +9,7 @@
 #import "MainPageVC.h"
 #import "MainSearchVC.h"
 #import "PlayHistoryVC.h"
+#import "ScanQRVC.h"
 #import "RollingCircleScroll.h"
 #import "MainPageVC+Request.h"
 #import "MainPageVC+Push.h"
@@ -191,7 +192,9 @@ INSTANCE_XIB_M(@"MainPage", MainPageVC)
 
 //扫码
 - (void)pushToScanList {
-    
+    ScanQRVC *scanQRVC = [[ScanQRVC alloc] init];
+    scanQRVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:scanQRVC animated:YES];
 }
 
 //下载

@@ -27,6 +27,7 @@
 		D21E0ED1225359FD0043FDAE /* MovieDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */; };
 		D23F33E2225B529300BA5789 /* ChannelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D23F33E1225B529300BA5789 /* ChannelRequest.m */; };
 		D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */; };
+		D26F38A7226865D90052723C /* ScanQRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F38A6226865D90052723C /* ScanQRVC.m */; };
 		D2756E29224218B000EB45B3 /* FilterSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2756E28224218B000EB45B3 /* FilterSortView.m */; };
 		D279812E222F6C590036D408 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D279812D222F6C590036D408 /* RegisterVC.m */; };
 		D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2798130222F6C6F0036D408 /* ForgetPswVC.m */; };
@@ -546,6 +547,8 @@
 		D23F33E1225B529300BA5789 /* ChannelRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelRequest.m; sourceTree = "<group>"; };
 		D25C2F25224CA394006361C3 /* SpecialTopicMoiveListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialTopicMoiveListVC.h; sourceTree = "<group>"; };
 		D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialTopicMoiveListVC.m; sourceTree = "<group>"; };
+		D26F38A5226865D90052723C /* ScanQRVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanQRVC.h; sourceTree = "<group>"; };
+		D26F38A6226865D90052723C /* ScanQRVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanQRVC.m; sourceTree = "<group>"; };
 		D2756E27224218B000EB45B3 /* FilterSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterSortView.h; sourceTree = "<group>"; };
 		D2756E28224218B000EB45B3 /* FilterSortView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterSortView.m; sourceTree = "<group>"; };
 		D279812C222F6C590036D408 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
@@ -1511,6 +1514,15 @@
 				D23F33E1225B529300BA5789 /* ChannelRequest.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D26F38A4226865C10052723C /* ScanQR */ = {
+			isa = PBXGroup;
+			children = (
+				D26F38A5226865D90052723C /* ScanQRVC.h */,
+				D26F38A6226865D90052723C /* ScanQRVC.m */,
+			);
+			path = ScanQR;
 			sourceTree = "<group>";
 		};
 		D296438F225B1DD900A2C1DA /* Cell */ = {
@@ -2777,6 +2789,7 @@
 		E589702221F0623F008924E4 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				D26F38A4226865C10052723C /* ScanQR */,
 				D2A3AA242237AF6600B6B7A3 /* Cell */,
 				D2ED914222325BCE00A021E4 /* Model */,
 				D2ED914122325BC100A021E4 /* Network */,
@@ -3365,6 +3378,7 @@
 				E55133D521F06AAF00DD8859 /* ZXPDF417Detector.m in Sources */,
 				E55133F821F06AB000DD8859 /* ZXAI01393xDecoder.m in Sources */,
 				E551314D21F0688500DD8859 /* QNPHAssetResource.m in Sources */,
+				D26F38A7226865D90052723C /* ScanQRVC.m in Sources */,
 				E55133C821F06AAF00DD8859 /* ZXDataMatrixDataBlock.m in Sources */,
 				E551315821F0688500DD8859 /* QNResponseInfo.m in Sources */,
 				D21E0EC2225352890043FDAE /* ZFPlayerControlView.m in Sources */,

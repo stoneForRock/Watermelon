@@ -12,6 +12,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import "HUDHelper.h"
 #import "MoivesDetialVC.h"
+#import "MainSearchVC.h"
 
 #define FinderCellIdentifier @"FinderCell"
 
@@ -96,7 +97,9 @@ INSTANCE_XIB_M(@"Finder", FinderVC)
 
 //搜索
 - (void)searchAction:(UIButton *)sender {
-    
+    MainSearchVC *searchVC = [MainSearchVC instanceFromXib];
+    searchVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegate
