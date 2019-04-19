@@ -25,6 +25,12 @@
 		D21E0ECD225352890043FDAE /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBD225352890043FDAE /* ZFPlayerModel.m */; };
 		D21E0ECE225352890043FDAE /* ZFBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0EBF225352890043FDAE /* ZFBrightnessView.m */; };
 		D21E0ED1225359FD0043FDAE /* MovieDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */; };
+		D22C9C392269690B004C1E4B /* SpecialCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C9C382269690B004C1E4B /* SpecialCardView.m */; };
+		D22C9C3B22696917004C1E4B /* SpecialCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22C9C3A22696917004C1E4B /* SpecialCardView.xib */; };
+		D22C9C412269B2AA004C1E4B /* ActorCategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C9C3F2269B2AA004C1E4B /* ActorCategoriesCell.m */; };
+		D22C9C422269B2AA004C1E4B /* ActorCategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22C9C402269B2AA004C1E4B /* ActorCategoriesCell.xib */; };
+		D22C9C462269B2F3004C1E4B /* ActorTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C9C442269B2F3004C1E4B /* ActorTopicCell.m */; };
+		D22C9C472269B2F3004C1E4B /* ActorTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22C9C452269B2F3004C1E4B /* ActorTopicCell.xib */; };
 		D23F33E2225B529300BA5789 /* ChannelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D23F33E1225B529300BA5789 /* ChannelRequest.m */; };
 		D25C2F27224CA394006361C3 /* SpecialTopicMoiveListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D25C2F26224CA394006361C3 /* SpecialTopicMoiveListVC.m */; };
 		D26F38A7226865D90052723C /* ScanQRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F38A6226865D90052723C /* ScanQRVC.m */; };
@@ -543,6 +549,15 @@
 		D21E0EBF225352890043FDAE /* ZFBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBrightnessView.m; sourceTree = "<group>"; };
 		D21E0ECF225359FD0043FDAE /* MovieDetailInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailInfoView.h; sourceTree = "<group>"; };
 		D21E0ED0225359FD0043FDAE /* MovieDetailInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailInfoView.m; sourceTree = "<group>"; };
+		D22C9C372269690B004C1E4B /* SpecialCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialCardView.h; sourceTree = "<group>"; };
+		D22C9C382269690B004C1E4B /* SpecialCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialCardView.m; sourceTree = "<group>"; };
+		D22C9C3A22696917004C1E4B /* SpecialCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialCardView.xib; sourceTree = "<group>"; };
+		D22C9C3E2269B2AA004C1E4B /* ActorCategoriesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActorCategoriesCell.h; sourceTree = "<group>"; };
+		D22C9C3F2269B2AA004C1E4B /* ActorCategoriesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActorCategoriesCell.m; sourceTree = "<group>"; };
+		D22C9C402269B2AA004C1E4B /* ActorCategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorCategoriesCell.xib; sourceTree = "<group>"; };
+		D22C9C432269B2F3004C1E4B /* ActorTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActorTopicCell.h; sourceTree = "<group>"; };
+		D22C9C442269B2F3004C1E4B /* ActorTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActorTopicCell.m; sourceTree = "<group>"; };
+		D22C9C452269B2F3004C1E4B /* ActorTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorTopicCell.xib; sourceTree = "<group>"; };
 		D23F33E0225B529300BA5789 /* ChannelRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelRequest.h; sourceTree = "<group>"; };
 		D23F33E1225B529300BA5789 /* ChannelRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelRequest.m; sourceTree = "<group>"; };
 		D25C2F25224CA394006361C3 /* SpecialTopicMoiveListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialTopicMoiveListVC.h; sourceTree = "<group>"; };
@@ -1505,6 +1520,29 @@
 				D21E0EB9225352890043FDAE /* UIViewController+ZFPlayerRotation.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		D22C9C3622696776004C1E4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D22C9C372269690B004C1E4B /* SpecialCardView.h */,
+				D22C9C382269690B004C1E4B /* SpecialCardView.m */,
+				D22C9C3A22696917004C1E4B /* SpecialCardView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D22C9C3D2269AEE9004C1E4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D22C9C3E2269B2AA004C1E4B /* ActorCategoriesCell.h */,
+				D22C9C3F2269B2AA004C1E4B /* ActorCategoriesCell.m */,
+				D22C9C402269B2AA004C1E4B /* ActorCategoriesCell.xib */,
+				D22C9C432269B2F3004C1E4B /* ActorTopicCell.h */,
+				D22C9C442269B2F3004C1E4B /* ActorTopicCell.m */,
+				D22C9C452269B2F3004C1E4B /* ActorTopicCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D23F33DE225B527000BA5789 /* Network */ = {
@@ -2810,9 +2848,9 @@
 		E589702321F06247008924E4 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				D22C9C3622696776004C1E4B /* Views */,
 				E5EF76AC2261E04400BB2B49 /* TagFilter */,
 				E5EF76AB2261E03500BB2B49 /* RecommendColumn */,
-				E5EF76A72261D94500BB2B49 /* Views */,
 				D23F33DE225B527000BA5789 /* Network */,
 				E5512D7421F0671400DD8859 /* ChannelVC.h */,
 				E5512D7521F0671400DD8859 /* ChannelVC.m */,
@@ -3037,16 +3075,10 @@
 			path = WatermelonVedioPlayerUITests;
 			sourceTree = "<group>";
 		};
-		E5EF76A72261D94500BB2B49 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		E5EF76AB2261E03500BB2B49 /* RecommendColumn */ = {
 			isa = PBXGroup;
 			children = (
+				D22C9C3D2269AEE9004C1E4B /* Cell */,
 				E5EF76A82261D99700BB2B49 /* RecommendColumnVC.h */,
 				E5EF76A92261D99700BB2B49 /* RecommendColumnVC.m */,
 			);
@@ -3198,8 +3230,10 @@
 				E551318021F0688500DD8859 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
 				E551304F21F0688400DD8859 /* MJPhotoBrowser.bundle in Resources */,
 				E551318221F0688500DD8859 /* ImageSelectedSmallOff@2x.png in Resources */,
+				D22C9C422269B2AA004C1E4B /* ActorCategoriesCell.xib in Resources */,
 				D2C3C40C2239EBF00052CE44 /* MovieCoverView.xib in Resources */,
 				E551318621F0688500DD8859 /* PlayButtonOverlayLargeTap@3x.png in Resources */,
+				D22C9C3B22696917004C1E4B /* SpecialCardView.xib in Resources */,
 				D2798133222F6CA50036D408 /* Login.storyboard in Resources */,
 				E551319821F0688500DD8859 /* ImageSelectedOn@2x.png in Resources */,
 				E551319021F0688500DD8859 /* ImageSelectedSmallOff.png in Resources */,
@@ -3231,6 +3265,7 @@
 				D2C44BF4223F959C00DB11DF /* MoviesClassListCell2.xib in Resources */,
 				D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */,
 				E551318921F0688500DD8859 /* ImageError.png in Resources */,
+				D22C9C472269B2F3004C1E4B /* ActorTopicCell.xib in Resources */,
 				D2A3AA472237E33600B6B7A3 /* MainNewestMovieCell.xib in Resources */,
 				D2C44BF9223F95AB00DB11DF /* MoviesClassListCell3.xib in Resources */,
 				D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */,
@@ -3346,6 +3381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22C9C392269690B004C1E4B /* SpecialCardView.m in Sources */,
 				E551337A21F06AAF00DD8859 /* ZXDataMatrixX12Encoder.m in Sources */,
 				E55133BF21F06AAF00DD8859 /* ZXRSSExpandedFieldParser.m in Sources */,
 				D2798131222F6C6F0036D408 /* ForgetPswVC.m in Sources */,
@@ -3496,6 +3532,7 @@
 				E55133EC21F06AB000DD8859 /* ZXSMTPResultParser.m in Sources */,
 				E55134D221F1DF4700DD8859 /* LoginManager+Logout.m in Sources */,
 				E551343B21F06AB000DD8859 /* ZXExpandedProductParsedResult.m in Sources */,
+				D22C9C462269B2F3004C1E4B /* ActorTopicCell.m in Sources */,
 				E551313521F0688500DD8859 /* IQTextView.m in Sources */,
 				E551316321F0688500DD8859 /* QNResolver.m in Sources */,
 				D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */,
@@ -3566,6 +3603,7 @@
 				D21E0ECA225352890043FDAE /* UIImageView+ZFCache.m in Sources */,
 				E55133BE21F06AAF00DD8859 /* ZXEAN13Reader.m in Sources */,
 				D21E0EC1225352890043FDAE /* ASValuePopUpView.m in Sources */,
+				D22C9C412269B2AA004C1E4B /* ActorCategoriesCell.m in Sources */,
 				E55133D621F06AAF00DD8859 /* ZXExpandedProductResultParser.m in Sources */,
 				E551342B21F06AB000DD8859 /* ZXAI01392xDecoder.m in Sources */,
 				E551314A21F0688500DD8859 /* QNUpToken.m in Sources */,
