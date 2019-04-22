@@ -43,9 +43,6 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
-    self.tableView.tableHeaderView = tableHeaderView;
-    
     self.tableView.tableFooterView = [[UIView alloc] init];
     
     [self regiserTableCell];

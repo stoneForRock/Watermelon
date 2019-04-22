@@ -22,6 +22,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-IC-0ri">
                         <rect key="frame" x="0.0" y="10" width="320" height="165"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="y9P-IC-0ri" secondAttribute="height" multiplier="64:33" id="g4l-fu-dD2"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
