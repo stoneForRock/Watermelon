@@ -13,6 +13,21 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ChannelRequest : BaseRequest
 
 /**
+ 获取专栏页面下的栏目小分类集合
+
+ @param finishBlock finishBlock
+ */
++ (void)getColumnNavsFinishBlock:(RequestFinishBlock)finishBlock;
+
+/**
+ 获取专栏页栏目详情电影列表
+
+ @param navId 栏目ID
+ @param finishBlock finishBlock
+ */
++ (void)getColumnMovieListWithNavsId:(NSString *)navId finishBlock:(RequestFinishBlock)finishBlock;
+
+/**
  获取频道标签列表
 
  @param finishBlock finishBlock

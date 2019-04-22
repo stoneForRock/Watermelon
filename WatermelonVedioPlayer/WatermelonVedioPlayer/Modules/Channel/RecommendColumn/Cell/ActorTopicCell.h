@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieCoverView.h"
+
+@protocol ActorTopicCellDelegate <NSObject>
+@optional
+- (void)actorTopicCellClickMovie:(MoivesModel *)moive;
+@end
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ActorTopicCell : UITableViewCell
+
+@property (nonatomic, strong) NSArray *cellDataList;
+@property (nonatomic, assign) id<ActorTopicCellDelegate> actorTopicCellDelegate;
 
 @end
 

@@ -10,6 +10,18 @@
 
 @implementation ChannelRequest
 
++ (void)getColumnNavsFinishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/column/navs" parameters:@{} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
++ (void)getColumnMovieListWithNavsId:(NSString *)navId finishBlock:(RequestFinishBlock)finishBlock {
+    [self sendGETRequest:@"/api/column/movies" parameters:@{@"navId":navId} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        finishBlock(success,responseObject,error);
+    }];
+}
+
 + (void)getTagListFinishBlock:(RequestFinishBlock)finishBlock {
     [self sendGETRequest:@"/api/tag/list" parameters:@{} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         finishBlock(success,responseObject,error);

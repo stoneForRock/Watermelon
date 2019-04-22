@@ -70,6 +70,10 @@
 		D2C3C416223A32480052CE44 /* MainListADCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C414223A32480052CE44 /* MainListADCell.xib */; };
 		D2C3C419223A46950052CE44 /* MovieColumnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C418223A46950052CE44 /* MovieColumnModel.m */; };
 		D2C3C425223A51DB0052CE44 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C424223A51DB0052CE44 /* Location.gpx */; };
+		D2C432E2226DB9CE001E9044 /* ColumnNavsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C432E0226DB9CE001E9044 /* ColumnNavsCell.m */; };
+		D2C432E3226DB9CE001E9044 /* ColumnNavsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C432E1226DB9CE001E9044 /* ColumnNavsCell.xib */; };
+		D2C432E7226DCBB7001E9044 /* ColumnAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C432E5226DCBB7001E9044 /* ColumnAdCell.m */; };
+		D2C432E8226DCBB7001E9044 /* ColumnAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C432E6226DCBB7001E9044 /* ColumnAdCell.xib */; };
 		D2C44BEE223F958B00DB11DF /* MoviesClassListCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BEC223F958B00DB11DF /* MoviesClassListCell1.m */; };
 		D2C44BEF223F958B00DB11DF /* MoviesClassListCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BED223F958B00DB11DF /* MoviesClassListCell1.xib */; };
 		D2C44BF3223F959C00DB11DF /* MoviesClassListCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BF1223F959C00DB11DF /* MoviesClassListCell2.m */; };
@@ -623,6 +627,12 @@
 		D2C3C417223A46950052CE44 /* MovieColumnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieColumnModel.h; sourceTree = "<group>"; };
 		D2C3C418223A46950052CE44 /* MovieColumnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieColumnModel.m; sourceTree = "<group>"; };
 		D2C3C424223A51DB0052CE44 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		D2C432DF226DB9CE001E9044 /* ColumnNavsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColumnNavsCell.h; sourceTree = "<group>"; };
+		D2C432E0226DB9CE001E9044 /* ColumnNavsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColumnNavsCell.m; sourceTree = "<group>"; };
+		D2C432E1226DB9CE001E9044 /* ColumnNavsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColumnNavsCell.xib; sourceTree = "<group>"; };
+		D2C432E4226DCBB7001E9044 /* ColumnAdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColumnAdCell.h; sourceTree = "<group>"; };
+		D2C432E5226DCBB7001E9044 /* ColumnAdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColumnAdCell.m; sourceTree = "<group>"; };
+		D2C432E6226DCBB7001E9044 /* ColumnAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColumnAdCell.xib; sourceTree = "<group>"; };
 		D2C44BEB223F958B00DB11DF /* MoviesClassListCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesClassListCell1.h; sourceTree = "<group>"; };
 		D2C44BEC223F958B00DB11DF /* MoviesClassListCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesClassListCell1.m; sourceTree = "<group>"; };
 		D2C44BED223F958B00DB11DF /* MoviesClassListCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesClassListCell1.xib; sourceTree = "<group>"; };
@@ -1535,6 +1545,12 @@
 		D22C9C3D2269AEE9004C1E4B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D2C432DF226DB9CE001E9044 /* ColumnNavsCell.h */,
+				D2C432E0226DB9CE001E9044 /* ColumnNavsCell.m */,
+				D2C432E1226DB9CE001E9044 /* ColumnNavsCell.xib */,
+				D2C432E4226DCBB7001E9044 /* ColumnAdCell.h */,
+				D2C432E5226DCBB7001E9044 /* ColumnAdCell.m */,
+				D2C432E6226DCBB7001E9044 /* ColumnAdCell.xib */,
 				D22C9C3E2269B2AA004C1E4B /* ActorCategoriesCell.h */,
 				D22C9C3F2269B2AA004C1E4B /* ActorCategoriesCell.m */,
 				D22C9C402269B2AA004C1E4B /* ActorCategoriesCell.xib */,
@@ -3257,11 +3273,13 @@
 				E551317D21F0688500DD8859 /* UIBarButtonItemGrid@2x.png in Resources */,
 				D2C3C425223A51DB0052CE44 /* Location.gpx in Resources */,
 				E551317B21F0688500DD8859 /* ImageSelectedSmallOn.png in Resources */,
+				D2C432E8226DCBB7001E9044 /* ColumnAdCell.xib in Resources */,
 				E551318321F0688500DD8859 /* ImageSelectedSmallOff@3x.png in Resources */,
 				E551318F21F0688500DD8859 /* VideoOverlay.png in Resources */,
 				E551319421F0688500DD8859 /* UIBarButtonItemArrowRight@2x.png in Resources */,
 				E551318421F0688500DD8859 /* PlayButtonOverlayLargeTap.png in Resources */,
 				E551317C21F0688500DD8859 /* UIBarButtonItemGrid.png in Resources */,
+				D2C432E3226DB9CE001E9044 /* ColumnNavsCell.xib in Resources */,
 				D2C44BF4223F959C00DB11DF /* MoviesClassListCell2.xib in Resources */,
 				D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */,
 				E551318921F0688500DD8859 /* ImageError.png in Resources */,
@@ -3395,6 +3413,7 @@
 				D21E0EC0225352890043FDAE /* MMMaterialDesignSpinner.m in Sources */,
 				E551304E21F0688400DD8859 /* MJPhotoView.m in Sources */,
 				E551340621F06AB000DD8859 /* ZXRGBLuminanceSource.m in Sources */,
+				D2C432E7226DCBB7001E9044 /* ColumnAdCell.m in Sources */,
 				E551346C21F071AC00DD8859 /* NSString+Tool.m in Sources */,
 				E551317221F0688500DD8859 /* MWZoomingScrollView.m in Sources */,
 				E551340A21F06AB000DD8859 /* ZXProductParsedResult.m in Sources */,
@@ -3612,6 +3631,7 @@
 				E551344A21F06AB000DD8859 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				E551342321F06AB000DD8859 /* ZXInvertedLuminanceSource.m in Sources */,
 				E551343121F06AB000DD8859 /* ZXReedSolomonEncoder.m in Sources */,
+				D2C432E2226DB9CE001E9044 /* ColumnNavsCell.m in Sources */,
 				E55133B021F06AAF00DD8859 /* ZXPDF417DetectorResult.m in Sources */,
 				E55133A821F06AAF00DD8859 /* ZXPDF417Common.m in Sources */,
 				E551341721F06AB000DD8859 /* ZXAztecSimpleToken.m in Sources */,

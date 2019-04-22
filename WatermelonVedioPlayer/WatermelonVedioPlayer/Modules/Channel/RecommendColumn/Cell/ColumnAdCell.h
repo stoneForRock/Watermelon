@@ -1,0 +1,19 @@
+//
+//  ColumnAdCell.h
+//  WatermelonVedioPlayer
+//
+//  Created by dachen on 2019/4/22.
+//  Copyright © 2019年 VedioPlayer. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ColumnAdCell : UITableViewCell
+
+@property (nonatomic, strong) NSArray *adInfos;
+
+@end
+
+NS_ASSUME_NONNULL_END

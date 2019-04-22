@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ActorCategoriesCellDelegate <NSObject>
+@optional
+
+- (void)clickCategories:(NSDictionary *)categoriesInfo;
+- (void)moreCategories;
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ActorCategoriesCell : UITableViewCell
-
+@property (nonatomic, strong) NSArray *cellDatas;
+@property (nonatomic, assign) id<ActorCategoriesCellDelegate> categoriesCellDelegate;
 @end
 
 NS_ASSUME_NONNULL_END
