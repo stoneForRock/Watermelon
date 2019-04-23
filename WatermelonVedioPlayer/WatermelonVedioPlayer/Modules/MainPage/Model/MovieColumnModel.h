@@ -17,7 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString<Optional> *name;
 @property (nonatomic, copy) NSString<Optional> *navId;
 @property (nonatomic, copy) NSString<Optional> *navImage;
+@property (nonatomic, copy) NSString<Optional> *intro;
+@property (nonatomic, copy) NSString<Optional> *lastUpdateTime;
 @property (nonatomic, strong) NSArray<MoivesModel,Optional> *movies;
+
+- (instancetype)initWithChannelColumnDic:(NSDictionary *)dictionary;
 
 @end
 

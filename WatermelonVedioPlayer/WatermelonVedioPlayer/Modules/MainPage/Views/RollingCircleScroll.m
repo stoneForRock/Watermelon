@@ -90,7 +90,7 @@
     }
     
     self.scrollTimer = [NSTimer timerWithTimeInterval:self.scrollInterval == 0?3:self.scrollInterval target:self selector:@selector(doScroll) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.scrollTimer forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop mainRunLoop] addTimer:self.scrollTimer forMode:NSRunLoopCommonModes];
 }
 
 - (void)doScroll {

@@ -28,6 +28,8 @@
     self.cardView2.specialCardViewDelegate = self;
     self.cardView3.specialCardViewDelegate = self;
     self.cardViewArray = [NSMutableArray arrayWithObjects:_cardView1,_cardView2,_cardView3, nil];
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setColumnNavsInfo:(NSDictionary *)columnNavsInfo {

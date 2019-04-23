@@ -10,6 +10,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface SpecialCardView ()
+@property (strong, nonatomic) IBOutlet UIView *specialCardContentView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -22,7 +23,14 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.iconImageView.layer.cornerRadius = 6.0;
+    self.specialCardContentView = [[[NSBundle mainBundle] loadNibNamed:@"SpecialCardView" owner:self options:nil] lastObject];
+    self.specialCardContentView.frame = self.bounds;
+    [self addSubview:self.specialCardContentView];
+    
+    self.specialCardContentView.layer.cornerRadius = 3.0;
+    self.specialCardContentView.layer.masksToBounds = YES;
+    
+    self.iconImageView.layer.cornerRadius = 30.0;
     self.iconImageView.layer.masksToBounds = YES;
     self.iconImageView.layer.borderWidth = 3.0;
     self.iconImageView.layer.borderColor = ThemeColor.CGColor;

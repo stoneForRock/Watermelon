@@ -80,6 +80,10 @@
 		D2C44BF4223F959C00DB11DF /* MoviesClassListCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BF2223F959C00DB11DF /* MoviesClassListCell2.xib */; };
 		D2C44BF8223F95AB00DB11DF /* MoviesClassListCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */; };
 		D2C44BF9223F95AB00DB11DF /* MoviesClassListCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */; };
+		D2D3B225226EDFFD00E9409D /* HotColumnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B224226EDFFD00E9409D /* HotColumnVC.m */; };
+		D2D3B229226EE77400E9409D /* HotActorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B228226EE77400E9409D /* HotActorVC.m */; };
+		D2D3B22D226EF43600E9409D /* HotColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B22C226EF43600E9409D /* HotColumnCell.m */; };
+		D2D3B230226F081A00E9409D /* HotActorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B22F226F081A00E9409D /* HotActorCell.m */; };
 		D2D53DCA224B711300001A0A /* UIView+NoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D53DC9224B711300001A0A /* UIView+NoData.m */; };
 		D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913A223259D300A021E4 /* MainSearchVC.m */; };
 		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
@@ -642,6 +646,14 @@
 		D2C44BF5223F95AB00DB11DF /* MoviesClassListCell3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesClassListCell3.h; sourceTree = "<group>"; };
 		D2C44BF6223F95AB00DB11DF /* MoviesClassListCell3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesClassListCell3.m; sourceTree = "<group>"; };
 		D2C44BF7223F95AB00DB11DF /* MoviesClassListCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesClassListCell3.xib; sourceTree = "<group>"; };
+		D2D3B223226EDFFD00E9409D /* HotColumnVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotColumnVC.h; sourceTree = "<group>"; };
+		D2D3B224226EDFFD00E9409D /* HotColumnVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotColumnVC.m; sourceTree = "<group>"; };
+		D2D3B227226EE77400E9409D /* HotActorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotActorVC.h; sourceTree = "<group>"; };
+		D2D3B228226EE77400E9409D /* HotActorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotActorVC.m; sourceTree = "<group>"; };
+		D2D3B22B226EF43600E9409D /* HotColumnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotColumnCell.h; sourceTree = "<group>"; };
+		D2D3B22C226EF43600E9409D /* HotColumnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotColumnCell.m; sourceTree = "<group>"; };
+		D2D3B22E226F081A00E9409D /* HotActorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotActorCell.h; sourceTree = "<group>"; };
+		D2D3B22F226F081A00E9409D /* HotActorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotActorCell.m; sourceTree = "<group>"; };
 		D2D53DC8224B711300001A0A /* UIView+NoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+NoData.h"; sourceTree = "<group>"; };
 		D2D53DC9224B711300001A0A /* UIView+NoData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+NoData.m"; sourceTree = "<group>"; };
 		D2ED9139223259D300A021E4 /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
@@ -1735,6 +1747,44 @@
 				D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */,
 			);
 			path = CellView;
+			sourceTree = "<group>";
+		};
+		D2D3B222226EDFDF00E9409D /* HotColumn */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3B22A226EF30200E9409D /* Cell */,
+				D2D3B223226EDFFD00E9409D /* HotColumnVC.h */,
+				D2D3B224226EDFFD00E9409D /* HotColumnVC.m */,
+			);
+			path = HotColumn;
+			sourceTree = "<group>";
+		};
+		D2D3B226226EE75E00E9409D /* HotActor */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3B231226F082100E9409D /* Cell */,
+				D2D3B227226EE77400E9409D /* HotActorVC.h */,
+				D2D3B228226EE77400E9409D /* HotActorVC.m */,
+			);
+			path = HotActor;
+			sourceTree = "<group>";
+		};
+		D2D3B22A226EF30200E9409D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3B22B226EF43600E9409D /* HotColumnCell.h */,
+				D2D3B22C226EF43600E9409D /* HotColumnCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2D3B231226F082100E9409D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3B22E226F081A00E9409D /* HotActorCell.h */,
+				D2D3B22F226F081A00E9409D /* HotActorCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D2ED91352232590600A021E4 /* Search */ = {
@@ -3094,6 +3144,8 @@
 		E5EF76AB2261E03500BB2B49 /* RecommendColumn */ = {
 			isa = PBXGroup;
 			children = (
+				D2D3B226226EE75E00E9409D /* HotActor */,
+				D2D3B222226EDFDF00E9409D /* HotColumn */,
 				D22C9C3D2269AEE9004C1E4B /* Cell */,
 				E5EF76A82261D99700BB2B49 /* RecommendColumnVC.h */,
 				E5EF76A92261D99700BB2B49 /* RecommendColumnVC.m */,
@@ -3568,10 +3620,13 @@
 				E55134A821F081E100DD8859 /* AppStyle.m in Sources */,
 				E55133A221F06AAF00DD8859 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				E55133D221F06AAF00DD8859 /* ZXAddressBookParsedResult.m in Sources */,
+				D2D3B22D226EF43600E9409D /* HotColumnCell.m in Sources */,
 				E55133FF21F06AB000DD8859 /* ZXEncodeHints.m in Sources */,
 				E55133C221F06AAF00DD8859 /* ZXURLTOResultParser.m in Sources */,
 				E55133C921F06AAF00DD8859 /* ZXISBNResultParser.m in Sources */,
+				D2D3B229226EE77400E9409D /* HotActorVC.m in Sources */,
 				E55133B921F06AAF00DD8859 /* ZXOneDimensionalCodeWriter.m in Sources */,
+				D2D3B230226F081A00E9409D /* HotActorCell.m in Sources */,
 				E551317621F0688500DD8859 /* MWTapDetectingView.m in Sources */,
 				D2D53DCA224B711300001A0A /* UIView+NoData.m in Sources */,
 				E551341A21F06AB000DD8859 /* ZXQRCodeEncoder.m in Sources */,
@@ -3678,6 +3733,7 @@
 				E551305221F0688400DD8859 /* MJPhotoProgressView.m in Sources */,
 				E551313621F0688500DD8859 /* IQToolbar.m in Sources */,
 				E551315C21F0688500DD8859 /* QNHex.m in Sources */,
+				D2D3B225226EDFFD00E9409D /* HotColumnVC.m in Sources */,
 				E551348421F0758700DD8859 /* UIImage+compress.m in Sources */,
 				E551343521F06AB000DD8859 /* ZXBitSource.m in Sources */,
 				E55133B621F06AAF00DD8859 /* ZXAztecToken.m in Sources */,

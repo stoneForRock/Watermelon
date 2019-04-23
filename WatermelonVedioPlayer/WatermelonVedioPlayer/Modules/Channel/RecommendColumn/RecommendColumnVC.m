@@ -14,6 +14,11 @@
 #import "ActorTopicCell.h"
 #import "ColumnNavsCell.h"
 #import "ColumnAdCell.h"
+#import <MJRefresh/MJRefresh.h>
+#import "SpecialTopicMoiveListVC.h"
+#import "MoivesDetialVC.h"
+#import "HotColumnVC.h"
+#import "HotActorVC.h"
 
 #define ColumnNavsCellIdentifier @"ColumnNavsCell"
 #define ColumnAdCellIdentifier @"ColumnAdCell"
@@ -24,6 +29,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *tableList;
+
+@property (nonatomic, strong) NSMutableArray *hotColumnFilterArray;
 
 @end
 
@@ -38,14 +45,22 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
 }
 
 - (void)initUI {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenFullWidth, ScreenFullHeight - NavigationBarHeight - StatusBarHeight) style:UITableViewStylePlain];
+    
+    self.view.backgroundColor = COLORWITHRGBADIVIDE255(29, 29, 29, 1);
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, StatusBarHeight, ScreenFullWidth, ScreenFullHeight - NavigationBarHeight - StatusBarHeight) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.backgroundColor = COLORWITHRGBADIVIDE255(29, 29, 29, 1);
     [self.view addSubview:self.tableView];
     
     self.tableView.tableFooterView = [[UIView alloc] init];
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self regiserTableCell];
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self requestColumnInfo];
+    }];
 }
 
 - (void)regiserTableCell {
@@ -57,16 +72,19 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
 
 - (void)initDataInfo {
     self.tableList = [NSMutableArray arrayWithObjects:@{},@[],@[],@[],nil];
+    self.hotColumnFilterArray = [NSMutableArray arrayWithCapacity:0];
 }
 
 - (void)requestColumnInfo {
     [self requestTopAdInfo];
     [self requestColumnNavs];
     [self requestHotsActor];
+    [self requestMoreColumnCategory];
 }
 
 - (void)requestColumnNavs {
     [ChannelRequest getColumnNavsFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        [self.tableView.mj_header endRefreshing];
         if (success) {
             NSArray *responseArray = responseObject;
             if (responseArray.count > 1) {
@@ -82,7 +100,10 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
 
 - (void)requestHotsActor {
     [ChannelRequest getHotsActorFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        if (success) {
+            [self.tableList replaceObjectAtIndex:3 withObject:responseObject];
+        }
+        [self.tableView reloadData];
     }];
 }
 
@@ -95,25 +116,69 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
     }];
 }
 
+- (void)requestMoreColumnCategory {
+    [ChannelRequest getActorCategoriesFinishBlock:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (success) {
+            [self.hotColumnFilterArray removeAllObjects];
+            NSArray *responseArray = responseObject;
+            for (int i = 0; i < responseArray.count; i++) {
+                NSDictionary *categoriesDic = responseArray[i];
+                NSMutableDictionary *filterDic = [NSMutableDictionary dictionaryWithCapacity:0];
+                [filterDic setObject:categoriesDic[@"name"] forKey:@"clsName"];
+                [filterDic setObject:categoriesDic[@"id"] forKey:@"id"];
+                [filterDic setObject:categoriesDic[@"rank"] forKey:@"rank"];
+                [filterDic setObject:categoriesDic[@"deleteFlag"] forKey:@"deleteFlag"];
+                [self.hotColumnFilterArray addObject:filterDic];
+            }
+            NSDictionary *dictionary = @{@"deleteFlag":@"",@"clsName":@"全部",@"id":@"",@"rank":@""};//构建一个全部的项
+            [self.hotColumnFilterArray insertObject:dictionary atIndex:0];
+        }
+    }];
+}
+
 #pragma mark - cellDelegate
 
 //点击栏目跳转
 - (void)columnNavsCellClick:(NSDictionary *)navInfo {
-    
+    [self pushToTopicVCWithNavInfo:navInfo];
 }
 
+//更多专题
 - (void)moreCategories {
-    
+    NSDictionary *columnInfo = self.tableList[2];
+    HotColumnVC *hotColumnVC = [HotColumnVC instanceFromXib];
+    hotColumnVC.title = columnInfo[@"modName"]?columnInfo[@"modName"]:@"";
+    hotColumnVC.allColumns = columnInfo[@"subclass"]?columnInfo[@"subclass"]:@[];
+    hotColumnVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:hotColumnVC animated:YES];
+}
+
+//更多人气演员
+- (void)actorTopicCellMoreHotActor {
+    HotActorVC *hotActorVC = [HotActorVC instanceFromXib];
+    hotActorVC.allClassList = self.hotColumnFilterArray.copy;
+    hotActorVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:hotActorVC animated:YES];
 }
 
 - (void)clickCategories:(NSDictionary *)categoriesInfo {
-    
+    [self pushToTopicVCWithNavInfo:categoriesInfo];
 }
 
-- (void)actorTopicCellClickMovie:(MoivesModel *)moive {
-    
+- (void)actorTopicCellClickMovie:(NSDictionary *)moiveDic {
+    MoivesDetialVC *moivesDetialVC = [MoivesDetialVC instanceFromXib];
+    moivesDetialVC.movieModel = [[MoivesModel alloc] initWithDetailDictionary:moiveDic];
+    moivesDetialVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:moivesDetialVC animated:YES];
 }
 
+- (void)pushToTopicVCWithNavInfo:(NSDictionary *)navInfo {
+    MovieColumnModel *column = [[MovieColumnModel alloc] initWithChannelColumnDic:navInfo];
+    SpecialTopicMoiveListVC *topicListVC = [SpecialTopicMoiveListVC instanceFromXib];
+    topicListVC.columnModel = column;
+    topicListVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:topicListVC animated:YES];
+}
 
 #pragma mark - tableViewDelegate
 
@@ -139,9 +204,9 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
         //分类
         ActorCategoriesCell *categoriesCell = [tableView dequeueReusableCellWithIdentifier:ActorCategoriesCellIdentifier];
         categoriesCell.categoriesCellDelegate = self;
-        id cellData = self.tableList[indexPath.section];
-        if (cellData && [cellData isKindOfClass:[NSArray class]]) {
-            categoriesCell.cellDatas = cellData;
+        NSDictionary *cellData = self.tableList[indexPath.section];
+        if (cellData && [cellData isKindOfClass:[NSDictionary class]]) {
+            categoriesCell.cellData = cellData;
         }
         
         return categoriesCell;
@@ -150,10 +215,11 @@ INSTANCE_XIB_M(@"Channel", RecommendColumnVC)
         ActorTopicCell *actorTopicCell = [tableView dequeueReusableCellWithIdentifier:ActorTopicCellIdentifier];
         actorTopicCell.actorTopicCellDelegate = self;
         NSArray *sectionData = self.tableList[indexPath.section];
-        id cellData = sectionData[indexPath.row];
-        if (cellData && [cellData isKindOfClass:[NSArray class]]) {
-            actorTopicCell.cellDataList = cellData;
+        NSDictionary *cellData = sectionData[indexPath.row];
+        if (cellData && [cellData isKindOfClass:[NSDictionary class]]) {
+            actorTopicCell.cellData = cellData;
         }
+        [actorTopicCell hidenTitle:(indexPath.row !=0)];
         return actorTopicCell;
     }
 }

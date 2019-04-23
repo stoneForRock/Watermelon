@@ -55,5 +55,35 @@
             </objects>
             <point key="canvasLocation" x="610" y="90"/>
         </scene>
+        <!--Hot ColumnVC-->
+        <scene sceneID="IaX-dl-ZCK">
+            <objects>
+                <viewController storyboardIdentifier="HotColumnVC" id="oy3-ke-vUM" customClass="HotColumnVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p8b-hm-byI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oWo-hB-1RU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhr-aM-YYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="90"/>
+        </scene>
+        <!--Hot ActorVC-->
+        <scene sceneID="eo7-wX-Hjn">
+            <objects>
+                <viewController storyboardIdentifier="HotActorVC" id="WpQ-7h-FK5" customClass="HotActorVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3W-MO-K3t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B88-Wv-Kmd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTt-LD-xUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="90"/>
+        </scene>
     </scenes>
 </document>

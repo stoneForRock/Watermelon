@@ -55,13 +55,13 @@
     __block atomic_int timeOutCount = 6;//5秒倒计时
     __block UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeBtn setTitle:[NSString stringWithFormat:@"%d",timeOutCount] forState:UIControlStateNormal];
-    closeBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    closeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [closeBtn setBackgroundColor:COLORWITHRGBADIVIDE255(244, 244, 244, 1)];
     [closeBtn setTitleColor:COLORWITHRGBADIVIDE255(68, 68, 68, 1) forState:UIControlStateNormal];
-    closeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 34, StatusBarHeight + 10, 24, 24);
+    closeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 42, StatusBarHeight + 10, 36, 36);
     [closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
     closeBtn.enabled = NO;
-    closeBtn.layer.cornerRadius = 12.0;
+    closeBtn.layer.cornerRadius = 18.0;
     closeBtn.layer.masksToBounds = YES;
     closeBtn.tag = 1009302;
     [launchImageView addSubview:closeBtn];

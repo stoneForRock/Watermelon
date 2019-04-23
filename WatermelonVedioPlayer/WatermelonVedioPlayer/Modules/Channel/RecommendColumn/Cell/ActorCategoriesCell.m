@@ -51,13 +51,17 @@
     
     self.btnArray = [NSMutableArray arrayWithObjects:_btn1,_btn2,_btn3,_btn4,_btn5,_btn6,_btn7,_btn8, nil];
     self.labelArray = [NSMutableArray arrayWithObjects:_lab1,_lab2,_lab3,_lab4,_lab5,_lab6,_lab7,_lab8, nil];
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-- (void)setCellDatas:(NSArray *)cellDatas {
-    _cellDatas = cellDatas;
-    for (int i = 0; i < cellDatas.count; i ++) {
+- (void)setCellData:(NSDictionary *)cellData {
+    _cellData = cellData;
+    self.navNameLabel.text = cellData[@"modName"]?cellData[@"modName"]:@"";
+    NSArray *navCards = cellData[@"subclass"]?cellData[@"subclass"]:@[];
+    for (int i = 0; i < navCards.count; i ++) {
         if (i < 8) {
-            NSDictionary *categoriesInfo = cellDatas[i];
+            NSDictionary *categoriesInfo = navCards[i];
             UIButton *button = self.btnArray[i];
             UILabel *label = self.labelArray[i];
             [button sd_setImageWithURL:[NSURL URLWithString:categoriesInfo[@"navImage"]] forState:UIControlStateNormal];
@@ -68,8 +72,9 @@
 
 - (IBAction)clickCategoriesInfo:(UIButton *)sender {
     NSInteger index = sender.tag - 101;
-    if (index < self.cellDatas.count) {
-        NSDictionary *categoriesInfo = self.cellDatas[index];
+    NSArray *navCards = self.cellData[@"subclass"]?self.cellData[@"subclass"]:@[];
+    if (index < navCards.count) {
+        NSDictionary *categoriesInfo = navCards[index];
         if (self.categoriesCellDelegate != nil && [self.categoriesCellDelegate respondsToSelector:@selector(clickCategories:)]) {
             [self.categoriesCellDelegate clickCategories:categoriesInfo];
         }

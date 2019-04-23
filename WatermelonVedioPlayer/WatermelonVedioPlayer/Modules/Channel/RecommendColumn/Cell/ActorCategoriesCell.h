@@ -19,7 +19,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ActorCategoriesCell : UITableViewCell
-@property (nonatomic, strong) NSArray *cellDatas;
+@property (nonatomic, strong) NSDictionary *cellData;
 @property (nonatomic, assign) id<ActorCategoriesCellDelegate> categoriesCellDelegate;
 @end
 
