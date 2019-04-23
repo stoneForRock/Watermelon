@@ -48,17 +48,16 @@ INSTANCE_XIB_M(@"Channel", HotActorVC)
 
 - (void)initUI {
     self.title = @"演员列表";
+    [self createCollectionView];
     self.filterSortView = [[FilterSortView alloc] initWithFilterType:FilterSort frame:CGRectMake(0, SafeTopHeight, self.view.frame.size.width, 80) delegate:self dataSource:self];
     [self.view addSubview:self.filterSortView];
-    
-    [self createCollectionView];
 }
 
 - (void)createCollectionView {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.itemSize = CGSizeMake((ScreenFullWidth - 50)/3, 140);
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.filterSortView.frame), ScreenFullWidth, ScreenFullHeight - NavigationBarHeight - StatusBarHeight - CGRectGetHeight(self.filterSortView.frame)) collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, SafeTopHeight + 80, ScreenFullWidth, ScreenFullHeight - SafeTopHeight - 80) collectionViewLayout:layout];
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
