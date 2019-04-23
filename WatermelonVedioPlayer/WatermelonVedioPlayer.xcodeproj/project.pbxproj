@@ -84,6 +84,7 @@
 		D2D3B229226EE77400E9409D /* HotActorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B228226EE77400E9409D /* HotActorVC.m */; };
 		D2D3B22D226EF43600E9409D /* HotColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B22C226EF43600E9409D /* HotColumnCell.m */; };
 		D2D3B230226F081A00E9409D /* HotActorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B22F226F081A00E9409D /* HotActorCell.m */; };
+		D2D3B235226F1A7400E9409D /* TagFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3B234226F1A7400E9409D /* TagFilterView.m */; };
 		D2D53DCA224B711300001A0A /* UIView+NoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D53DC9224B711300001A0A /* UIView+NoData.m */; };
 		D2ED913B223259D300A021E4 /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913A223259D300A021E4 /* MainSearchVC.m */; };
 		D2ED913F22325B6E00A021E4 /* PlayHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */; };
@@ -654,6 +655,8 @@
 		D2D3B22C226EF43600E9409D /* HotColumnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotColumnCell.m; sourceTree = "<group>"; };
 		D2D3B22E226F081A00E9409D /* HotActorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotActorCell.h; sourceTree = "<group>"; };
 		D2D3B22F226F081A00E9409D /* HotActorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotActorCell.m; sourceTree = "<group>"; };
+		D2D3B233226F1A7400E9409D /* TagFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagFilterView.h; sourceTree = "<group>"; };
+		D2D3B234226F1A7400E9409D /* TagFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagFilterView.m; sourceTree = "<group>"; };
 		D2D53DC8224B711300001A0A /* UIView+NoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+NoData.h"; sourceTree = "<group>"; };
 		D2D53DC9224B711300001A0A /* UIView+NoData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+NoData.m"; sourceTree = "<group>"; };
 		D2ED9139223259D300A021E4 /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
@@ -1785,6 +1788,15 @@
 				D2D3B22F226F081A00E9409D /* HotActorCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2D3B232226F193300E9409D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3B233226F1A7400E9409D /* TagFilterView.h */,
+				D2D3B234226F1A7400E9409D /* TagFilterView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D2ED91352232590600A021E4 /* Search */ = {
@@ -3156,6 +3168,7 @@
 		E5EF76AC2261E04400BB2B49 /* TagFilter */ = {
 			isa = PBXGroup;
 			children = (
+				D2D3B232226F193300E9409D /* Views */,
 				E5EF76AD2261E05E00BB2B49 /* TagFilterVC.h */,
 				E5EF76AE2261E05E00BB2B49 /* TagFilterVC.m */,
 			);
@@ -3565,6 +3578,7 @@
 				E55133CE21F06AAF00DD8859 /* ZXCGImageLuminanceSource.m in Sources */,
 				E551339021F06AAF00DD8859 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				E551339521F06AAF00DD8859 /* ZXQRCodeMaskUtil.m in Sources */,
+				D2D3B235226F1A7400E9409D /* TagFilterView.m in Sources */,
 				E55133DD21F06AB000DD8859 /* ZXTextParsedResult.m in Sources */,
 				E55133EB21F06AB000DD8859 /* ZXDataMatrixASCIIEncoder.m in Sources */,
 				E55133FA21F06AB000DD8859 /* ZXAI01320xDecoder.m in Sources */,
