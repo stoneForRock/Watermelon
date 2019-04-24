@@ -63,6 +63,7 @@
 		D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA322312A4200E3DF62 /* Channel.storyboard */; };
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
+		D2BBC1F622705C0B004464D1 /* SubTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BBC1F522705C0B004464D1 /* SubTagView.m */; };
 		D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */; };
 		D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C4092239EBE20052CE44 /* MovieCoverView.m */; };
 		D2C3C40C2239EBF00052CE44 /* MovieCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C3C40B2239EBF00052CE44 /* MovieCoverView.xib */; };
@@ -620,6 +621,8 @@
 		D2ACDCA322312A4200E3DF62 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finder.storyboard; sourceTree = "<group>"; };
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		D2BBC1F422705C0B004464D1 /* SubTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTagView.h; sourceTree = "<group>"; };
+		D2BBC1F522705C0B004464D1 /* SubTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTagView.m; sourceTree = "<group>"; };
 		D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieLiveView.h; sourceTree = "<group>"; };
 		D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieLiveView.m; sourceTree = "<group>"; };
 		D2C3C4062239E4F90052CE44 /* WatermelonVedioPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatermelonVedioPlayer.entitlements; sourceTree = "<group>"; };
@@ -1795,6 +1798,8 @@
 			children = (
 				D2D3B233226F1A7400E9409D /* TagFilterView.h */,
 				D2D3B234226F1A7400E9409D /* TagFilterView.m */,
+				D2BBC1F422705C0B004464D1 /* SubTagView.h */,
+				D2BBC1F522705C0B004464D1 /* SubTagView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3632,6 +3637,7 @@
 				E551342821F06AB000DD8859 /* ZXDataMatrixVersion.m in Sources */,
 				E55133E721F06AB000DD8859 /* ZXPDF417BarcodeMetadata.m in Sources */,
 				E55134A821F081E100DD8859 /* AppStyle.m in Sources */,
+				D2BBC1F622705C0B004464D1 /* SubTagView.m in Sources */,
 				E55133A221F06AAF00DD8859 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				E55133D221F06AAF00DD8859 /* ZXAddressBookParsedResult.m in Sources */,
 				D2D3B22D226EF43600E9409D /* HotColumnCell.m in Sources */,
