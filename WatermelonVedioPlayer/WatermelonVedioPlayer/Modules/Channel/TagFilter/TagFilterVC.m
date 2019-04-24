@@ -50,6 +50,10 @@ INSTANCE_XIB_M(@"Channel", TagFilterVC)
     self.tagFilterView = [[TagFilterView alloc] initWithFrame:CGRectMake(0, SafeTopHeight, ScreenFullWidth, 70) tagList:self.allTagList];
     self.tagFilterView.tagFilterViewDelegate = self;
     [self.view addSubview:self.tagFilterView];
+    
+    self.subTagView = [[SubTagView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.tagFilterView.frame) + 10, ScreenFullWidth, 300)];
+    [self.view addSubview:self.subTagView];
+    [self.subTagView refreshWithDataList:self.allTagList.copy selectedIds:self.allSelectedTagIdList.copy];
 }
 
 - (void)requestData {

@@ -32,7 +32,8 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         layout.itemSize = CGSizeMake(ScreenFullWidth/2, 30);
-        self.collectionView = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
+        self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height - 50) collectionViewLayout:layout];
+        self.collectionView.backgroundColor = [UIColor whiteColor];
         self.collectionView.delegate=self;
         self.collectionView.dataSource=self;
         [self.collectionView registerClass:[TagCollectionCell class] forCellWithReuseIdentifier:TagCollectionCellIdentifier];
@@ -58,6 +59,7 @@
     } else {
         cell.marked = NO;
     }
+    cell.tagName = cellInfo[@""]?cellInfo[@""]:@"";
     return cell;
 }
 

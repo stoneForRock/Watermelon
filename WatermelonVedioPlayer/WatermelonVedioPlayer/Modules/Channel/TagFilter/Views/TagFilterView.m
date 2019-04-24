@@ -82,11 +82,15 @@
 - (void)filterAction:(UIButton *)sender {
     for (id subView in self.subviews) {
         if ([subView isKindOfClass:[UIButton class]]) {
-            if (subView == sender) {
-                sender.layer.borderColor = COLORWITHRGBADIVIDE255(194, 154, 104, 1).CGColor;
-                sender.layer.borderWidth = 0.5;
+            UIButton *subBtn = (UIButton *)subView;
+            UIView *borderView = subBtn.subviews[0];
+            if (subBtn == sender) {
+                subBtn.selected = YES;
+                borderView.layer.borderColor = COLORWITHRGBADIVIDE255(194, 154, 104, 1).CGColor;
+                borderView.layer.borderWidth = 0.5;
             } else {
-                sender.layer.borderWidth = 0.0;
+                subBtn.selected = NO;
+                borderView.layer.borderWidth = 0.0;
             }
         }
     }
@@ -115,11 +119,21 @@
     [filterSortBtn setTitleColor:COLORWITHRGBADIVIDE255(55, 55, 55, 1) forState:UIControlStateNormal];
     [filterSortBtn setTitleColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1) forState:UIControlStateSelected];
     filterSortBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    filterSortBtn.layer.cornerRadius = btnHeight/2;
-    filterSortBtn.layer.masksToBounds = YES;
+    filterSortBtn.layer.shadowOffset = CGSizeMake(5, 5);
+    filterSortBtn.layer.shadowColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1).CGColor;
+    filterSortBtn.layer.shadowOpacity = 0.5;
+    filterSortBtn.layer.shadowRadius = btnHeight/2;
     
     CGSize titleSize = [title sc_sizeWithFont:[UIFont systemFontOfSize:12]];
     filterSortBtn.bounds = CGRectMake(0, 0, titleSize.width + 30, btnHeight);
+    
+    UIView *subView = [[UIView alloc] initWithFrame:filterSortBtn.bounds];
+    subView.layer.cornerRadius = btnHeight/2;
+    subView.layer.masksToBounds = YES;
+    subView.userInteractionEnabled = NO;
+    subView.backgroundColor = [UIColor whiteColor];
+    [filterSortBtn addSubview:subView];
+    [filterSortBtn sendSubviewToBack:subView];
     
     return filterSortBtn;
 }
