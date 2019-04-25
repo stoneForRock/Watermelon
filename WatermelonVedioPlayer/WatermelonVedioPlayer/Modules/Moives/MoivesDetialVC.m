@@ -14,6 +14,7 @@
 #import "MovieDetailInfoView.h"
 #import "MoviesClassListCell1.h"
 #import "MovieIntroduceView.h"
+#import "PlayHistoryManager.h"
 
 #define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
 
@@ -157,6 +158,7 @@ INSTANCE_XIB_M(@"Moives", MoivesDetialVC)
             if (model) {
                 self.movieModel = model;
             }
+            [[PlayHistoryManager shared] saveMovie:model];
             self.liveView.movieModel = self.movieModel;
             self.infoView.infoModel = self.movieModel;
             [self requestBeforPlayAdInfo];

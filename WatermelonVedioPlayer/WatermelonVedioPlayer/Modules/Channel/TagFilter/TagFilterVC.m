@@ -16,6 +16,8 @@
 #import "MoviesClassListCell1.h"
 #import "MoivesDetialVC.h"
 
+#define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
+
 @interface TagFilterVC ()<TagFilterViewDelegate, SubTagViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -29,8 +31,6 @@
 @property (nonatomic, strong) SubTagView *subTagView;
 
 @end
-
-#define MoviesClassListCell1Identifier  @"MoviesClassListCell1"
 
 @implementation TagFilterVC
 INSTANCE_XIB_M(@"Channel", TagFilterVC)

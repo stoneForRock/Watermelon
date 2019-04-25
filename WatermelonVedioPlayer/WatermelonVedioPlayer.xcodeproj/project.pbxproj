@@ -63,6 +63,7 @@
 		D2ACDCA422312A4200E3DF62 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA322312A4200E3DF62 /* Channel.storyboard */; };
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
+		D2AD78EF22715BC60036F7B6 /* PlayHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD78EE22715BC60036F7B6 /* PlayHistoryManager.m */; };
 		D2BBC1F622705C0B004464D1 /* SubTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BBC1F522705C0B004464D1 /* SubTagView.m */; };
 		D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */; };
 		D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C4092239EBE20052CE44 /* MovieCoverView.m */; };
@@ -621,6 +622,8 @@
 		D2ACDCA322312A4200E3DF62 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Finder.storyboard; sourceTree = "<group>"; };
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		D2AD78ED22715BC60036F7B6 /* PlayHistoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayHistoryManager.h; sourceTree = "<group>"; };
+		D2AD78EE22715BC60036F7B6 /* PlayHistoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayHistoryManager.m; sourceTree = "<group>"; };
 		D2BBC1F422705C0B004464D1 /* SubTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTagView.h; sourceTree = "<group>"; };
 		D2BBC1F522705C0B004464D1 /* SubTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTagView.m; sourceTree = "<group>"; };
 		D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieLiveView.h; sourceTree = "<group>"; };
@@ -1720,6 +1723,15 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
+		D2AD78EC22715B7C0036F7B6 /* RecordHisManager */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD78ED22715BC60036F7B6 /* PlayHistoryManager.h */,
+				D2AD78EE22715BC60036F7B6 /* PlayHistoryManager.m */,
+			);
+			path = RecordHisManager;
+			sourceTree = "<group>";
+		};
 		D2BE4BCA224DFED4005BBAC6 /* ZFPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1816,6 +1828,7 @@
 		D2ED913C22325B5000A021E4 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD78EC22715B7C0036F7B6 /* RecordHisManager */,
 				D2ED913D22325B6E00A021E4 /* PlayHistoryVC.h */,
 				D2ED913E22325B6E00A021E4 /* PlayHistoryVC.m */,
 			);
@@ -3679,6 +3692,7 @@
 				E551343C21F06AB000DD8859 /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				E55133C121F06AAF00DD8859 /* ZXPDF417BarcodeRow.m in Sources */,
 				E55133AA21F06AAF00DD8859 /* ZXImage.m in Sources */,
+				D2AD78EF22715BC60036F7B6 /* PlayHistoryManager.m in Sources */,
 				E55133A921F06AAF00DD8859 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				D2964398225B26F200A2C1DA /* FinderRequest.m in Sources */,
 				D21E0EC8225352890043FDAE /* UINavigationController+ZFPlayerRotation.m in Sources */,
