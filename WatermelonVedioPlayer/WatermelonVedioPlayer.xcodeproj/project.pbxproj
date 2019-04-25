@@ -64,6 +64,15 @@
 		D2ACDCA622312A5D00E3DF62 /* Finder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA522312A5D00E3DF62 /* Finder.storyboard */; };
 		D2ACDCA822312A7300E3DF62 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2ACDCA722312A7300E3DF62 /* Mine.storyboard */; };
 		D2AD78EF22715BC60036F7B6 /* PlayHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD78EE22715BC60036F7B6 /* PlayHistoryManager.m */; };
+		D2AD78FA22719C000036F7B6 /* DownloadCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD78F922719C000036F7B6 /* DownloadCacheVC.m */; };
+		D2AD78FD22719C0B0036F7B6 /* NoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD78FC22719C0B0036F7B6 /* NoticeVC.m */; };
+		D2AD790022719C180036F7B6 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD78FF22719C180036F7B6 /* FeedbackVC.m */; };
+		D2AD790322719C260036F7B6 /* PromotionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD790222719C260036F7B6 /* PromotionVC.m */; };
+		D2AD790622719C310036F7B6 /* LevelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD790522719C310036F7B6 /* LevelVC.m */; };
+		D2AD790922719C3B0036F7B6 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD790822719C3B0036F7B6 /* SettingVC.m */; };
+		D2AD790C22719C4C0036F7B6 /* ActivationCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD790B22719C4C0036F7B6 /* ActivationCodeVC.m */; };
+		D2AD790F22719C5B0036F7B6 /* MyFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD790E22719C5B0036F7B6 /* MyFavoritesVC.m */; };
+		D2AD791322719C7A0036F7B6 /* MineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD791222719C7A0036F7B6 /* MineRequest.m */; };
 		D2BBC1F622705C0B004464D1 /* SubTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BBC1F522705C0B004464D1 /* SubTagView.m */; };
 		D2BE4BC9224DFBD1005BBAC6 /* MovieLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BE4BC8224DFBD1005BBAC6 /* MovieLiveView.m */; };
 		D2C3C40A2239EBE20052CE44 /* MovieCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3C4092239EBE20052CE44 /* MovieCoverView.m */; };
@@ -624,6 +633,24 @@
 		D2ACDCA722312A7300E3DF62 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		D2AD78ED22715BC60036F7B6 /* PlayHistoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayHistoryManager.h; sourceTree = "<group>"; };
 		D2AD78EE22715BC60036F7B6 /* PlayHistoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayHistoryManager.m; sourceTree = "<group>"; };
+		D2AD78F822719C000036F7B6 /* DownloadCacheVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadCacheVC.h; sourceTree = "<group>"; };
+		D2AD78F922719C000036F7B6 /* DownloadCacheVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadCacheVC.m; sourceTree = "<group>"; };
+		D2AD78FB22719C0B0036F7B6 /* NoticeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeVC.h; sourceTree = "<group>"; };
+		D2AD78FC22719C0B0036F7B6 /* NoticeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeVC.m; sourceTree = "<group>"; };
+		D2AD78FE22719C180036F7B6 /* FeedbackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackVC.h; sourceTree = "<group>"; };
+		D2AD78FF22719C180036F7B6 /* FeedbackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackVC.m; sourceTree = "<group>"; };
+		D2AD790122719C260036F7B6 /* PromotionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromotionVC.h; sourceTree = "<group>"; };
+		D2AD790222719C260036F7B6 /* PromotionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromotionVC.m; sourceTree = "<group>"; };
+		D2AD790422719C310036F7B6 /* LevelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelVC.h; sourceTree = "<group>"; };
+		D2AD790522719C310036F7B6 /* LevelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LevelVC.m; sourceTree = "<group>"; };
+		D2AD790722719C3B0036F7B6 /* SettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
+		D2AD790822719C3B0036F7B6 /* SettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
+		D2AD790A22719C4C0036F7B6 /* ActivationCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivationCodeVC.h; sourceTree = "<group>"; };
+		D2AD790B22719C4C0036F7B6 /* ActivationCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivationCodeVC.m; sourceTree = "<group>"; };
+		D2AD790D22719C5B0036F7B6 /* MyFavoritesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFavoritesVC.h; sourceTree = "<group>"; };
+		D2AD790E22719C5B0036F7B6 /* MyFavoritesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFavoritesVC.m; sourceTree = "<group>"; };
+		D2AD791122719C7A0036F7B6 /* MineRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineRequest.h; sourceTree = "<group>"; };
+		D2AD791222719C7A0036F7B6 /* MineRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineRequest.m; sourceTree = "<group>"; };
 		D2BBC1F422705C0B004464D1 /* SubTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTagView.h; sourceTree = "<group>"; };
 		D2BBC1F522705C0B004464D1 /* SubTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTagView.m; sourceTree = "<group>"; };
 		D2BE4BC7224DFBD1005BBAC6 /* MovieLiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieLiveView.h; sourceTree = "<group>"; };
@@ -1730,6 +1757,87 @@
 				D2AD78EE22715BC60036F7B6 /* PlayHistoryManager.m */,
 			);
 			path = RecordHisManager;
+			sourceTree = "<group>";
+		};
+		D2AD78F022719AF60036F7B6 /* MyFavorites */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD790D22719C5B0036F7B6 /* MyFavoritesVC.h */,
+				D2AD790E22719C5B0036F7B6 /* MyFavoritesVC.m */,
+			);
+			path = MyFavorites;
+			sourceTree = "<group>";
+		};
+		D2AD78F122719B4C0036F7B6 /* ActivationCode */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD790A22719C4C0036F7B6 /* ActivationCodeVC.h */,
+				D2AD790B22719C4C0036F7B6 /* ActivationCodeVC.m */,
+			);
+			path = ActivationCode;
+			sourceTree = "<group>";
+		};
+		D2AD78F222719B700036F7B6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD790722719C3B0036F7B6 /* SettingVC.h */,
+				D2AD790822719C3B0036F7B6 /* SettingVC.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D2AD78F322719B800036F7B6 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD790422719C310036F7B6 /* LevelVC.h */,
+				D2AD790522719C310036F7B6 /* LevelVC.m */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
+		D2AD78F422719B980036F7B6 /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD790122719C260036F7B6 /* PromotionVC.h */,
+				D2AD790222719C260036F7B6 /* PromotionVC.m */,
+			);
+			path = Promotion;
+			sourceTree = "<group>";
+		};
+		D2AD78F522719BB90036F7B6 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD78FE22719C180036F7B6 /* FeedbackVC.h */,
+				D2AD78FF22719C180036F7B6 /* FeedbackVC.m */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		D2AD78F622719BC00036F7B6 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD78FB22719C0B0036F7B6 /* NoticeVC.h */,
+				D2AD78FC22719C0B0036F7B6 /* NoticeVC.m */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		D2AD78F722719BCF0036F7B6 /* DownloadCache */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD78F822719C000036F7B6 /* DownloadCacheVC.h */,
+				D2AD78F922719C000036F7B6 /* DownloadCacheVC.m */,
+			);
+			path = DownloadCache;
+			sourceTree = "<group>";
+		};
+		D2AD791022719C600036F7B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD791122719C7A0036F7B6 /* MineRequest.h */,
+				D2AD791222719C7A0036F7B6 /* MineRequest.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D2BE4BCA224DFED4005BBAC6 /* ZFPlayer */ = {
@@ -2970,6 +3078,15 @@
 		E589702521F06264008924E4 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD791022719C600036F7B6 /* Network */,
+				D2AD78F722719BCF0036F7B6 /* DownloadCache */,
+				D2AD78F622719BC00036F7B6 /* Notice */,
+				D2AD78F522719BB90036F7B6 /* Feedback */,
+				D2AD78F422719B980036F7B6 /* Promotion */,
+				D2AD78F322719B800036F7B6 /* Level */,
+				D2AD78F222719B700036F7B6 /* Setting */,
+				D2AD78F122719B4C0036F7B6 /* ActivationCode */,
+				D2AD78F022719AF60036F7B6 /* MyFavorites */,
 				E5512D7121F0662300DD8859 /* MineVC.h */,
 				E5512D7221F0662300DD8859 /* MineVC.m */,
 				D2ACDCA722312A7300E3DF62 /* Mine.storyboard */,
@@ -3562,6 +3679,7 @@
 				E551343F21F06AB000DD8859 /* ZXIntArray.m in Sources */,
 				E551315621F0688500DD8859 /* QN_GTM_Base64.m in Sources */,
 				E55133CA21F06AAF00DD8859 /* ZXPDF417.m in Sources */,
+				D2AD790922719C3B0036F7B6 /* SettingVC.m in Sources */,
 				E551343921F06AB000DD8859 /* ZXCode39Writer.m in Sources */,
 				E55133FE21F06AB000DD8859 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
 				E55133E421F06AB000DD8859 /* ZXDataMatrixSymbolInfo144.m in Sources */,
@@ -3572,6 +3690,7 @@
 				E551316921F0688500DD8859 /* QNDomain.m in Sources */,
 				E55133EE21F06AB000DD8859 /* ZXResult.m in Sources */,
 				E55133CB21F06AAF00DD8859 /* ZXQRCode.m in Sources */,
+				D2AD790C22719C4C0036F7B6 /* ActivationCodeVC.m in Sources */,
 				E55134CF21F1DF3B00DD8859 /* LoginManager+Enter.m in Sources */,
 				E589702B21F0640E008924E4 /* BaseRequest.m in Sources */,
 				E551314721F0688500DD8859 /* QNUploadManager.m in Sources */,
@@ -3612,6 +3731,8 @@
 				E551340921F06AB000DD8859 /* ZXCodaBarWriter.m in Sources */,
 				E551304721F0688400DD8859 /* UIView+Layout.m in Sources */,
 				E551304C21F0688400DD8859 /* TZImagePickerController.m in Sources */,
+				D2AD78FD22719C0B0036F7B6 /* NoticeVC.m in Sources */,
+				D2AD790F22719C5B0036F7B6 /* MyFavoritesVC.m in Sources */,
 				E551342521F06AB000DD8859 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				E551341D21F06AB000DD8859 /* ZXUPCEANWriter.m in Sources */,
 				E551339821F06AAF00DD8859 /* ZXProductResultParser.m in Sources */,
@@ -3657,6 +3778,7 @@
 				E55133FF21F06AB000DD8859 /* ZXEncodeHints.m in Sources */,
 				E55133C221F06AAF00DD8859 /* ZXURLTOResultParser.m in Sources */,
 				E55133C921F06AAF00DD8859 /* ZXISBNResultParser.m in Sources */,
+				D2AD78FA22719C000036F7B6 /* DownloadCacheVC.m in Sources */,
 				D2D3B229226EE77400E9409D /* HotActorVC.m in Sources */,
 				E55133B921F06AAF00DD8859 /* ZXOneDimensionalCodeWriter.m in Sources */,
 				D2D3B230226F081A00E9409D /* HotActorCell.m in Sources */,
@@ -3805,6 +3927,7 @@
 				E551319C21F0688500DD8859 /* XMRequest.m in Sources */,
 				E55133DB21F06AB000DD8859 /* ZXDataMatrixC40Encoder.m in Sources */,
 				E55133F021F06AB000DD8859 /* ZXCharacterSetECI.m in Sources */,
+				D2AD790022719C180036F7B6 /* FeedbackVC.m in Sources */,
 				E551342021F06AB000DD8859 /* ZXQRCodeMatrixUtil.m in Sources */,
 				D21E0ECC225352890043FDAE /* ZFPlayerView.m in Sources */,
 				E55133DF21F06AB000DD8859 /* ZXITFReader.m in Sources */,
@@ -3827,6 +3950,7 @@
 				E551347521F0739700DD8859 /* UIAlertController+Style.m in Sources */,
 				E551343A21F06AB000DD8859 /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				E55133E621F06AB000DD8859 /* ZXQRCodeMode.m in Sources */,
+				D2AD790322719C260036F7B6 /* PromotionVC.m in Sources */,
 				E551339E21F06AAF00DD8859 /* ZXRSSPair.m in Sources */,
 				E551341221F06AB000DD8859 /* ZXQRCodeReader.m in Sources */,
 				E551342221F06AB000DD8859 /* ZXAbstractExpandedDecoder.m in Sources */,
@@ -3851,6 +3975,7 @@
 				E55133E821F06AB000DD8859 /* ZXAztecHighLevelEncoder.m in Sources */,
 				E551344421F06AB000DD8859 /* ZXPDF417ECErrorCorrection.m in Sources */,
 				E551337821F06AAF00DD8859 /* ZXPlanarYUVLuminanceSource.m in Sources */,
+				D2AD790622719C310036F7B6 /* LevelVC.m in Sources */,
 				E55134C421F1DCCA00DD8859 /* LaunchManager.m in Sources */,
 				E551348A21F0774B00DD8859 /* UITableView+updateData.m in Sources */,
 				E55133D721F06AAF00DD8859 /* ZXModulusPoly.m in Sources */,
@@ -3882,6 +4007,7 @@
 				E55133EA21F06AB000DD8859 /* ZXHybridBinarizer.m in Sources */,
 				E551339221F06AAF00DD8859 /* ZXQRCodeAlignmentPattern.m in Sources */,
 				E551348D21F0782000DD8859 /* UIView+Frame.m in Sources */,
+				D2AD791322719C7A0036F7B6 /* MineRequest.m in Sources */,
 				E551346F21F0727900DD8859 /* NSObject+Safe.m in Sources */,
 				E551317521F0688500DD8859 /* MWPhoto.m in Sources */,
 				E551345F21F06F3A00DD8859 /* SegmentView.m in Sources */,

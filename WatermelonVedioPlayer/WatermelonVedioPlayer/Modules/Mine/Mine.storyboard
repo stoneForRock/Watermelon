@@ -15,15 +15,83 @@
             <objects>
                 <viewController storyboardIdentifier="MineVC" id="FA4-jD-AZy" customClass="MineVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQU-YC-2pe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_bg" translatesAutoresizingMaskIntoConstraints="NO" id="F3d-7q-n4W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F3d-7q-n4W" secondAttribute="height" multiplier="125:59" id="f84-Mv-kMn"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDd-IB-uNb">
+                                <rect key="frame" x="15" y="64" width="345" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nku-UB-b9F">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="736"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mC7-Qm-wJo">
+                                                <rect key="frame" x="0.0" y="63" width="345" height="166"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_head_l_bg" translatesAutoresizingMaskIntoConstraints="NO" id="khs-YO-cIE">
+                                                <rect key="frame" x="129" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="87" id="Fni-bn-IJ0"/>
+                                                    <constraint firstAttribute="width" constant="87" id="ORY-EG-nU3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_head_l" translatesAutoresizingMaskIntoConstraints="NO" id="AbJ-VO-wMt">
+                                                <rect key="frame" x="130" y="1" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="7Qv-Qw-MQS"/>
+                                                    <constraint firstAttribute="height" constant="85" id="m5c-jv-TO5"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="AbJ-VO-wMt" firstAttribute="top" secondItem="nku-UB-b9F" secondAttribute="top" constant="1" id="Bwg-XE-6BP"/>
+                                            <constraint firstItem="khs-YO-cIE" firstAttribute="top" secondItem="nku-UB-b9F" secondAttribute="top" id="ISA-5q-ltM"/>
+                                            <constraint firstAttribute="height" constant="736" id="VWy-VP-c9D"/>
+                                            <constraint firstItem="AbJ-VO-wMt" firstAttribute="centerX" secondItem="nku-UB-b9F" secondAttribute="centerX" id="lte-9g-vTf"/>
+                                            <constraint firstItem="khs-YO-cIE" firstAttribute="centerX" secondItem="nku-UB-b9F" secondAttribute="centerX" id="vnW-F8-WFi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nku-UB-b9F" firstAttribute="leading" secondItem="lDd-IB-uNb" secondAttribute="leading" id="5dY-sI-y2c"/>
+                                    <constraint firstAttribute="bottom" secondItem="nku-UB-b9F" secondAttribute="bottom" id="8cU-ct-HOf"/>
+                                    <constraint firstAttribute="trailing" secondItem="nku-UB-b9F" secondAttribute="trailing" id="lCx-H3-eQF"/>
+                                    <constraint firstItem="nku-UB-b9F" firstAttribute="top" secondItem="lDd-IB-uNb" secondAttribute="top" id="laY-zF-gQu"/>
+                                    <constraint firstItem="nku-UB-b9F" firstAttribute="centerX" secondItem="lDd-IB-uNb" secondAttribute="centerX" id="uW2-ph-vwU"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F3d-7q-n4W" firstAttribute="top" secondItem="tQU-YC-2pe" secondAttribute="top" id="5sX-V3-ogh"/>
+                            <constraint firstItem="lDd-IB-uNb" firstAttribute="bottom" secondItem="hbv-CX-OMA" secondAttribute="bottom" id="HNW-7a-KhG"/>
+                            <constraint firstItem="lDd-IB-uNb" firstAttribute="leading" secondItem="hbv-CX-OMA" secondAttribute="leading" constant="15" id="dfp-if-hZZ"/>
+                            <constraint firstAttribute="trailing" secondItem="F3d-7q-n4W" secondAttribute="trailing" id="g0a-Mf-IoA"/>
+                            <constraint firstItem="hbv-CX-OMA" firstAttribute="trailing" secondItem="lDd-IB-uNb" secondAttribute="trailing" constant="15" id="m6Z-6a-5Jz"/>
+                            <constraint firstItem="F3d-7q-n4W" firstAttribute="leading" secondItem="hbv-CX-OMA" secondAttribute="leading" id="oJa-mq-0a3"/>
+                            <constraint firstItem="lDd-IB-uNb" firstAttribute="top" secondItem="hbv-CX-OMA" secondAttribute="top" constant="44" id="tMd-dV-yAy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hbv-CX-OMA"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auy-uM-DdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="117"/>
+            <point key="canvasLocation" x="-1343.2" y="118.74062968515743"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_head_l" width="85" height="85"/>
+        <image name="ic_head_l_bg" width="120" height="120"/>
+        <image name="mine_bg" width="500" height="236"/>
+    </resources>
 </document>
