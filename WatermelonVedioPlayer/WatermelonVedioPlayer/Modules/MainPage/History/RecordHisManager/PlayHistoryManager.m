@@ -36,7 +36,13 @@ static PlayHistoryManager *sharedPlayHistoryManager_ = nil;
 
 - (void)saveMovie:(MoivesModel *)movieModel {
     self.allHistoryList = [NSMutableArray arrayWithArray:[self readMovies]];
-    [self.allHistoryList addObject:movieModel];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.moiveId = %@",movieModel.moiveId];
+    NSArray *filterArray = [self.allHistoryList filteredArrayUsingPredicate:predicate];
+    if (filterArray.count > 0) {
+        [self.allHistoryList exchangeObjectAtIndex:0 withObjectAtIndex:[self.allHistoryList indexOfObject:[filterArray lastObject]]];
+    } else {
+        [self.allHistoryList addObject:movieModel];
+    }
     NSMutableData *data = [NSMutableData data];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     [archiver encodeObject:self.allHistoryList.copy forKey:@"movieModels"];
