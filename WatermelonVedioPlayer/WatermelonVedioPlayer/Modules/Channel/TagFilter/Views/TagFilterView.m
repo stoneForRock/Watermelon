@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) NSArray *allTagList;
 
-@property (nonatomic, strong) NSMutableArray *allSubClass;
 @end
 
 @implementation TagFilterView
@@ -50,6 +49,13 @@
         [resetBtn addTarget:self action:@selector(resetAction:) forControlEvents:UIControlEventTouchUpInside];
         resetBtn.center = CGPointMake(resetBtn.bounds.size.width/2 + btnX, btnY + 25/2);
         [self addSubview:resetBtn];
+        
+        //默认选中第一个
+        UIButton *allSender = [self viewWithTag:99];
+        UIView *borderView = allSender.subviews[0];
+        allSender.selected = YES;
+        borderView.layer.borderColor = COLORWITHRGBADIVIDE255(194, 154, 104, 1).CGColor;
+        borderView.layer.borderWidth = 0.5;
     }
     return self;
 }
@@ -119,7 +125,7 @@
     [filterSortBtn setTitleColor:COLORWITHRGBADIVIDE255(55, 55, 55, 1) forState:UIControlStateNormal];
     [filterSortBtn setTitleColor:COLORWITHRGBADIVIDE255(194, 154, 104, 1) forState:UIControlStateSelected];
     filterSortBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    filterSortBtn.layer.shadowOffset = CGSizeMake(5, 5);
+    filterSortBtn.layer.shadowOffset = CGSizeMake(3, 3);
     filterSortBtn.layer.shadowColor = COLORWITHRGBADIVIDE255(55, 55, 55, 1).CGColor;
     filterSortBtn.layer.shadowOpacity = 0.5;
     filterSortBtn.layer.shadowRadius = btnHeight/2;
@@ -144,7 +150,7 @@
         [checkMarkImageView removeFromSuperview];
     }
     if (marked) {
-        UIImageView *checkImgview = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width - 20, self.bounds.size.height - 20, 12, 12)];
+        UIImageView *checkImgview = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width - 15, self.bounds.size.height - 14, 12, 12)];
         checkImgview.tag = CheckMarkTag;
         checkImgview.image = [UIImage imageNamed:@"tag_mark"];
         [self addSubview:checkImgview];

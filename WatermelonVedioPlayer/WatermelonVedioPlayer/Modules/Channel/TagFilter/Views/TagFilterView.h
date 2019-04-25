@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TagFilterView : UIView
 
+@property (nonatomic, strong) NSMutableArray *allSubClass;
 @property (nonatomic, assign) id<TagFilterViewDelegate> tagFilterViewDelegate;
 
 - (instancetype)initWithFrame:(CGRect)frame tagList:(NSArray *)tagList;

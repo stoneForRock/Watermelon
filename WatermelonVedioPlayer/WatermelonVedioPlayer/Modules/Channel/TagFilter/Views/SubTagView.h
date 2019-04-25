@@ -11,7 +11,7 @@
 @protocol SubTagViewDelegate <NSObject>
 @optional
 - (void)subTagViewSelectedTagInfo:(NSDictionary *)tagInfo;
-
+- (void)subTagViewConfirmSelectedTagIds:(NSArray *)allSelectedIds;
 @end
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SubTagView : UIView
 @property (nonatomic, assign) id<SubTagViewDelegate> subTagViewDelegate;
 - (void)refreshWithDataList:(NSArray *)dataList selectedIds:(NSArray *)selectedIds;
+- (void)refreshSelectedIds:(NSArray *)selectedIds;
 
 @end
 

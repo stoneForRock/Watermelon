@@ -26,18 +26,30 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        
         self.markedIdList = [NSMutableArray arrayWithCapacity:0];
         self.collectionList = [NSMutableArray arrayWithCapacity:0];
         
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemSize = CGSizeMake(ScreenFullWidth/2, 30);
+        layout.itemSize = CGSizeMake(frame.size.width/2 - 30, 30);
         self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height - 50) collectionViewLayout:layout];
+        self.collectionView.delegate = self;
+        self.collectionView.dataSource = self;
         self.collectionView.backgroundColor = [UIColor whiteColor];
-        self.collectionView.delegate=self;
-        self.collectionView.dataSource=self;
         [self.collectionView registerClass:[TagCollectionCell class] forCellWithReuseIdentifier:TagCollectionCellIdentifier];
         [self addSubview:self.collectionView];
+        
+        self.confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.confirmBtn setBackgroundImage:[UIImage imageNamed:@"normal_btn"] forState:UIControlStateNormal];
+        [self.confirmBtn setTitle:@"确认" forState:UIControlStateNormal];
+        [self.confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.confirmBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        [self.confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
+        self.confirmBtn.bounds = CGRectMake(0, 0, 200, 40);
+        self.confirmBtn.center = CGPointMake(ScreenFullWidth/2, CGRectGetMaxY(self.collectionView.frame) + 25);
+        self.confirmBtn.hidden = YES;
+        [self addSubview:self.confirmBtn];
         
     }
     return self;
@@ -47,6 +59,17 @@
     self.collectionList = [NSMutableArray arrayWithArray:dataList];
     self.markedIdList = [NSMutableArray arrayWithArray:selectedIds];
     [self.collectionView reloadData];
+}
+
+- (void)refreshSelectedIds:(NSArray *)selectedIds {
+    self.markedIdList = [NSMutableArray arrayWithArray:selectedIds];
+    [self.collectionView reloadData];
+}
+
+- (void)confirmAction {
+    if (self.subTagViewDelegate != nil && [self.subTagViewDelegate respondsToSelector:@selector(subTagViewConfirmSelectedTagIds:)]) {
+        [self.subTagViewDelegate subTagViewConfirmSelectedTagIds:self.markedIdList.copy];
+    }
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -59,7 +82,7 @@
     } else {
         cell.marked = NO;
     }
-    cell.tagName = cellInfo[@""]?cellInfo[@""]:@"";
+    cell.tagName = cellInfo[@"name"]?cellInfo[@"name"]:@"";
     return cell;
 }
 
@@ -69,6 +92,11 @@
 
 //返回每个分区的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    if (self.markedIdList.count > 0) {
+        self.confirmBtn.hidden = NO;
+    } else {
+        self.confirmBtn.hidden = YES;
+    }
     return self.collectionList.count;
 }
 
@@ -77,6 +105,7 @@
     if (self.subTagViewDelegate != nil && [self.subTagViewDelegate respondsToSelector:@selector(subTagViewSelectedTagInfo:)]) {
         [self.subTagViewDelegate subTagViewSelectedTagInfo:cellInfo];
     }
+    [self.collectionView reloadData];
 }
 
 @end
@@ -107,10 +136,15 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    self.marked = self.marked;
+}
+
+- (void)setMarked:(BOOL)marked {
+    _marked = marked;
     if (self.marked) {
         self.markImgview.frame = CGRectMake(15, 8, 12, 12);
     } else {
-        self.markImgview.frame = CGRectMake(15, 0, 0, 0);
+        self.markImgview.frame = CGRectMake(10, 0, 0, 0);
     }
     self.tagLabel.frame = CGRectMake(CGRectGetMaxX(self.markImgview.frame) + 5, 5, 120, 18);
 }

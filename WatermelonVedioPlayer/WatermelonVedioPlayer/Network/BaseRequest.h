@@ -34,6 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
                    parameters:(NSDictionary *)parameters
                      callBack:(RequestFinishBlock)callBack;
 
++ (NSString *)sendPostJsonRequest:(NSString *)url
+                       parameters:(NSDictionary *)parameters
+                         callBack:(RequestFinishBlock)callBack;
+
 + (NSString *)sendRequest:(RequestConfigBlock)configBlock
                 onSuccess:(nullable SuccessBlock)successBlock
                 onFailure:(nullable FailureBlock)failureBlock;

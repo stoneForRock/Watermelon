@@ -29,7 +29,7 @@
 }
 
 + (void)queryMovieWithTagIds:(NSArray *)tagIds page:(NSInteger)page finishBlock:(RequestFinishBlock)finishBlock {
-    [self sendPOSTRequest:@"/api/movie/bytags" parameters:@{@"tagIds":tagIds,@"page":@(page),@"pageSize":@"10"} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
+    [self sendPostJsonRequest:@"/api/movie/bytags" parameters:@{@"tagIds":tagIds,@"page":@(page),@"pageSize":@"10"} callBack:^(BOOL success, id  _Nullable responseObject, NSError * _Nullable error) {
         finishBlock(success,responseObject,error);
     }];
 }

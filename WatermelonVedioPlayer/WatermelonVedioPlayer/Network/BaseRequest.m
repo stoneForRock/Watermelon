@@ -47,6 +47,13 @@
     return [self sendRequest:url parameters:parameters isPost:YES timeoutInterval:0 retryCount:0 callBack:callBack];
 }
 
++ (NSString *)sendPostJsonRequest:(NSString *)url
+                       parameters:(NSDictionary *)parameters
+                         callBack:(RequestFinishBlock)callBack {
+    return [self sendBaseRequest:url parameters:parameters isPost:YES isJson:YES timeoutInterval:0 retryCount:0 callBack:callBack];
+}
+
+
 + (NSString *)sendRequest:(NSString *)url
                parameters:(NSDictionary *)parameters
                    isPost:(BOOL)isPost
